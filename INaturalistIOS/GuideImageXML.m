@@ -22,6 +22,10 @@
     return self;
 }
 
+- (NSString *)photoKey {
+    return nil;
+}
+
 - (NSString *)urlForTextAtXPath:(NSString *)xpath
 {
     NSString *relativePath = [self.xml atXPath:xpath].text;

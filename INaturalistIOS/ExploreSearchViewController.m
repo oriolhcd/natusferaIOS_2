@@ -276,7 +276,8 @@
 - (void)searchForMyObservations {
 
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -336,7 +337,8 @@
 - (void)searchForNearbyObservations {
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)//M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -380,7 +382,8 @@
 - (void)searchForTaxon:(NSString *)text {
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -399,7 +402,8 @@
         });
         
         if (error) {
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+            //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                         message:error.localizedDescription
                                        delegate:nil
                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -448,7 +452,8 @@
 - (void)searchForPerson:(NSString *)text {
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -467,7 +472,8 @@
         });
         
         if (error) {
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+            //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                         message:error.localizedDescription
                                        delegate:nil
                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -514,7 +520,8 @@
 - (void)searchForLocation:(NSString *)text {
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -533,7 +540,8 @@
         });
 
         if (error) {
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+            //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                         message:error.localizedDescription
                                        delegate:nil
                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -558,7 +566,8 @@
                                       inRegion:nil  // if we're auth'd for location svcs, uses the user's location as the region
                              completionHandler:^(NSArray *placemarks, NSError *error) {
                                  if (error.code == kCLErrorNetwork) {
-                                     [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+                                     //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) M.Lujano:10/06/2016
+                                     [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                                                  message:NSLocalizedString(@"Please try again in a few moments.", @"Error message for the user, when the geocoder is telling us to slow down.")
                                                                 delegate:nil
                                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -609,7 +618,8 @@
 - (void)searchForProject:(NSString *)text {
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+        //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                     message:NSLocalizedString(@"Network unavailable", nil)
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"OK", nil)
@@ -628,7 +638,8 @@
         });
         
         if (error) {
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil)
+            //[[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search iNaturalist.org", nil) //M.Lujano:10/06/2016
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Cannot search Natusfera.gbif.es", nil)
                                         message:error.localizedDescription
                                        delegate:nil
                               cancelButtonTitle:NSLocalizedString(@"OK", nil)

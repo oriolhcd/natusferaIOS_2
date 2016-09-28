@@ -181,6 +181,7 @@
 }
 
 - (void)reloadObservation {
+    
     if ([self.observation isKindOfClass:[ExploreObservation class]]) {
         ObservationAPI *api = [[ObservationAPI alloc] init];
         __weak typeof(self) weakSelf = self;
@@ -205,9 +206,19 @@
     [[Analytics sharedClient] debugLog:@"Network - Load complete observation details"];
     if ([self.observation isKindOfClass:[Observation class]]) {
         Observation *obs = (Observation *)self.observation;
-        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", obs.recordID]
-                                                     objectMapping:[Observation mapping]
-                                                          delegate:self];
+        NSString *path = [NSString stringWithFormat:@"/observations/%@", obs.recordID];
+        
+        //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", obs.recordID]
+       //                                              objectMapping:[Observation mapping]
+       //                                                   delegate:self];
+        //Comentado por M.Lujano  (8/06/2016)
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:path usingBlock:^(RKObjectLoader *loader)
+         {
+             loader.objectMapping =[Observation mapping];
+             loader.delegate=self;
+             
+         }];
+        
     } else {
         // TODO: fetch with iNat API
     }

@@ -253,6 +253,7 @@
             return cell;
         }
     }
+    return 0; //mlb
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {

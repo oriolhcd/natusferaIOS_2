@@ -164,7 +164,8 @@ NSInteger INatMinPasswordLength = 6;
                                if ([respJson valueForKey:@"errors"]) {
                                    // TODO: extract error from json and notify user
                                    NSArray *errors = [respJson valueForKey:@"errors"];
-                                   NSError *newError = [NSError errorWithDomain:@"org.inaturalist"
+                                   //NSError *newError = [NSError errorWithDomain:@"org.inaturalist"
+                                   NSError *newError = [NSError errorWithDomain:@"es.gbif.natusfera"
                                                                            code:response.statusCode
                                                                        userInfo:@{
                                                                                   NSLocalizedDescriptionKey: errors.firstObject
@@ -247,7 +248,8 @@ NSInteger INatMinPasswordLength = 6;
     if (loginSucceeded) {
         if ([accountType isEqualToString:kINatAuthService]) {
             [[Analytics sharedClient] event:kAnalyticsEventLogin
-                             withProperties:@{ @"Via": @"iNaturalist" }];
+                             //withProperties:@{ @"Via": @"iNaturalist" }];
+                            withProperties:@{ @"Via": @"Natusfera" }];
         }
         isLoginCompleted = YES;
         [[NSUserDefaults standardUserDefaults] setValue:iNatAccessToken
@@ -319,7 +321,8 @@ NSInteger INatMinPasswordLength = 6;
                           }];        
     } else {
         [[Analytics sharedClient] event:kAnalyticsEventLoginFailed
-                         withProperties:@{ @"from": @"iNaturalist" }];
+                         //withProperties:@{ @"from": @"iNaturalist" }];
+                        withProperties:@{ @"from": @"Natusfera" }];
         
         [self executeError:nil];
     }
@@ -393,18 +396,23 @@ NSInteger INatMinPasswordLength = 6;
 -(void) initGoogleLogin {
     // Google+ init
     GPPSignIn *googleSignIn = [GPPSignIn sharedInstance];
+    googleSignIn.shouldFetchGoogleUserID=true; //M.Lujano:14/06/2016
+    
     googleSignIn.clientID = GoogleClientId;
+    
     googleSignIn.scopes = @[
                             kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
                             kGTLAuthScopePlusMe,
-                            @"https://www.googleapis.com/auth/userinfo.email",
+                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
                             ];
+    
     googleSignIn.delegate = self;
     [googleSignIn trySilentAuthentication];
 }
 
 - (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
                    error:(NSError *)error {
+    
     
     if (error || (!auth.accessToken && tryingGoogleReauth)) {
         
@@ -434,6 +442,8 @@ NSInteger INatMinPasswordLength = 6;
           finishedAuth:(GTMOAuth2Authentication *)auth
                  error:(NSError *)error {
     [self finishedWithAuth:auth error:error];
+    
+    
 }
 
 #pragma mark - Success / Failure helpers

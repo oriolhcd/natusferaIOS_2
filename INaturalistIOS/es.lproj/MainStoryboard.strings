@@ -10,8 +10,8 @@
 /* Class = "IBUILabel"; text = "Categorize new observations"; ObjectID = "thU-yQ-HUV"; */
 "thU-yQ-HUV.text" = "Clasificar nuevas observaciones";
 
-/* Class = "IBUILabel"; text = "iNaturalist Network"; ObjectID = "g3B-dy-Lka"; */
-"g3B-dy-Lka.text" = "Red de iNaturalist";
+/* Class = "IBUILabel"; text = "Natusfera Network"; ObjectID = "g3B-dy-Lka"; */
+"g3B-dy-Lka.text" = "Red de Natusfera";
 
 /* Class = "IBUINavigationItem"; title = "Guides"; ObjectID = "0U1-va-cIB"; */
 "0U1-va-cIB.title" = "Guías";
@@ -44,7 +44,7 @@
 "nla-WE-iqA.text" = "Usuario";
 
 /* Class = "IBUITextField"; placeholder = "Your iNat username"; ObjectID = "7ua-fh-uvU"; */
-"7ua-fh-uvU.placeholder" = "Tu nombre de usuario Nat";
+"7ua-fh-uvU.placeholder" = "Tu nombre de usuario de Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "What did you see?"; ObjectID = "9br-9C-J7v"; */
 "9br-9C-J7v.headerTitle" = "¿Qué viste?";
@@ -53,7 +53,7 @@
 "AWa-0U-YdH.text" = "Atribución";
 
 /* Class = "IBUITextField"; placeholder = "Your iNat password"; ObjectID = "AeG-t0-DTD"; */
-"AeG-t0-DTD.placeholder" = "Tu contraseña Nat";
+"AeG-t0-DTD.placeholder" = "Tu contraseña de Natusfera";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "AiV-F7-sFl"; */
 "AiV-F7-sFl.text" = "Detalle";
@@ -256,8 +256,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "hKK-sS-qAN"; */
 "hKK-sS-qAN.title" = "Cancelar";
 
-/* Class = "IBUIButton"; normalTitle = "View on iNaturalist"; ObjectID = "hX2-Qg-qfb"; */
-"hX2-Qg-qfb.normalTitle" = "Ver en Naturalista";
+/* Class = "IBUIButton"; normalTitle = "View on Natusfera"; ObjectID = "hX2-Qg-qfb"; */
+"hX2-Qg-qfb.normalTitle" = "Ver en Natusfera";
 
 /* Class = "IBUILabel"; text = "Sign in"; ObjectID = "hfA-vB-13u"; */
 "hfA-vB-13u.text" = "Iniciar sesión";
@@ -286,8 +286,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Done"; ObjectID = "mgd-CX-pVK"; */
 "mgd-CX-pVK.title" = "Hecho";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Your iNaturalist Account"; ObjectID = "oWq-bA-sYY"; */
-"oWq-bA-sYY.headerTitle" = "Tu cuenta de Naturalista";
+/* Class = "IBUITableViewSection"; headerTitle = "Your Natusfera Account"; ObjectID = "oWq-bA-sYY"; */
+"oWq-bA-sYY.headerTitle" = "Tu cuenta de Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "App Settings"; ObjectID = "LbD-zB-zU2"; */
 "LbD-zB-zU2.headerTitle" = "Configuración de la aplicación";
@@ -328,8 +328,8 @@
 /* Class = "IBUITabBarItem"; title = "Observations"; ObjectID = "s0d-iz-ydn"; */
 "s0d-iz-ydn.title" = "Observaciones";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Sign in to iNaturalist.org"; ObjectID = "tW8-NR-sj7"; */
-"tW8-NR-sj7.headerTitle" = "Iniciar sesión en Naturalista";
+/* Class = "IBUITableViewSection"; headerTitle = "Sign in to Natusfera.gbif.es"; ObjectID = "tW8-NR-sj7"; */
+"tW8-NR-sj7.headerTitle" = "Iniciar sesión en Natusfera";
 
 /* Class = "IBUIBarButtonItem"; title = "Log in"; ObjectID = "tiA-DP-jEV"; */
 "tiA-DP-jEV.title" = "Iniciar sesión";

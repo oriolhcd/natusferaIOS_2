@@ -74,9 +74,18 @@
     self.isLoading = YES;
     NSString *url = [NSString stringWithFormat:self.searchURL, self.savedSearchTerm];
     [[Analytics sharedClient] debugLog:@"Network - Record search"];
+    
+    //las siguientes lineas de código han sido comentadas por M.Lujano:26-09-2016
+    //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+      //                                           objectMapping:[self.model mapping]
+        //                                              delegate:self];
+    
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
-                                                 objectMapping:[self.model mapping]
-                                                      delegate:self];
+                                                    usingBlock:^(RKObjectLoader *loader){
+                                                        loader.objectMapping=[self.model mapping];
+                                                        loader.delegate=self;
+                                                    }];
+    
     [self checkRemoteLoading];
 }
 
@@ -146,7 +155,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (self.allowsFreeTextSelection && self.savedSearchTerm.length > 0 && section == 1) {
-        return @"iNaturalist";
+        return @"Natusfera";
     } else {
         return nil;
     }

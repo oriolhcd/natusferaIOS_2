@@ -28,6 +28,9 @@
 @synthesize receivedData = _receivedData;
 @synthesize ngzFilePath = _ngzFilePath;
 
+
+
+
 static int TextCellTextViewTag = 101;
 static int ConfirmDownloadAlertViewTag = 100;
 static int ProgressViewTag = 102;
@@ -37,6 +40,7 @@ static int DownloadRow = 2;
 static int DetailCellTextTag = 10;
 static int DetailCellDetailTag = 11;
 static NSString *RightDetailCellIdentifier = @"RightDetailCell";
+static CGSize maximumSize;
 
 - (void)viewDidLoad
 {
@@ -238,16 +242,35 @@ static NSString *RightDetailCellIdentifier = @"RightDetailCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     NSString *tag = [self tagForIndexPath:indexPath];
     if (tag) {
         return 44.0;
     }
     NSInteger i = indexPath.section - self.tagPredicates.count;
     if (i != 0) return 44.0;
-    CGSize constraintSize = CGSizeMake(260.0f, MAXFLOAT);
-    CGSize labelSize = [self.guide.desc.stringByStrippingHTML sizeWithFont:[UIFont systemFontOfSize:15.0]
-                                                         constrainedToSize:constraintSize
-                                                             lineBreakMode:NSLineBreakByWordWrapping];
+    //comentador por M.Lujano:28/06/2016
+    //CGSize constraintSize = CGSizeMake(260.0f, MAXFLOAT);
+    //CGSize labelSize = [self.guide.desc.stringByStrippingHTML sizeWithFont:[UIFont systemFontOfSize:15.0]
+    //                                                     constrainedToSize:constraintSize
+    //
+    //                                                     lineBreakMode:NSLineBreakByWordWrapping];
+    
+    //primer intento M.Lujano:28/06/2016
+    //let's make an NSAttributedString first
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString: self.guide.desc.stringByStrippingHTML];
+    //add LineBreakMode
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+    [attributedString setAttributes:@{NSParagraphStyleAttributeName:paragraphStyle}
+                              range:NSMakeRange(0, attributedString.length)];
+    //Add Font
+    [attributedString setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0]} range:NSMakeRange(0,attributedString.length)];
+    //Now let's make the Bounding Rect
+    CGSize labelSize = [attributedString boundingRectWithSize:maximumSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    
+    
+       
     return labelSize.height + 20;
 }
 

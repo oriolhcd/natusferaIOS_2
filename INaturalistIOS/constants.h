@@ -26,13 +26,13 @@
     #define INatWebBaseURL @"http://127.0.0.1:3000"
 #else
     // base URL for all API requests
-    #define INatBaseURL @"https://www.inaturalist.org"
+    #define INatBaseURL @"http://natusfera.gbif.es"
 
     // base URL for all media upload API requests
-    #define INatMediaBaseURL @"https://www.inaturalist.org"
+    #define INatMediaBaseURL @"http://natusfera.gbif.es"
 
     // base URL for all website requests
-    #define INatWebBaseURL @"http://www.inaturalist.org"
+    #define INatWebBaseURL @"http://natusfera.gbif.es"
 #endif
 
 #endif

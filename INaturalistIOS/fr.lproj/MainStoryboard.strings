@@ -10,8 +10,8 @@
 /* Class = "IBUILabel"; text = "Categorize new observations"; ObjectID = "thU-yQ-HUV"; */
 "thU-yQ-HUV.text" = "Classez les nouvelles observations";
 
-/* Class = "IBUILabel"; text = "iNaturalist Network"; ObjectID = "g3B-dy-Lka"; */
-"g3B-dy-Lka.text" = "iNaturalist Network";
+/* Class = "IBUILabel"; text = "Natusfera Network"; ObjectID = "g3B-dy-Lka"; */
+"g3B-dy-Lka.text" = "Natusfera Network";
 
 /* Class = "IBUINavigationItem"; title = "Guides"; ObjectID = "0U1-va-cIB"; */
 "0U1-va-cIB.title" = "Guides";
@@ -44,7 +44,7 @@
 "nla-WE-iqA.text" = "Username";
 
 /* Class = "IBUITextField"; placeholder = "Your iNat username"; ObjectID = "7ua-fh-uvU"; */
-"7ua-fh-uvU.placeholder" = "Votre nom d'utilisateur iNat";
+"7ua-fh-uvU.placeholder" = "Votre nom d'utilisateur Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "What did you see?"; ObjectID = "9br-9C-J7v"; */
 "9br-9C-J7v.headerTitle" = "Qu'avez-vous vu?";
@@ -154,8 +154,8 @@
 /* Class = "IBUILabel"; text = "Need ID help?"; ObjectID = "QYT-BR-dNq"; */
 "QYT-BR-dNq.text" = "Besoin d'aide avec votre ID?";
 
-/* Class = "IBUILabel"; text = "Designed and built by iNaturalist at the California Academy of Sciences, with support from the Encyclopedia of Life.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists! "; ObjectID = "Qrv-G3-6nh"; */
-"Qrv-G3-6nh.text" = "Conçu et programmé par iNaturalist, à la California Academy of Sciences, avec le soutien de l'Encyclopédie de la vie.\n\nCette application utilise des éléments libres ou protégés par Creative Commons, comme Three20, Restkit, TapkuLibrary par Devin Ross, DejalActivityView par David Sinclair, ainsi que les icones Glyphish par Joseph Wain. Nous saluons le talent et la générosité de ces programmeurs et artistes.";
+/* Class = "IBUILabel"; text = "Designed and built by Natusfera at the California Academy of Sciences, with support from the Encyclopedia of Life.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists! "; ObjectID = "Qrv-G3-6nh"; */
+"Qrv-G3-6nh.text" = "Conçu et programmé par Natusfera, à la California Academy of Sciences, avec le soutien de l'Encyclopédie de la vie.\n\nCette application utilise des éléments libres ou protégés par Creative Commons, comme Three20, Restkit, TapkuLibrary par Devin Ross, DejalActivityView par David Sinclair, ainsi que les icones Glyphish par Joseph Wain. Nous saluons le talent et la générosité de ces programmeurs et artistes.";
 
 /* Class = "IBUILabel"; text = "???"; ObjectID = "R4F-3k-D7x"; */
 "R4F-3k-D7x.text" = "???";
@@ -256,8 +256,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "hKK-sS-qAN"; */
 "hKK-sS-qAN.title" = "Annuler";
 
-/* Class = "IBUIButton"; normalTitle = "View on iNaturalist"; ObjectID = "hX2-Qg-qfb"; */
-"hX2-Qg-qfb.normalTitle" = "Voir sur iNaturalist";
+/* Class = "IBUIButton"; normalTitle = "View on Natusfera"; ObjectID = "hX2-Qg-qfb"; */
+"hX2-Qg-qfb.normalTitle" = "Voir sur Natusfera";
 
 /* Class = "IBUILabel"; text = "Sign in"; ObjectID = "hfA-vB-13u"; */
 "hfA-vB-13u.text" = "Connexion";
@@ -286,8 +286,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Done"; ObjectID = "mgd-CX-pVK"; */
 "mgd-CX-pVK.title" = "Terminé";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Your iNaturalist Account"; ObjectID = "oWq-bA-sYY"; */
-"oWq-bA-sYY.headerTitle" = "Votre compte iNaturalist";
+/* Class = "IBUITableViewSection"; headerTitle = "Your Natusfera Account"; ObjectID = "oWq-bA-sYY"; */
+"oWq-bA-sYY.headerTitle" = "Votre compte Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "App Settings"; ObjectID = "LbD-zB-zU2"; */
 "LbD-zB-zU2.headerTitle" = "Paramètres de l'application";
@@ -328,8 +328,8 @@
 /* Class = "IBUITabBarItem"; title = "Observations"; ObjectID = "s0d-iz-ydn"; */
 "s0d-iz-ydn.title" = "Observations";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Sign in to iNaturalist.org"; ObjectID = "tW8-NR-sj7"; */
-"tW8-NR-sj7.headerTitle" = "Connexion à iNaturalist.org";
+/* Class = "IBUITableViewSection"; headerTitle = "Sign in to Natusfera.gbif.es"; ObjectID = "tW8-NR-sj7"; */
+"tW8-NR-sj7.headerTitle" = "Connexion à Natusfera.gbif.es";
 
 /* Class = "IBUIBarButtonItem"; title = "Log in"; ObjectID = "tiA-DP-jEV"; */
 "tiA-DP-jEV.title" = "Connexion";

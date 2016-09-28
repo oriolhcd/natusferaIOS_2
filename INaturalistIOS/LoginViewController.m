@@ -624,7 +624,7 @@
                                                        alertMsg = error.localizedDescription;
                                                    }
                                                } else {
-                                                   alertMsg = NSLocalizedString(@"Failed to login to iNaturalist. Please try again.",
+                                                   alertMsg = NSLocalizedString(@"Failed to login to Natusfera. Please try again.",
                                                                                 @"Unknown iNat login error");
                                                }
                                                [[[UIAlertView alloc] initWithTitle:alertTitle
@@ -667,7 +667,7 @@
     
     NSString *alertTitle = NSLocalizedString(@"Check your email",
                                              @"title of alert after you reset your password");
-    NSString *alertMsg = NSLocalizedString(@"If the email address you entered is associated with an iNaturalist account, you should receive an email at that address with a link to reset your password.",
+    NSString *alertMsg = NSLocalizedString(@"If the email address you entered is associated with an Natusfera account, you should receive an email at that address with a link to reset your password.",
                                            @"body of alert after you reset your password");
     
     av = [[UIAlertView alloc] initWithTitle:alertTitle

@@ -27,6 +27,10 @@
     return self;
 }
 
+- (NSString *)photoKey {
+    return nil;
+}
+
 - (NSArray *)guidePhotos
 {
     if (!_guidePhotos) {

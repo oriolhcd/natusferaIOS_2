@@ -11,7 +11,7 @@
 @class LoginController;
 
 @interface INaturalistAppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window; //corresponde a la ventana de inicio de la aplicación M.Lujano:9-06-2016
 @property (strong, nonatomic) RKObjectManager *photoObjectManager;
 @property (strong, nonatomic) LoginController *loginController;
 

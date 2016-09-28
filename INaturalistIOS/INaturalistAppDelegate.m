@@ -86,6 +86,9 @@
 }
 
 - (void)showLoadingScreen {
+    //se llama a la clase e inicializa el .xib a traves del parametro initwithnibname
+    //antes los archivos .xib se llamaban .nib por eso se hace referencia en initwithNibname
+    
     UIViewController *loadingVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     
     UIImageView *launchImageView = ({
@@ -108,7 +111,7 @@
         view;
     });
     [loadingVC.view addSubview:spinner];
-    
+    //establemos la ventana principal
     [self.window setRootViewController:loadingVC];
 }
 
@@ -225,7 +228,8 @@
     // User Agent
     UIDevice *d = [UIDevice currentDevice];
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    NSString *userAgent = [NSString stringWithFormat:@"iNaturalist/%@ (iOS %@ %@ %@)", 
+    //NSString *userAgent = [NSString stringWithFormat:@"iNaturalist/%@ (iOS %@ %@ %@)", //M.Lujano:10/06/2016
+    NSString *userAgent = [NSString stringWithFormat:@"Natusfera/%@ (iOS %@ %@ %@)",
                            appVersion,
                            d.systemName, 
                            d.systemVersion, 

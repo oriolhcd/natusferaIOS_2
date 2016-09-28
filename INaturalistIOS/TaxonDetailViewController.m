@@ -188,7 +188,7 @@ static char SUMMARY_ASSOCIATED_KEY;
     self.taxon = [[Taxon objectsWithPredicate:taxonPredicate] firstObject];
     
     if (!self.taxon || (self.taxon.wikipediaSummary.length == 0 && [[[RKClient sharedClient] reachabilityObserver] isNetworkReachable])) {
-        NSString *urlString = [[NSURL URLWithString:[NSString stringWithFormat:@"/taxa/%ld.json", self.taxonId]
+        NSString *urlString = [[NSURL URLWithString:[NSString stringWithFormat:@"/taxa/%ld.json", (long)self.taxonId]
                                       relativeToURL:[NSURL inat_baseURL]] absoluteString];
 
         __weak typeof(self)weakSelf = self;
@@ -298,6 +298,7 @@ static char SUMMARY_ASSOCIATED_KEY;
                 [cell.creditsButton addTarget:self action:@selector(creditsTapped:) forControlEvents:UIControlEventTouchUpInside];
                 
                 __weak typeof(self) weakSelf = self;
+                (void)weakSelf;//now used
                 [cell.taxonPhoto sd_setImageWithURL:[NSURL URLWithString:tp.mediumURL]
                                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                               dispatch_async(dispatch_get_main_queue(), ^{

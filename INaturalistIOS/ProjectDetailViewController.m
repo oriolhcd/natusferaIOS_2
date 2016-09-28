@@ -20,6 +20,7 @@
 #import "INatWebController.h"
 
 static const int LeaveProjectAlertViewTag = 1;
+static CGSize maximumSize;
 
 @implementation ProjectDetailViewController
 @synthesize project = _project;
@@ -219,9 +220,25 @@ static const int LeaveProjectAlertViewTag = 1;
     s = [s stringByReplacingOccurrencesOfString:@"</p>" withString:@"\n"];
     s = [s stringByRemovingHTML];
     s = [s stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]];
-    CGSize size = [s sizeWithFont:[UIFont systemFontOfSize:15] 
-                    constrainedToSize:CGSizeMake(320, 1000) 
-                    lineBreakMode:NSLineBreakByWordWrapping];
+    
+    //comentado por M.Lujano:29/06/2016
+    //CGSize size = [s sizeWithFont:[UIFont systemFontOfSize:15]
+    //                constrainedToSize:CGSizeMake(320, 1000)
+    //                lineBreakMode:NSLineBreakByWordWrapping];
+    
+    //return size.height;
+    
+    //lets make an NSAttributedString first
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.guide.desc.stringByStrippingHTML];
+    //add line break mode
+    NSMutableParagraphStyle *paragraphStyle=[NSMutableParagraphStyle new];
+    [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+    [attributedString setAttributes:@{NSParagraphStyleAttributeName:paragraphStyle} range:NSMakeRange(0, attributedString.length)];
+    //Add Font
+    [attributedString setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0]} range:NSMakeRange(0, attributedString.length)];
+    //now lets make the bounding Rect
+    CGSize size =[attributedString boundingRectWithSize: maximumSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+    
     return size.height;
 }
 
@@ -240,9 +257,22 @@ static const int LeaveProjectAlertViewTag = 1;
         } else {
             first = [NSString stringWithString:NSLocalizedString(@"No observation rules",nil)];
         }
-        CGSize s = [first sizeWithFont:[UIFont systemFontOfSize:15] 
-                     constrainedToSize:CGSizeMake(320, 1000) 
-                         lineBreakMode:NSLineBreakByWordWrapping];
+        //comentado por M.Lujano:29/07/2016
+        //CGSize s = [first sizeWithFont:[UIFont systemFontOfSize:15]
+        //             constrainedToSize:CGSizeMake(320, 1000)
+        //                 lineBreakMode:NSLineBreakByWordWrapping];
+        
+        //lets make an NSAttributedString first
+        NSMutableAttributedString *attributedString =[[NSMutableAttributedString alloc] initWithString:self.guide.desc.stringByStrippingHTML];
+        //add line break modeM
+        NSMutableParagraphStyle *paragraphStyle =[NSMutableParagraphStyle new];
+        [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+        [attributedString setAttributes:@{NSParagraphStyleAttributeName:paragraphStyle} range:NSMakeRange(0, attributedString.length)];
+        //add font
+        [attributedString setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0]} range:NSMakeRange(0, attributedString.length)];
+        //now ltes make the bounding Rect
+        CGSize s =[attributedString boundingRectWithSize: maximumSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+                                                      
         return s.height * terms.count + 10;
     }
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];

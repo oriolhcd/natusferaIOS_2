@@ -121,6 +121,7 @@
 
     float screenMax = MAX([UIScreen mainScreen].bounds.size.width,
                           [UIScreen mainScreen].bounds.size.height);
+    (void)screenMax; //used
     
     // "small" == asset fullscreen
     @autoreleasepool {

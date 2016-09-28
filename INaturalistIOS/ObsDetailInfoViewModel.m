@@ -271,9 +271,9 @@
                 } else if (!self.observation.observedOn) {
                     footer.dataQualityDetails = NSLocalizedString(@"This observation needs a date to be considered for Research Grade.", nil);
                 } else if (self.observation.captive.boolValue) {
-                    footer.dataQualityDetails = NSLocalizedString(@"This observation is Casual Grade because it has been voted captive or cultivated by the iNaturalist community.", nil);
+                    footer.dataQualityDetails = NSLocalizedString(@"This observation is Casual Grade because it has been voted captive or cultivated by the Natusfera community.", nil);
                 } else {
-                    footer.dataQualityDetails = NSLocalizedString(@"This observation has been voted as Casual Grade by the iNaturalist community.", nil);
+                    footer.dataQualityDetails = NSLocalizedString(@"This observation has been voted as Casual Grade by the Natusfera community.", nil);
                 }
             } else {
                 footer.dataQualityDetails = nil;
@@ -382,7 +382,7 @@
         // data quality, do nothing
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         if (self.observation.dataQuality == ObsDataQualityNone) {
-            NSURL *dataQualityURL = [NSURL URLWithString:@"http://www.inaturalist.org/pages/help#quality"];
+            NSURL *dataQualityURL = [NSURL URLWithString:@"http://natusfera.gbif.es/pages/help#quality"];
             if (dataQualityURL) {
                 [[UIApplication sharedApplication] openURL:dataQualityURL];
             }

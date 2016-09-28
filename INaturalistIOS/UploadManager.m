@@ -264,7 +264,7 @@
                         NSString *errorMsg = [NSString stringWithFormat:NSLocalizedString(@"Failed to upload photo # %d from observation '%@'",
                                                                                           @"error message when an obs photo doesn't have a file on the phone."),
                                               index, obsName];
-                        NSError *error = [NSError errorWithDomain:@"org.inaturalist"
+                        NSError *error = [NSError errorWithDomain:@"es.gbif.natusfera"
                                                              code:1201
                                                          userInfo:@{
                                                                     NSLocalizedDescriptionKey: errorMsg,

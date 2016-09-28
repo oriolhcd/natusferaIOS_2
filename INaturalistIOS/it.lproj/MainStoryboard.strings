@@ -10,8 +10,8 @@
 /* Class = "IBUILabel"; text = "Categorize new observations"; ObjectID = "thU-yQ-HUV"; */
 "thU-yQ-HUV.text" = "Suddividere in categorie nuove osservazioni";
 
-/* Class = "IBUILabel"; text = "iNaturalist Network"; ObjectID = "g3B-dy-Lka"; */
-"g3B-dy-Lka.text" = "La rete di iNaturalist";
+/* Class = "IBUILabel"; text = "Natusfera Network"; ObjectID = "g3B-dy-Lka"; */
+"g3B-dy-Lka.text" = "La rete di Natusfera";
 
 /* Class = "IBUINavigationItem"; title = "Guides"; ObjectID = "0U1-va-cIB"; */
 "0U1-va-cIB.title" = "Guide";
@@ -44,7 +44,7 @@
 "nla-WE-iqA.text" = "Nome utente";
 
 /* Class = "IBUITextField"; placeholder = "Your iNat username"; ObjectID = "7ua-fh-uvU"; */
-"7ua-fh-uvU.placeholder" = "Tuo nome utente iNat";
+"7ua-fh-uvU.placeholder" = "Tuo nome utente Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "What did you see?"; ObjectID = "9br-9C-J7v"; */
 "9br-9C-J7v.headerTitle" = "Cosa hai visto?";
@@ -53,7 +53,7 @@
 "AWa-0U-YdH.text" = "Attribuzione";
 
 /* Class = "IBUITextField"; placeholder = "Your iNat password"; ObjectID = "AeG-t0-DTD"; */
-"AeG-t0-DTD.placeholder" = "Tua password iNat";
+"AeG-t0-DTD.placeholder" = "Tua password Natusfera";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "AiV-F7-sFl"; */
 "AiV-F7-sFl.text" = "Dettagli";
@@ -110,7 +110,7 @@
 "IvC-UJ-yev.text" = "Contatta il supporto";
 
 /* Class = "IBUILabel"; text = "Love iNat? Rate Us"; ObjectID = "r3a-dI-zLW"; */
-"r3a-dI-zLW.text" = "Ti piace iNat? Votaci";
+"r3a-dI-zLW.text" = "Ti piace Natusfera? Votaci";
 
 /* Class = "IBUILabel"; text = "Choose projects"; ObjectID = "J9i-XA-tlL"; */
 "J9i-XA-tlL.text" = "Scegli progetti";
@@ -154,8 +154,8 @@
 /* Class = "IBUILabel"; text = "Need ID help?"; ObjectID = "QYT-BR-dNq"; */
 "QYT-BR-dNq.text" = "Serve aiuto con l'ID?";
 
-/* Class = "IBUILabel"; text = "Designed and built by iNaturalist at the California Academy of Sciences, with support from the Encyclopedia of Life.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists! "; ObjectID = "Qrv-G3-6nh"; */
-"Qrv-G3-6nh.text" = "Progettato e costruito da iNaturalist alla California Academy of Sciences, con il supporto della Encyclopedia of Life.\n\nQuesta app fa ampio uso di materiale da open source e Licenze Creative Commons, inclusi Three20, Restkit, TapkuLibrary di Devin Ross, DejalActivityView di David Sinclair, e icone Glyphish di Joseph Wain. Sentiti ringraziamenti a questi generosi e talentuosi ingegneri e artisti! ";
+/* Class = "IBUILabel"; text = "Designed and built by Natusfera at the California Academy of Sciences, with support from the Encyclopedia of Life.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists! "; ObjectID = "Qrv-G3-6nh"; */
+"Qrv-G3-6nh.text" = "Progettato e costruito da Natusfera alla California Academy of Sciences, con il supporto della Encyclopedia of Life.\n\nQuesta app fa ampio uso di materiale da open source e Licenze Creative Commons, inclusi Three20, Restkit, TapkuLibrary di Devin Ross, DejalActivityView di David Sinclair, e icone Glyphish di Joseph Wain. Sentiti ringraziamenti a questi generosi e talentuosi ingegneri e artisti! ";
 
 /* Class = "IBUILabel"; text = "???"; ObjectID = "R4F-3k-D7x"; */
 "R4F-3k-D7x.text" = "???";
@@ -256,8 +256,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Cancel"; ObjectID = "hKK-sS-qAN"; */
 "hKK-sS-qAN.title" = "Annulla";
 
-/* Class = "IBUIButton"; normalTitle = "View on iNaturalist"; ObjectID = "hX2-Qg-qfb"; */
-"hX2-Qg-qfb.normalTitle" = "Guarda su iNaturalist";
+/* Class = "IBUIButton"; normalTitle = "View on Natusfera"; ObjectID = "hX2-Qg-qfb"; */
+"hX2-Qg-qfb.normalTitle" = "Guarda su Natusfera";
 
 /* Class = "IBUILabel"; text = "Sign in"; ObjectID = "hfA-vB-13u"; */
 "hfA-vB-13u.text" = "Accedi";
@@ -286,8 +286,8 @@
 /* Class = "IBUIBarButtonItem"; title = "Done"; ObjectID = "mgd-CX-pVK"; */
 "mgd-CX-pVK.title" = "Fatto";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Your iNaturalist Account"; ObjectID = "oWq-bA-sYY"; */
-"oWq-bA-sYY.headerTitle" = "Il tuo account iNaturalist";
+/* Class = "IBUITableViewSection"; headerTitle = "Your Natusfera Account"; ObjectID = "oWq-bA-sYY"; */
+"oWq-bA-sYY.headerTitle" = "Il tuo account Natusfera";
 
 /* Class = "IBUITableViewSection"; headerTitle = "App Settings"; ObjectID = "LbD-zB-zU2"; */
 "LbD-zB-zU2.headerTitle" = "Impostazioni App";
@@ -328,8 +328,8 @@
 /* Class = "IBUITabBarItem"; title = "Observations"; ObjectID = "s0d-iz-ydn"; */
 "s0d-iz-ydn.title" = "Osservazioni";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Sign in to iNaturalist.org"; ObjectID = "tW8-NR-sj7"; */
-"tW8-NR-sj7.headerTitle" = "Accedi a iNaturalist.org";
+/* Class = "IBUITableViewSection"; headerTitle = "Sign in to Natusfera.gbif.es"; ObjectID = "tW8-NR-sj7"; */
+"tW8-NR-sj7.headerTitle" = "Accedi a Natusfera.gbif.es";
 
 /* Class = "IBUIBarButtonItem"; title = "Log in"; ObjectID = "tiA-DP-jEV"; */
 "tiA-DP-jEV.title" = "Accedi";

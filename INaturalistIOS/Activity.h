@@ -18,4 +18,8 @@
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) Observation *observation;
 @property (nonatomic, retain) NSDate * createdAt;
+@property (nonatomic, retain) NSString *userName;
+@property (nonatomic, retain) NSURL *userIconUrl;
+
+@property (nonatomic, assign) NSInteger userId;
 @end

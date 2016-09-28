@@ -54,6 +54,9 @@
 
     NSFetchedResultsController *_fetchedResultsController;
 }
+
+
+
 @property RKObjectLoader *meObjectLoader;
 @property MeHeaderView *meHeader;
 @property (nonatomic, strong) NSDate *lastRefreshAt;
@@ -62,6 +65,7 @@
 @property UILabel *noObservationsLabel;
 @property UIImageView *noObservationsImageView;
 @property NSMutableDictionary *uploadProgress;
+
 @end
 
 @implementation ObservationsViewController
@@ -96,7 +100,7 @@
                                                                                       NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0f],
                                                                                       }];
 
-    NSString *alertMsg = NSLocalizedString(@"Turn on Auto Upload and your observations will be automatically uploaded to iNaturalist.",
+    NSString *alertMsg = NSLocalizedString(@"Turn on Auto Upload and your observations will be automatically uploaded to Natusfera.",
                                            @"message of autoupload introduction alert view");
     NSAttributedString *attrMsg = [[NSAttributedString alloc] initWithString:alertMsg
                                                                   attributes:@{ NSForegroundColorAttributeName: [UIColor whiteColor] }];
@@ -199,7 +203,7 @@
     
     if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Internet connection required",nil)
-                                                     message:NSLocalizedString(@"You must be connected to the Internet to upload to iNaturalist.org",nil)
+                                                     message:NSLocalizedString(@"You must be connected to the Internet to upload to Natusfera.gbif.es",nil)
                                                     delegate:self 
                                            cancelButtonTitle:NSLocalizedString(@"OK",nil)
                                            otherButtonTitles:nil];
@@ -270,7 +274,7 @@
         
         if (notify) {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network unavailable", nil)
-                                        message:NSLocalizedString(@"You must be connected to the Internet to upload to iNaturalist.org", nil)
+                                        message:NSLocalizedString(@"You must be connected to the Internet to upload to Natusfera.gbfi.es", nil)
                                        delegate:nil
                               cancelButtonTitle:NSLocalizedString(@"OK", nil)
                               otherButtonTitles:nil] show];
@@ -303,18 +307,50 @@
 
 - (void)refreshData
 {
+    
 	NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:INatUsernamePrefKey];
+    //comentado por M.Lujano:24/06/2016
+    //NSString *path = [NSString stringWithFormat:@"/observations/%@.json?extra=observation_photos,projects,fields&per_page=10", username];
+    
 	if (username.length) {
         [[Analytics sharedClient] debugLog:@"Network - Refresh 10 recent observations"];
+        
+        //las siguientes lineas de código has sido comentadas por M.Lujano:26-09-2016
+        //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@.json?extra=observation_photos,projects,fields&per_page=10", username]
+        //                                             objectMapping:[Observation mapping]
+        //                                                  delegate:self];
+        
         [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@.json?extra=observation_photos,projects,fields&per_page=10", username]
-                                                     objectMapping:[Observation mapping]
-                                                          delegate:self];
+                                                        usingBlock:^(RKObjectLoader *loader){
+                                                            loader.objectMapping=[Observation mapping];
+                                                            loader.delegate=self;
+                                                        }];
+         
+
+        
+        
+        //comentado por M.Lujano:08/06/2016
+        //[[RKObjectManager sharedManager] loadObjectAtResourcePath:path usingBlock:^(RKObjectLoader *loader)
+        // {
+        //     loader.objectMapping=[Observation mapping];
+        //     loader.delegate=self;
+        // }];
+        
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [[Analytics sharedClient] debugLog:@"Network - Refresh 200 recent observations"];
+            
+            //las siguientes lineas de codigo han sido comentadas por M.Lujano:26-09-2016
+            //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@.json?extra=observation_photos,projects,fields", username]
+              //                                           objectMapping:[Observation mapping]
+                //                                              delegate:self];
+            
             [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@.json?extra=observation_photos,projects,fields", username]
-                                                         objectMapping:[Observation mapping]
-                                                              delegate:self];
+                                                            usingBlock:^(RKObjectLoader *loader){
+                                                                loader.objectMapping =[Observation mapping];
+                                                                loader.delegate=self;
+                                                            }];
+            
         });
 
         [self loadUserForHeader];
@@ -1479,7 +1515,7 @@
                                       @"Via": @"Auth Required",
                                       }];
     
-    NSString *reasonMsg = NSLocalizedString(@"You must be logged in to upload to iNaturalist.org.",
+    NSString *reasonMsg = NSLocalizedString(@"You must be logged in to upload to Natusfera.gbif.es.",
                                             @"This is an explanation for why the sync button triggers a login prompt.");
     [self presentSignupSplashWithReason:reasonMsg];
 }

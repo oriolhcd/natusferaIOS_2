@@ -9,5 +9,5 @@
 #import "Activity.h"
 
 @implementation Activity
-
+@synthesize observation, user, body, createdAt, userIconUrl, userName, userId;
 @end

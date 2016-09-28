@@ -82,6 +82,7 @@
     } else {
         return nil;
     }
+    return 0; //mlb
 }
 
 - (UITableViewCell *)userDateCellForTableView:(UITableView *)tableView {
@@ -423,7 +424,7 @@
 
 - (void)captiveInfoPressed {
     NSString *captiveTitle = NSLocalizedString(@"What does captive / cultivated mean?", @"title for alert explaining what captive means");
-    NSString *captiveMsg = NSLocalizedString(@"Captive / cultivated means that the organism exists where it was observed because humans intended it to be there. iNaturalist is about observing wild organisms, and our scientific data partners are not interested in observations of pets, gardens, or animals in zoos.", @"message explaining what captive / cultivated means for iNaturalist");
+    NSString *captiveMsg = NSLocalizedString(@"Captive / cultivated means that the organism exists where it was observed because humans intended it to be there. Natusfera is about observing wild organisms, and our scientific data partners are not interested in observations of pets, gardens, or animals in zoos.", @"message explaining what captive / cultivated means for Natusfera");
     
     [[[UIAlertView alloc] initWithTitle:captiveTitle
                                 message:captiveMsg

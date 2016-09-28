@@ -97,7 +97,7 @@ static const int AutouploadSwitchTag = 101;
 - (void)clickedSignOut
 {
     UIAlertView *av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Are you sure?",nil)
-                                                 message:NSLocalizedString(@"This will delete all your observations on this device.  It will not affect any observations you've uploaded to iNaturalist.",nil)
+                                                 message:NSLocalizedString(@"This will delete all your observations on this device.  It will not affect any observations you've uploaded to Natusfera.",nil)
                                                 delegate:self 
                                        cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
                                        otherButtonTitles:NSLocalizedString(@"Sign out",nil), nil];
@@ -155,12 +155,12 @@ static const int AutouploadSwitchTag = 101;
     
     NSArray *tutorialImages = @[
                                 [UIImage imageNamed:@"tutorial1"],
-                                [UIImage imageNamed:@"tutorial2"],
-                                [UIImage imageNamed:@"tutorial3"],
-                                [UIImage imageNamed:@"tutorial4"],
-                                [UIImage imageNamed:@"tutorial5"],
-                                [UIImage imageNamed:@"tutorial6"],
-                                [UIImage imageNamed:@"tutorial7"],
+                                //[UIImage imageNamed:@"tutorial2"],
+                                //[UIImage imageNamed:@"tutorial3"],
+                                //[UIImage imageNamed:@"tutorial4"],
+                                //[UIImage imageNamed:@"tutorial5"],
+                                //[UIImage imageNamed:@"tutorial6"],
+                                //[UIImage imageNamed:@"tutorial7"],
                                 ];
     
     NSArray *galleryData = [tutorialImages bk_map:^id(UIImage *image) {
@@ -191,7 +191,7 @@ static const int AutouploadSwitchTag = 101;
 
 - (void)sendSupportEmail
 {
-    NSString *email = [NSString stringWithFormat:@"mailto://help@inaturalist.org?cc=&subject=iNaturalist iPhone help: version %@", 
+    NSString *email = [NSString stringWithFormat:@"mailto://natusfera@gbif.es?cc=&subject=Natusfera iPhone help: version %@",
                        self.versionText];
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
@@ -436,7 +436,7 @@ static const int AutouploadSwitchTag = 101;
                 Partner *p = [self.partnerController partnerForSiteId:me.siteId.integerValue];
                 detailTextLabel.text = p.name;
             } else {
-                detailTextLabel.text = @"iNaturalist";
+                detailTextLabel.text = @"Natusfera";
             }
             
         }
@@ -495,7 +495,7 @@ static const int AutouploadSwitchTag = 101;
             } else {
                 [[Analytics sharedClient] event:kAnalyticsEventSettingsNetworkChangeBegan];
                 // show SERIOUS alert
-                NSString *alertMsg = NSLocalizedString(@"Changing your iNaturalist Network affiliation will alter some parts of the app, like what taxa appear in searches, but it will also allow the new network partner to view and download all of your data. Are you sure you want to do this?",
+                NSString *alertMsg = NSLocalizedString(@"Changing your Natusfera Network affiliation will alter some parts of the app, like what taxa appear in searches, but it will also allow the new network partner to view and download all of your data. Are you sure you want to do this?",
                                                        @"alert msg before changing the network affiliation.");
                 NSString *cancelBtnMsg = NSLocalizedString(@"No, don't change my affiliation", @"cancel button before changing network affiliation.");
                 NSString *continueBtnMsg = NSLocalizedString(@"Yes, change my affiliation", @"continue button before changing network affiliation.");
@@ -517,7 +517,7 @@ static const int AutouploadSwitchTag = 101;
             tooltipText = NSLocalizedString(@"Enable to allow iOS to auto-correct and spell-check Species names.", @"tooltip text for autocorrect settings option.");
         } else if (indexPath.item == 1) {
             // automatically upload
-            tooltipText = NSLocalizedString(@"Automatically upload new or edited content to iNaturalist.org",
+            tooltipText = NSLocalizedString(@"Automatically upload new or edited content to Natusfera.gbif.es",
                                             @"tooltip text for automatically upload option.");
         }
         

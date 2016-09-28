@@ -449,7 +449,7 @@ static UIImage *userIconPlaceholder;
         if (observation.placeGuess && ![observation.placeGuess isEqualToString:@""]) {
             observedLocationLabel.text = observation.placeGuess;
         } else {
-            observedLocationLabel.text = [NSString stringWithFormat:@"%f,%f", observation.latitude, observation.longitude];
+            observedLocationLabel.text = [NSString stringWithFormat:@"%@,%@", observation.latitude, observation.longitude];
             // attempt to geocode the lat/lng into a place name
             CLLocation *location = [[CLLocation alloc] initWithLatitude:observation.latitude.floatValue
                                                               longitude:observation.longitude.floatValue];

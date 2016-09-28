@@ -53,7 +53,7 @@
                 
                 button.layer.cornerRadius = 17.0f;
 
-                [button setTitle:NSLocalizedString(@"Log In", @"Title for button that allows users to log in to their existing iNat account")
+                [button setTitle:NSLocalizedString(@"Log In", @"Title for button that allows users to log in to their existing Natusfera account")
                         forState:UIControlStateNormal];
                 
                 button;
@@ -70,7 +70,7 @@
                 
                 button.layer.cornerRadius = 17.0f;
                 
-                [button setTitle:NSLocalizedString(@"Sign Up", @"Title for button that allows users to sign up for a new iNat account")
+                [button setTitle:NSLocalizedString(@"Sign Up", @"Title for button that allows users to sign up for a new Natusfera account")
                         forState:UIControlStateNormal];
                 
                 button;

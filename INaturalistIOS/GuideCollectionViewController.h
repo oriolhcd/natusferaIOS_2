@@ -11,6 +11,7 @@
 #import "RXMLElement.h"
 #import "GuideMenuViewController.h"
 
+
 @interface GuideCollectionViewController : UICollectionViewController <UISearchBarDelegate, GuideMenuControllerDelegate>
 {
     NSTimer *searchTimer;
@@ -26,6 +27,8 @@
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) NSString *search;
 @property (nonatomic, strong) NSMutableArray *tags;
+
+
 
 - (void)loadXML:(NSString *)path;
 - (void)downloadXML:(NSString *)url;

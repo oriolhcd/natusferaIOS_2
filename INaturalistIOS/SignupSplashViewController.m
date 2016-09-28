@@ -656,8 +656,8 @@ static char PARTNER_ASSOCIATED_KEY;
     NSString *alertTitle = [NSString stringWithFormat:NSLocalizedString(@"Use %@?",
                                                                         @"join iNat network partner alert title"),
                             partner.name];
-    NSString *alertMsgFmt = NSLocalizedString(@"Would you like to use %@, a member of the iNaturalist Network in %@? Clicking OK will localize your experience and share data accordingly.",
-                                              @"join iNat network partner alert message");
+    NSString *alertMsgFmt = NSLocalizedString(@"Would you like to use %@, a member of the Natusfera Network in %@? Clicking OK will localize your experience and share data accordingly.",
+                                              @"join Natuafera network partner alert message");
     NSString *alertMsg = [NSString stringWithFormat:alertMsgFmt, partner.name, partner.countryName];
     
     partnerAlert = [[UIAlertView alloc] initWithTitle:alertTitle

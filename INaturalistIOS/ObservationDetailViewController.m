@@ -59,6 +59,7 @@ static const int LocationTableViewSection = 2;
 static const int ObservedOnTableViewSection = 3;
 static const int MoreSection = 4;
 static const int ProjectsSection = 5;
+static CGSize maximumSize;
 NSString *const ObservationFieldValueDefaultCell = @"ObservationFieldValueDefaultCell";
 NSString *const ObservationFieldValueStaticCell = @"ObservationFieldValueStaticCell";
 NSString *const ObservationFieldValueSwitchCell = @"ObservationFieldValueSwitchCell";
@@ -1422,7 +1423,8 @@ NSString *const ObservationFieldValueSwitchCell = @"ObservationFieldValueSwitchC
     if (indexPath.section == ProjectsSection || indexPath.section == MoreSection) {
         return 44;
     } else if (indexPath.section == NotesTableViewSection && self.observation.inatDescription.length > 0) {
-        NSString *txt = self.observation.inatDescription;
+        //la siguiente liena ha sido comentada por M.Lujano:29/06/2016
+        //NSString *txt = self.observation.inatDescription;
         CGFloat defaultHeight = [super tableView:tableView heightForRowAtIndexPath:indexPath];
         float fontSize;
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -1430,9 +1432,22 @@ NSString *const ObservationFieldValueSwitchCell = @"ObservationFieldValueSwitchC
         } else {
             fontSize = 17;
         }
-        CGSize size = [txt sizeWithFont:[UIFont systemFontOfSize:fontSize]
-                      constrainedToSize:CGSizeMake(320.0, 10000.0)
-                          lineBreakMode:NSLineBreakByWordWrapping];
+        //comentado por M.Lujano:29/06/2016
+        //CGSize size = [txt sizeWithFont:[UIFont systemFontOfSize:fontSize]
+        //              constrainedToSize:CGSizeMake(320.0, 10000.0)
+        //                  lineBreakMode:NSLineBreakByWordWrapping];
+        
+        //lets make an NSAttributedString first
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.guide.desc.stringByStrippingHTML];
+        //add line break mode
+        NSMutableParagraphStyle *paragraphStyle=[NSMutableParagraphStyle new];
+        [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+        [attributedString setAttributes:@{NSParagraphStyleAttributeName:paragraphStyle} range:NSMakeRange(0, attributedString.length)];
+        //add font
+        [attributedString setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0]} range:NSMakeRange(0, attributedString.length)];
+        //now lets make the bounding Rect
+        CGSize size = [attributedString boundingRectWithSize:maximumSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+        
         return MAX(defaultHeight, size.height);
     } else {
         return [super tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -1568,7 +1583,7 @@ NSString *const ObservationFieldValueSwitchCell = @"ObservationFieldValueSwitchC
         } failureBlock:^(NSError *error) {
             NSString *msg = error.localizedFailureReason;
             if (error.code == ALAssetsLibraryAccessUserDeniedError) {
-                msg = NSLocalizedString(@"You've denied iNaturalist access to certain kinds of data, most likely location data, so some of the photo data couldn't be imported.  To change this, open your Settings app, click Location Services, and make sure Location Services are on for iNaturalist.",nil);
+                msg = NSLocalizedString(@"You've denied Natusfera access to certain kinds of data, most likely location data, so some of the photo data couldn't be imported.  To change this, open your Settings app, click Location Services, and make sure Location Services are on for Natusfera.",nil);
             }
             UIAlertView *av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Import Error",nil)
                                                          message:msg

@@ -12,6 +12,7 @@
 #import "ProjectChooserViewController.h"
 #import "TaxaSearchViewController.h"
 #import "DCRoundSwitch.h"
+#import "GuideXML.h"
 
 @class Observation;
 @class ObservationField;
@@ -43,7 +44,8 @@
     ProjectChooserViewControllerDelegate,
     TaxaSearchViewControllerDelegate,
     UIAlertViewDelegate>
-
+//siguiente linea añadida por M.Lujano:29/06/2016
+@property (nonatomic, strong) GuideXML *guide;
 @property (nonatomic, weak) id <ObservationDetailViewControllerDelegate> delegate;
 @property (nonatomic, strong) Observation *observation;
 @property (nonatomic, strong) NSMutableArray *observationPhotos;

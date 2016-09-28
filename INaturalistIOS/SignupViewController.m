@@ -31,7 +31,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        self.title = NSLocalizedString(@"Sign Up", @"Title of the iNaturalist sign up form screen");
+        self.title = NSLocalizedString(@"Sign Up", @"Title of the Natusfera sign up form screen");
     }
     
     return self;
@@ -112,7 +112,7 @@
         label.textAlignment = NSTextAlignmentLeft;
         label.textColor = [UIColor whiteColor];
         
-        NSString *base = NSLocalizedString(@"By using iNaturalist you agree to the Terms of Service and Privacy Policy.", @"Base text for terms of service and privacy policy notice when creating an iNat account.");
+        NSString *base = NSLocalizedString(@"By using Natusfera you agree to the Terms of Service and Privacy Policy.", @"Base text for terms of service and privacy policy notice when creating an Natusfera account.");
         NSString *terms = NSLocalizedString(@"Terms of Service", @"Emphasized part of the terms of service base text.");
         NSString *privacy = NSLocalizedString(@"Privacy Policy", @"Emphasized part of the privacy base text.");
         
@@ -139,10 +139,10 @@
             
             UITapGestureRecognizer *tapSender = (UITapGestureRecognizer *)sender;
             if ([tapSender didTapAttributedTextInLabel:label inRange:termsRange]) {
-                NSURL *termsURL = [NSURL URLWithString:@"http://www.inaturalist.org/pages/terms"];
+                NSURL *termsURL = [NSURL URLWithString:@"http://www.natusfera.gbif.es/pages/terms"];
                 [[UIApplication sharedApplication] openURL:termsURL];
             } else if ([tapSender didTapAttributedTextInLabel:label inRange:privacyRange]) {
-                NSURL *privacyURL = [NSURL URLWithString:@"http://www.inaturalist.org/pages/privacy"];
+                NSURL *privacyURL = [NSURL URLWithString:@"http://www.natusfera.gbif.es/pages/privacy"];
                 [[UIApplication sharedApplication] openURL:privacyURL];
             }
         }];
@@ -501,8 +501,8 @@
     NSInteger selectedPartnerId = self.selectedPartner ? self.selectedPartner.identifier : 1;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = NSLocalizedString(@"Creating iNaturalist account...",
-                                      @"Notice while we're creating an iNat account for them");
+    hud.labelText = NSLocalizedString(@"Creating Natusfera account...",
+                                      @"Notice while we're creating an Natusfera account for them");
     hud.removeFromSuperViewOnHide = YES;
     hud.dimBackground = YES;
 
@@ -542,8 +542,8 @@
                                                     if (error) {
                                                         alertMsg = error.localizedDescription;
                                                     } else {
-                                                        alertMsg = NSLocalizedString(@"Failed to create an iNaturalist account. Please try again.",
-                                                                                   @"Unknown iNaturalist create account error");
+                                                        alertMsg = NSLocalizedString(@"Failed to create an Natusfera account. Please try again.",
+                                                                                   @"Unknown Natusfera create account error");
                                                     }
                                                     
                                                     [[[UIAlertView alloc] initWithTitle:alertTitle

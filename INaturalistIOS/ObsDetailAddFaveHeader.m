@@ -155,7 +155,9 @@
 - (void)setFaveCount:(NSInteger)faveCount {
     _faveCount = faveCount;
     
-    self.faveCountLabel.text = [NSString stringWithFormat:@"%ld", _faveCount];
+    //self.faveCountLabel.text = [NSString stringWithFormat:@"%ld", _faveCount]; ////sentencia original mlb
+    self.faveCountLabel.text = [NSString stringWithFormat:@"%ld", (long)_faveCount];
+    
 }
 
 - (NSInteger)faveCount {

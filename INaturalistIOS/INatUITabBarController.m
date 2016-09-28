@@ -162,13 +162,15 @@ static char PROJECT_ASSOCIATED_KEY;
     switch (source) {
         case INatPhotoSourceCamera:
             alertTitle = NSLocalizedString(@"Cannot access camera", @"Alert title when we don't have permission to access camera.");
-            alertMsg = NSLocalizedString(@"Please make sure iNaturalist is turned on in Settings > Privacy > Camera",
+            //alertMsg = NSLocalizedString(@"Please make sure iNaturalist is turned on in Settings > Privacy > Camera",//M.Lujano:10/06/2016
+            alertMsg = NSLocalizedString(@"Please make sure Natusfera is turned on in Settings > Privacy > Camera",
                                          @"Alert message when we don't have permission to access the camera.");
             break;
         case INatPhotoSourcePhotos:
         default:
             alertTitle = NSLocalizedString(@"Cannot access photos", @"Alert title when we don't have permission to access photos.");
-            alertMsg = NSLocalizedString(@"Please make sure iNaturalist is turned on in Settings > Privacy > Photos",
+            //alertMsg = NSLocalizedString(@"Please make sure iNaturalist is turned on in Settings > Privacy > Photos", //M.Lujano:10/06/2016
+            alertMsg = NSLocalizedString(@"Please make sure Natusfera is turned on in Settings > Privacy > Photos",
                                          @"Alert message when we don't have permission to access the photo library.");
             break;
     }
@@ -534,7 +536,14 @@ static char PROJECT_ASSOCIATED_KEY;
     return [self.selectedViewController shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+
+
+
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations //
+
+//- (NSUInteger)supportedInterfaceOrientations
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     if ([self.selectedViewController isKindOfClass:UINavigationController.class]) {
         UINavigationController *nc = (UINavigationController *)self.selectedViewController;

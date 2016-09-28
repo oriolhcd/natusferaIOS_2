@@ -104,6 +104,7 @@ static const int WebViewTag = 1;
         NSError *error;
         id parameters = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers
                                                           error:&error];
+        (void)parameters;
         if (error) {
             NSLog(@"error: %@", error);
         } else {

@@ -256,9 +256,20 @@ static UIImage *defaultPersonImage;
             && [[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
 
         [[Analytics sharedClient] debugLog:@"Network - Refresh observation activity"];
-		[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", self.observation.recordID]
-													 objectMapping:[Observation mapping]
-														  delegate:self];
+        
+        //las siguientes líneas de código han sido comentadas por M.Lujano:26-09-2016
+		//[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", self.observation.recordID]
+		//											 objectMapping:[Observation mapping]
+		//												  delegate:self];
+        
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", self.observation.recordID]
+                                                        usingBlock:^(RKObjectLoader *loader){
+                                                            loader.objectMapping=[Observation mapping];
+                                                            loader.delegate=self;
+                                                        }];
+         
+
+        
 	}
 }
 
