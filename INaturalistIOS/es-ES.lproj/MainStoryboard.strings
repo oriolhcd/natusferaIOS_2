@@ -1,0 +1,492 @@
+
+/* Class = "UILabel"; text = "Tutorial"; ObjectID = "0Q2-fy-dMQ"; */
+"0Q2-fy-dMQ.text" = "Tutorial";
+
+/* Class = "UINavigationItem"; title = "Guides"; ObjectID = "0U1-va-cIB"; */
+"0U1-va-cIB.title" = "Guides";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0bb-6D-4Hw"; */
+"0bb-6D-4Hw.text" = "Label";
+
+/* Class = "UILabel"; text = "Captive / Cultivated"; ObjectID = "0c6-iu-ARK"; */
+"0c6-iu-ARK.text" = "Captive / Cultivated";
+
+/* Class = "UITextField"; placeholder = "Unknown place"; ObjectID = "1bw-oa-ona"; */
+"1bw-oa-ona.placeholder" = "Unknown place";
+
+/* Class = "UILabel"; text = "Scientific name"; ObjectID = "1hu-IK-XsQ"; */
+"1hu-IK-XsQ.text" = "Scientific name";
+
+/* Class = "UILabel"; text = "your ID"; ObjectID = "1iK-3K-ACP"; */
+"1iK-3K-ACP.text" = "your ID";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2oq-jA-OoV"; */
+"2oq-jA-OoV.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "3BD-cp-ntb"; */
+"3BD-cp-ntb.title" = "Save";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "3Eg-uZ-ogI"; */
+"3Eg-uZ-ogI.text" = "Title";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "3mG-Aq-OEi"; */
+"3mG-Aq-OEi.text" = "Details";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "3qN-6c-EVN"; */
+"3qN-6c-EVN.title" = "Item";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "46e-pE-mJn"; */
+"46e-pE-mJn.text" = "???";
+
+/* Class = "UILabel"; text = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l"; ObjectID = "4is-uw-pth"; */
+"4is-uw-pth.text" = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l";
+
+/* Class = "UINavigationItem"; title = "Observation Activity"; ObjectID = "4vK-Bt-6LG"; */
+"4vK-Bt-6LG.title" = "Observation Activity";
+
+/* Class = "UILabel"; text = "taxon name here"; ObjectID = "6Ac-FE-Mys"; */
+"6Ac-FE-Mys.text" = "taxon name here";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "6Eu-N7-evS"; */
+"6Eu-N7-evS.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Projects"; ObjectID = "6UX-BL-9DW"; */
+"6UX-BL-9DW.title" = "Projects";
+
+/* Class = "UILabel"; text = "Love Natusfera? Rate us"; ObjectID = "6bP-NK-UmB"; */
+"6bP-NK-UmB.text" = "Love Natusfera? Rate us";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "6cS-83-3B7"; */
+"6cS-83-3B7.title" = "Item";
+
+/* Class = "UILabel"; text = "50000"; ObjectID = "9Ge-36-1aq"; */
+"9Ge-36-1aq.text" = "50000";
+
+/* Class = "UITableViewSection"; headerTitle = "What did you see?"; ObjectID = "9br-9C-J7v"; */
+"9br-9C-J7v.headerTitle" = "What did you see?";
+
+/* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "AFb-0q-aeK"; */
+"AFb-0q-aeK.normalTitle" = "Agree";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Be1-xj-miA"; */
+"Be1-xj-miA.text" = "Label";
+
+/* Class = "UILabel"; text = "Lon:"; ObjectID = "CFS-AV-ZYV"; */
+"CFS-AV-ZYV.text" = "Lon:";
+
+/* Class = "UILabel"; text = "Geoprivacy"; ObjectID = "CrY-as-UVn"; */
+"CrY-as-UVn.text" = "Geoprivacy";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "D22-7s-3ca"; */
+"D22-7s-3ca.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Up"; ObjectID = "Drg-bQ-MVS"; */
+"Drg-bQ-MVS.normalTitle" = "Up";
+
+/* Class = "UINavigationItem"; title = "Taxon"; ObjectID = "F6V-RD-Yrx"; */
+"F6V-RD-Yrx.title" = "Taxon";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "FYt-db-0Ka"; */
+"FYt-db-0Ka.title" = "Back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FaP-3x-da8"; */
+"FaP-3x-da8.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Observe"; ObjectID = "GKo-Sv-g5X"; */
+"GKo-Sv-g5X.title" = "Observe";
+
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "GOH-dl-HXL"; */
+"GOH-dl-HXL.normalTitle" = "Join";
+
+/* Class = "UILabel"; text = "R"; ObjectID = "GhD-Pv-hyV"; */
+"GhD-Pv-hyV.text" = "R";
+
+/* Class = "UILabel"; text = "Research Grade"; ObjectID = "Ghi-b0-mds"; */
+"Ghi-b0-mds.text" = "Research Grade";
+
+/* Class = "UITabBarItem"; title = "Projects"; ObjectID = "GmQ-fX-MuU"; */
+"GmQ-fX-MuU.title" = "Projects";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "H9A-Km-Rkh"; */
+"H9A-Km-Rkh.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "HB8-Oo-jRB"; */
+"HB8-Oo-jRB.title" = "Close";
+
+/* Class = "UITableViewSection"; headerTitle = "Identification Taxon"; ObjectID = "Hhm-Rj-8gu"; */
+"Hhm-Rj-8gu.headerTitle" = "Identification Taxon";
+
+/* Class = "UITableViewSection"; headerTitle = "Version"; ObjectID = "I43-iz-miT"; */
+"I43-iz-miT.headerTitle" = "Version";
+
+/* Class = "UILabel"; text = "Contact support"; ObjectID = "IvC-UJ-yev"; */
+"IvC-UJ-yev.text" = "Contact support";
+
+/* Class = "UILabel"; text = "Choose projects"; ObjectID = "J9i-XA-tlL"; */
+"J9i-XA-tlL.text" = "Choose projects";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "JRR-T4-jKQ"; */
+"JRR-T4-jKQ.title" = "Done";
+
+/* Class = "UILabel"; text = "open"; ObjectID = "JkM-AH-Zal"; */
+"JkM-AH-Zal.text" = "open";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "KGf-qa-ltD"; */
+"KGf-qa-ltD.text" = "500";
+
+/* Class = "UINavigationItem"; title = "Search species"; ObjectID = "Kfy-Up-oCb"; */
+"Kfy-Up-oCb.title" = "Search species";
+
+/* Class = "UITableViewSection"; headerTitle = "App Settings"; ObjectID = "LbD-zB-zU2"; */
+"LbD-zB-zU2.headerTitle" = "App Settings";
+
+/* Class = "UILabel"; text = "Natusfera"; ObjectID = "Ldf-mk-Bj8"; */
+"Ldf-mk-Bj8.text" = "Natusfera";
+
+/* Class = "UILabel"; text = "Autocomplete names"; ObjectID = "M0h-Eg-gr3"; */
+"M0h-Eg-gr3.text" = "Autocomplete names";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "M93-9f-xgT"; */
+"M93-9f-xgT.text" = "???";
+
+/* Class = "UINavigationItem"; title = "Add Identification"; ObjectID = "Ml3-QP-W2S"; */
+"Ml3-QP-W2S.title" = "Add Identification";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "N7H-Hl-jcl"; */
+"N7H-Hl-jcl.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "^"; ObjectID = "NVu-fT-hmA"; */
+"NVu-fT-hmA.normalTitle" = "^";
+
+/* Class = "UITextField"; placeholder = "Species name"; ObjectID = "NdE-AU-Gkn"; */
+"NdE-AU-Gkn.placeholder" = "Species name";
+
+/* Class = "UINavigationItem"; title = "Choose projects"; ObjectID = "Nsa-pu-mCD"; */
+"Nsa-pu-mCD.title" = "Choose projects";
+
+/* Class = "UILabel"; text = "00:00 AM"; ObjectID = "P1E-WK-OB4"; */
+"P1E-WK-OB4.text" = "00:00 AM";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PKp-Oy-RjD"; */
+"PKp-Oy-RjD.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Project"; ObjectID = "Pc6-ER-pVU"; */
+"Pc6-ER-pVU.title" = "Project";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pxm-jK-T2i"; */
+"Pxm-jK-T2i.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "Location"; ObjectID = "Q0S-qE-f4O"; */
+"Q0S-qE-f4O.headerTitle" = "Location";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QBS-Et-vgb"; */
+"QBS-Et-vgb.text" = "Label";
+
+/* Class = "UILabel"; text = "Need ID help?"; ObjectID = "QYT-BR-dNq"; */
+"QYT-BR-dNq.text" = "Need ID help?";
+
+/* Class = "UILabel"; text = "Needs ID"; ObjectID = "QaI-aC-heW"; */
+"QaI-aC-heW.text" = "Needs ID";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "R4F-3k-D7x"; */
+"R4F-3k-D7x.text" = "???";
+
+/* Class = "UIButton"; normalTitle = "22"; ObjectID = "R82-gv-Mlg"; */
+"R82-gv-Mlg.normalTitle" = "22";
+
+/* Class = "UITabBarItem"; title = "Projects"; ObjectID = "SKe-fr-0qo"; */
+"SKe-fr-0qo.title" = "Projects";
+
+/* Class = "UINavigationItem"; title = "GuideTaxon"; ObjectID = "SaM-EA-Ovq"; */
+"SaM-EA-Ovq.title" = "GuideTaxon";
+
+/* Class = "UILabel"; text = "2.1.1, build 2.1.12"; ObjectID = "Sr1-uD-ljI"; */
+"Sr1-uD-ljI.text" = "2.1.1, build 2.1.12";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "TSU-vf-AJw"; */
+"TSU-vf-AJw.text" = "Title";
+
+/* Class = "UILabel"; text = "Posted by user on date"; ObjectID = "TdD-Oa-9ir"; */
+"TdD-Oa-9ir.text" = "Posted by user on date";
+
+/* Class = "UILabel"; text = "Automatic Upload"; ObjectID = "TeG-HZ-eQD"; */
+"TeG-HZ-eQD.text" = "Automatic Upload";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "TvY-6v-upW"; */
+"TvY-6v-upW.normalTitle" = "About";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UYT-WY-iEk"; */
+"UYT-WY-iEk.text" = "Label";
+
+/* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[0] = "Standard"; ObjectID = "VjR-qL-q95"; */
+"VjR-qL-q95.segmentTitles[0]" = "Standard";
+
+/* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[1] = "Satellite"; ObjectID = "VjR-qL-q95"; */
+"VjR-qL-q95.segmentTitles[1]" = "Satellite";
+
+/* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[2] = "Hybrid"; ObjectID = "VjR-qL-q95"; */
+"VjR-qL-q95.segmentTitles[2]" = "Hybrid";
+
+/* Class = "UINavigationItem"; title = "Edit"; ObjectID = "Vmt-AE-W0j"; */
+"Vmt-AE-W0j.title" = "Edit";
+
+/* Class = "UILabel"; text = "Project title is way too long brother"; ObjectID = "X8Y-bf-fBQ"; */
+"X8Y-bf-fBQ.text" = "Project title is way too long brother";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XGD-Gw-yZr"; */
+"XGD-Gw-yZr.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Project Details"; ObjectID = "XXq-bW-vbF"; */
+"XXq-bW-vbF.title" = "Project Details";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "XyN-zm-hAh"; */
+"XyN-zm-hAh.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "YDK-Qj-SES"; */
+"YDK-Qj-SES.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l"; ObjectID = "YzB-Lv-hOb"; */
+"YzB-Lv-hOb.text" = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l";
+
+/* Class = "UITableViewSection"; headerTitle = "Date / Time"; ObjectID = "Z4l-tt-zMs"; */
+"Z4l-tt-zMs.headerTitle" = "Date / Time";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "ZBp-ec-FjM"; */
+"ZBp-ec-FjM.title" = "Cancel";
+
+/* Class = "UITableViewSection"; headerTitle = "Projects"; ObjectID = "ZOk-5a-K6O"; */
+"ZOk-5a-K6O.headerTitle" = "Projects";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Zq5-BG-IXA"; */
+"Zq5-BG-IXA.title" = "Cancel";
+
+/* Class = "UILabel"; text = "N"; ObjectID = "aGV-hu-Qk0"; */
+"aGV-hu-Qk0.text" = "N";
+
+/* Class = "UILabel"; text = "e"; ObjectID = "bDI-Jt-ccY"; */
+"bDI-Jt-ccY.text" = "e";
+
+/* Class = "UILabel"; text = "Project title is way too long brother"; ObjectID = "bKM-7Q-aRA"; */
+"bKM-7Q-aRA.text" = "Project title is way too long brother";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bTy-8i-NnF"; */
+"bTy-8i-NnF.text" = "Label";
+
+/* Class = "UILabel"; text = "Scientific name"; ObjectID = "bW0-Pb-mB9"; */
+"bW0-Pb-mB9.text" = "Scientific name";
+
+/* Class = "UILabel"; text = "50"; ObjectID = "bXi-Eq-fRG"; */
+"bXi-Eq-fRG.text" = "50";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cFt-Xm-dZF"; */
+"cFt-Xm-dZF.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "More"; ObjectID = "cQc-hZ-KcA"; */
+"cQc-hZ-KcA.headerTitle" = "More";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "cSZ-cD-dfS"; */
+"cSZ-cD-dfS.title" = "Add";
+
+/* Class = "UINavigationItem"; title = "Guide Title"; ObjectID = "cTI-n2-vmb"; */
+"cTI-n2-vmb.title" = "Guide Title";
+
+/* Class = "UILabel"; text = "Add observation"; ObjectID = "dYu-ti-1gC"; */
+"dYu-ti-1gC.text" = "Add observation";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ddP-Sx-hMc"; */
+"ddP-Sx-hMc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Comment"; ObjectID = "drv-xl-rKi"; */
+"drv-xl-rKi.normalTitle" = "Comment";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "duv-dw-uXw"; */
+"duv-dw-uXw.text" = "Detail";
+
+/* Class = "UILabel"; text = "Unknown"; ObjectID = "e0j-MT-hzk"; */
+"e0j-MT-hzk.text" = "Unknown";
+
+/* Class = "UILabel"; text = "Acc."; ObjectID = "eMN-g3-ANY"; */
+"eMN-g3-ANY.text" = "Acc.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eRq-1c-r0W"; */
+"eRq-1c-r0W.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "eZT-am-pa2"; */
+"eZT-am-pa2.title" = "Item";
+
+/* Class = "UILabel"; text = "Taxon name"; ObjectID = "exb-m5-Kht"; */
+"exb-m5-Kht.text" = "Taxon name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fI4-Ti-IhX"; */
+"fI4-Ti-IhX.text" = "Label";
+
+/* Class = "UILabel"; text = "Captive / Cultivated"; ObjectID = "fMy-Kd-WzB"; */
+"fMy-Kd-WzB.text" = "Captive / Cultivated";
+
+/* Class = "UILabel"; text = "Natusfera Network"; ObjectID = "g3B-dy-Lka"; */
+"g3B-dy-Lka.text" = "Natusfera Network";
+
+/* Class = "UITableViewSection"; headerTitle = "Observation Rules"; ObjectID = "gDe-P6-41D"; */
+"gDe-P6-41D.headerTitle" = "Observation Rules";
+
+/* Class = "UILabel"; text = "C"; ObjectID = "gNg-CF-5w6"; */
+"gNg-CF-5w6.text" = "C";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "geY-Nh-jIQ"; */
+"geY-Nh-jIQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Lat:"; ObjectID = "gq3-Sv-hEY"; */
+"gq3-Sv-hEY.text" = "Lat:";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "hKK-sS-qAN"; */
+"hKK-sS-qAN.title" = "Cancel";
+
+/* Class = "UINavigationItem"; title = "Add Comment"; ObjectID = "hQf-3u-7NV"; */
+"hQf-3u-7NV.title" = "Add Comment";
+
+/* Class = "UIButton"; normalTitle = "View on Natusfera"; ObjectID = "hX2-Qg-qfb"; */
+"hX2-Qg-qfb.normalTitle" = "View on Natusfera";
+
+/* Class = "UILabel"; text = "Log In / Sign Up"; ObjectID = "hfA-vB-13u"; */
+"hfA-vB-13u.text" = "Log In / Sign Up";
+
+/* Class = "UILabel"; text = "Not Logged In"; ObjectID = "i9A-56-hiU"; */
+"i9A-56-hiU.text" = "Not Logged In";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iEA-QW-8rJ"; */
+"iEA-QW-8rJ.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "j2d-J8-Tv4"; */
+"j2d-J8-Tv4.title" = "Item";
+
+/* Class = "UILabel"; text = "Err"; ObjectID = "j77-Rx-AEr"; */
+"j77-Rx-AEr.text" = "Err";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "jaz-9S-FvT"; */
+"jaz-9S-FvT.title" = "Cancel";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "jjH-JI-aEw"; */
+"jjH-JI-aEw.title" = "Save";
+
+/* Class = "UILabel"; text = "Common name"; ObjectID = "ju8-if-UDh"; */
+"ju8-if-UDh.text" = "Common name";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "kJ8-TA-cdz"; */
+"kJ8-TA-cdz.text" = "Username";
+
+/* Class = "UITableViewSection"; headerTitle = "Description"; ObjectID = "kaD-3n-Xuk"; */
+"kaD-3n-Xuk.headerTitle" = "Description";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "l3n-dl-Zr0"; */
+"l3n-dl-Zr0.title" = "Settings";
+
+/* Class = "UILabel"; text = "Choose a map type"; ObjectID = "lol-PH-r6p"; */
+"lol-PH-r6p.text" = "Choose a map type";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "mgd-CX-pVK"; */
+"mgd-CX-pVK.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mt1-Cf-PtX"; */
+"mt1-Cf-PtX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "n3x-5I-5wO"; */
+"n3x-5I-5wO.text" = "Label";
+
+/* Class = "UILabel"; text = "Posted by user on date"; ObjectID = "nwh-Yp-GPu"; */
+"nwh-Yp-GPu.text" = "Posted by user on date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nze-J5-f6P"; */
+"nze-J5-f6P.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "o0O-Ue-qQo"; */
+"o0O-Ue-qQo.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "Your Account"; ObjectID = "oWq-bA-sYY"; */
+"oWq-bA-sYY.headerTitle" = "Your Account";
+
+/* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "pL9-Nd-0JB"; */
+"pL9-Nd-0JB.headerTitle" = "Help";
+
+/* Class = "UITextField"; placeholder = "Species name"; ObjectID = "pmm-Vg-XgJ"; */
+"pmm-Vg-XgJ.placeholder" = "Species name";
+
+/* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "qJK-jT-EPE"; */
+"qJK-jT-EPE.headerTitle" = "Notes";
+
+/* Class = "UILabel"; text = "taxon name here"; ObjectID = "qok-8r-tzc"; */
+"qok-8r-tzc.text" = "taxon name here";
+
+/* Class = "UILabel"; text = "Project title"; ObjectID = "qsE-wG-WNP"; */
+"qsE-wG-WNP.text" = "Project title";
+
+/* Class = "UILabel"; text = "Project name"; ObjectID = "r3N-gL-j8R"; */
+"r3N-gL-j8R.text" = "Project name";
+
+/* Class = "UITabBarItem"; title = "Observations"; ObjectID = "s0d-iz-ydn"; */
+"s0d-iz-ydn.title" = "Observations";
+
+/* Class = "UILabel"; text = "Casual Grade"; ObjectID = "sFv-C3-tQc"; */
+"sFv-C3-tQc.text" = "Casual Grade";
+
+/* Class = "UIBarButtonItem"; title = "Observe"; ObjectID = "sit-XC-ixQ"; */
+"sit-XC-ixQ.title" = "Observe";
+
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "sxb-6N-VGO"; */
+"sxb-6N-VGO.headerTitle" = "About";
+
+/* Class = "UILabel"; text = "00:00 AM"; ObjectID = "tn8-cj-klM"; */
+"tn8-cj-klM.text" = "00:00 AM";
+
+/* Class = "UITableViewSection"; headerTitle = "Terms"; ObjectID = "tnA-n3-DOC"; */
+"tnA-n3-DOC.headerTitle" = "Terms";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "tp5-5y-3mX"; */
+"tp5-5y-3mX.normalTitle" = "Details";
+
+/* Class = "UINavigationItem"; title = "Observations"; ObjectID = "uR8-0q-Vnf"; */
+"uR8-0q-Vnf.title" = "Observations";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uVH-g7-EIc"; */
+"uVH-g7-EIc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uoB-WQ-RJP"; */
+"uoB-WQ-RJP.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Suggest ID"; ObjectID = "vUq-gN-XYD"; */
+"vUq-gN-XYD.normalTitle" = "Suggest ID";
+
+/* Class = "UIBarButtonItem"; title = "Join"; ObjectID = "wCV-Z1-3g6"; */
+"wCV-Z1-3g6.title" = "Join";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "xE8-Wh-GqW"; */
+"xE8-Wh-GqW.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xOz-Sg-Gxs"; */
+"xOz-Sg-Gxs.text" = "Label";
+
+/* Class = "UILabel"; text = "Guide name"; ObjectID = "xdk-Tu-cps"; */
+"xdk-Tu-cps.text" = "Guide name";
+
+/* Class = "UILabel"; text = "50"; ObjectID = "yNr-7b-Prg"; */
+"yNr-7b-Prg.text" = "50";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ymb-99-hDM"; */
+"ymb-99-hDM.text" = "Label";
+
+/* Class = "UILabel"; text = "50000"; ObjectID = "zCO-f9-Nwb"; */
+"zCO-f9-Nwb.text" = "50000";
+
+/* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "zHl-Cq-k7v"; */
+"zHl-Cq-k7v.headerTitle" = "Notes";
+
+/* Class = "UILabel"; text = "Acknowledgements"; ObjectID = "zPB-Sx-9Uh"; */
+"zPB-Sx-9Uh.text" = "Acknowledgements";
+
+/* Class = "UILabel"; text = "00:00 AM"; ObjectID = "zY1-k8-meb"; */
+"zY1-k8-meb.text" = "00:00 AM";
+
+/* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "zb7-C4-rX1"; */
+"zb7-C4-rX1.normalTitle" = "Agree";
+
+/* Class = "UINavigationItem"; title = "Edit Location"; ObjectID = "zpr-b5-V8G"; */
+"zpr-b5-V8G.title" = "Edit Location";
