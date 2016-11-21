@@ -8,6 +8,11 @@
 
 #import <GoogleOpenSource/GoogleOpenSource.h>
 
-@interface GooglePlusAuthViewController : GTMOAuth2ViewControllerTouch
+@interface GooglePlusAuthViewController : GTMOAuth2ViewControllerTouch //lineas comentadas por M.Lujano
+@end    //linea comentada por M.Lujano
 
-@end
+
+//reutilizo este archivo aunque no voy a utilizar el logueo de google plus M.Lujano
+
+
+#import <UIKit/UIKit.h>

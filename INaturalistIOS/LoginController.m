@@ -9,7 +9,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <NXOAuth2Client/NXOAuth2.h>
 #import <GooglePlus/GPPSignIn.h>
-
+//#import <GoogleSignIn/GoogleSignIn.h>
 #import "LoginController.h"
 #import "Analytics.h"
 #import "INaturalistAppDelegate.h"
@@ -20,7 +20,7 @@
 #import "UploadManager.h"
 #import "Taxon.h"
 
-@interface LoginController () <GPPSignInDelegate> {
+@interface LoginController ()  {
     NSString    *externalAccessToken;
     NSString    *iNatAccessToken;
     NSString    *accountType;
@@ -45,7 +45,7 @@ NSInteger INatMinPasswordLength = 6;
         self.uploadManager = [[UploadManager alloc] init];
         
         [self initOAuth2Service];
-        [self initGoogleLogin];
+        //[self initGoogleLogin];
     }
     
     return self;
@@ -350,13 +350,13 @@ NSInteger INatMinPasswordLength = 6;
     accountType = kINatAuthServiceExtToken;
     isLoginCompleted = NO;
 
-    GooglePlusAuthViewController *vc = [GooglePlusAuthViewController controllerWithScope:self.scopesForGoogleSignin
+    /*GooglePlusAuthViewController *vc = [GooglePlusAuthViewController controllerWithScope:self.scopesForGoogleSignin
                                                                                 clientID:self.clientIdForGoogleSignin
                                                                             clientSecret:nil
                                                                         keychainItemName:nil
                                                                                 delegate:self
                                                                         finishedSelector:@selector(viewController:finishedAuth:error:)];
-    [nav pushViewController:vc animated:YES];
+    [nav pushViewController:vc animated:YES];*/
     
     // inat green button tint
     [nav.navigationBar setTintColor:[UIColor inatTint]];
@@ -369,7 +369,7 @@ NSInteger INatMinPasswordLength = 6;
     [nav setNavigationBarHidden:NO];
 }
 
-- (NSString *)scopesForGoogleSignin {
+/*- (NSString *)scopesForGoogleSignin {
     GPPSignIn *signin = [GPPSignIn sharedInstance];
     
     // GTMOAuth2VCTouch takes a different scope format than GPPSignIn
@@ -383,34 +383,34 @@ NSInteger INatMinPasswordLength = 6;
     }];
     
     return scopes;
-}
+}*/
 
-- (NSString *)clientIdForGoogleSignin {
-    return [[GPPSignIn sharedInstance] clientID];
-}
+//- (NSString *)clientIdForGoogleSignin {
+//    return [[GPPSignIn sharedInstance] clientID];
+//}
 
-- (GPPSignIn *)googleSignin {
-    return [GPPSignIn sharedInstance];
-}
+//- (GPPSignIn *)googleSignin {
+//    return [GPPSignIn sharedInstance];
+//}
 
--(void) initGoogleLogin {
-    // Google+ init
-    GPPSignIn *googleSignIn = [GPPSignIn sharedInstance];
-    googleSignIn.shouldFetchGoogleUserID=true; //M.Lujano:14/06/2016
+//-(void) initGoogleLogin {
+//    // Google+ init
+//    GPPSignIn *googleSignIn = [GPPSignIn sharedInstance];
+//    googleSignIn.shouldFetchGoogleUserID=true; //M.Lujano:14/06/2016
+//
+//    googleSignIn.clientID = GoogleClientId;
+//
+//    googleSignIn.scopes = @[
+//                            kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
+//                            kGTLAuthScopePlusMe,
+//                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
+//                            ];
     
-    googleSignIn.clientID = GoogleClientId;
-    
-    googleSignIn.scopes = @[
-                            kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
-                            kGTLAuthScopePlusMe,
-                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
-                            ];
-    
-    googleSignIn.delegate = self;
-    [googleSignIn trySilentAuthentication];
-}
+//    googleSignIn.delegate = self;
+//    [googleSignIn trySilentAuthentication];
+//}
 
-- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
+/*- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
                    error:(NSError *)error {
     
     
@@ -436,15 +436,15 @@ NSInteger INatMinPasswordLength = 6;
         tryingGoogleReauth = NO;
         [self executeSuccess:nil];
     }
-}
+}*/
 
-- (void)viewController:(GTMOAuth2ViewControllerTouch *)vc
+/*- (void)viewController:(GTMOAuth2ViewControllerTouch *)vc
           finishedAuth:(GTMOAuth2Authentication *)auth
                  error:(NSError *)error {
     [self finishedWithAuth:auth error:error];
     
     
-}
+}*/
 
 #pragma mark - Success / Failure helpers
 

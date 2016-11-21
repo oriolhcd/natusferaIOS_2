@@ -155,7 +155,7 @@
 "QYT-BR-dNq.text" = "識別協力を依頼";
 
 /* Class = "IBUILabel"; text = "Designed and built by iNaturalist at the California Academy of Sciences, with support from the Encyclopedia of Life.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists! "; ObjectID = "Qrv-G3-6nh"; */
-"Qrv-G3-6nh.text" = "カリフォルニア科学アカデミーのNatusfera.gbif.esによってエンサイクロペディア・オブ・ライフの支援とともにデザインされ構築されました。\n\nこのアプリは数えきれない程のオープンソースとCCライセンスの素材が使用されており、その中にはthree20、Restkit、 Devin Ross氏のTapkuLibrary、David Sinclair氏のDejalActivityViewやJoseph Wain氏のGlyphish iconsも含みます。これらの才能あふれ寛大であるエンジニアとアーティストに多大の感謝を申し上げます。";
+"Qrv-G3-6nh.text" = "NatusferaはiNaturalistに触発されました。\n\nこのアプリは、ジョセフ・ウェインによって数多くのオープンソースとデヴィン・ロス、デビッド・シンクレアによってDejalActivityViewによりThree20、Restkit、TapkuLibraryを含むクリエイティブ・コモンズ・ライセンス材料、およびGlyphishのアイコンを使用しています。これらの寛大で、有能なエンジニアやアーティストに感謝！";
 
 /* Class = "IBUILabel"; text = "???"; ObjectID = "R4F-3k-D7x"; */
 "R4F-3k-D7x.text" = "???";

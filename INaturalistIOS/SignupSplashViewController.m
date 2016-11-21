@@ -326,11 +326,27 @@ static char PARTNER_ASSOCIATED_KEY;
     });
     [self.view addSubview:self.loginFaceButton];
     
+    [GIDSignIn sharedInstance].uiDelegate = self;//añadido M.Lujano
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(receiveToggleAuthUINotification:)
+     name:@"ToggleAuthUINotification"
+     object:nil];
+    
+    //[self toggleAuthUI];
+    [self statusText].text = @"Google Sign in\niOS Demo";
+    
+    //self.loginGButton = ({
+    //    SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
+    //    button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
+    //    button.translatesAutoresizingMaskIntoConstraints = NO;
     self.loginGButton = ({
-        SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
-        button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
-        button.translatesAutoresizingMaskIntoConstraints = NO;
+           SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
+            button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
+            button.translatesAutoresizingMaskIntoConstraints = NO;
         
+    
         button.leadingTitleLabel.attributedText = ({
             FAKIcon *face = [FAKIonIcons socialGoogleplusIconWithSize:25.0f];
             face.attributedString;
@@ -755,6 +771,16 @@ static char PARTNER_ASSOCIATED_KEY;
 
 - (NSString *)reason {
     return _reason;
+}
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    // Perform any operations on signed in user here.
+    NSString *userId = user.userID;                  // For client-side use only!
+    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+    NSString *name = user.profile.name;
+    NSString *email = user.profile.email;
+    NSLog(@"Customer details: %@ %@ %@ %@", userId, idToken, name, email);
+    // ...
 }
 
 @end

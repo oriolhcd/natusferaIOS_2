@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @class SplitTextButton;
+@class GIDSignInButton;
 
-@interface SignupSplashViewController : UIViewController
+//@interface SignupSplashViewController : UIViewController // esta línea de código es la antigua M.Lujano
 
+@interface SignupSplashViewController : UIViewController <GIDSignInDelegate>
 @property NSString *reason;
 @property BOOL skippable;
 @property BOOL cancellable;
@@ -24,7 +27,13 @@
 @property UILabel *logoLabel;
 @property UILabel *reasonLabel;
 @property SplitTextButton *loginFaceButton;
-@property SplitTextButton *loginGButton;
+//@property SplitTextButton *loginGButton;
+//start loginviewcontroller_vars // las siguientes lineas han sido añadidas por M.Lujano
+@property (weak, nonatomic) IBOutlet GIDSignInButton *loginGButton;
+@property (weak, nonatomic) IBOutlet UIButton * signOutButton;
+@property (weak, nonatomic) IBOutlet UIButton * disconnectButton;
+@property (weak, nonatomic) IBOutlet UILabel *statusText;
+//end loginviewcontroller_vars
 @property SplitTextButton *signupEmailButton;
 @property UIButton *signinEmailButton;
 @property UIButton *skipButton;
@@ -32,3 +41,10 @@
 @property UIView *blurView;
 
 @end
+
+
+
+
+
+
+

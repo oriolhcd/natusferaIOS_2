@@ -220,11 +220,11 @@ static const int AutouploadSwitchTag = 101;
     VTAcknowledgementsViewController *creditsVC = [VTAcknowledgementsViewController acknowledgementsViewController];
     
     NSString *credits = [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@\n\n%@",
-                         NSLocalizedString(@"Designed and built by iNaturalist at the California Academy of Sciences, with support from the Encyclopedia of Life. ", @"funding thank yous"),
-                         NSLocalizedString(@"iNaturalist is made by every single person who participates in our community. The people who build the software, maintain our infrastructure, and foster collaborations are Joelle Belmonte, Patrick Leary, Scott Loarie, Alex Shepard, and Ken-ichi Ueda.", @"inat core team, alphabetically"),
-                         NSLocalizedString(@"iNaturalist uses Glyphish icons by Joseph Wain, ionicons by Ben Sperry, and icons by Luis Prado and Roman Shlyakov from the Noun Project. iNaturalist is also deeply grateful to the Cocoapods community, and to the contributions of our own open source community. See https://github.com/inaturalist/INaturalistIOS.", @"open source contributions"),
-                         NSLocalizedString(@"We are grateful for the translation assistance provided by the following members of the crowdin.com community: Carlos Alonso, Gabriel Fabiano Benzoni, cgalindo, Claudine Cyr, eldadzz, jacquesboivin, harum koh, Angelo Loula, myerssusan, nagatowell, natleclaire, James Page, Juliana Gatti Pereira, sgravel8596, sudachi, T.O, testamorta, tiwamura, vilseskog, and vonmatter. To join the iNaturalist iOS translation team, please visit https://crowdin.com/project/inaturalistios.", @"inat ios translation team, alphabetically"),
-                         @"IUCN category II places provided by IUCN and UNEP-WCMC (2015), The World Database on Protected Areas (WDPA) [On-line], [11/2014], Cambridge, UK: UNEP-WCMC. Available at: www.protectedplanet.net."];
+                         NSLocalizedString(@"Natusfera was inspired on iNaturalist.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists!", @"funding thank yous"),
+                         NSLocalizedString(@"Natusfera is an adaptation of iNaturalist (www.inaturalist.org) developed by CREAF (www.creaf.cat/es).", @"inat core team, alphabetically"),
+                         NSLocalizedString(@"It is funded by the FECYT, Spanish Foundation for Science and Technology (www.fecyt.es) Obra Social La Caixa (www.lacaixa.es),funded by the Royal Botanical Garden-CSIC through the National Biodiversity Node in Spain, GBIF.ES (www.gbif.es) and the Institute of the Sea (www.icm.csic.es) Sciences.", @"open source contributions"),
+                         NSLocalizedString(@"The administration, coordination, maintenance and content management is performed through the CREAF and GBIF.ES.", @"inat ios translation team, alphabetically"),
+                         @""];
 
     creditsVC.headerText = credits;
     UILabel *label = creditsVC.tableView.tableHeaderView.subviews.firstObject;

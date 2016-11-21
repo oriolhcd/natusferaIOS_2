@@ -96,11 +96,18 @@
 		19F87499152679F300A65F9A /* TaxaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F87498152679F100A65F9A /* TaxaSearchViewController.m */; };
 		19F8749B152684DF00A65F9A /* TaxonOneNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F8749A152684DF00A65F9A /* TaxonOneNameTableViewCell.xib */; };
 		19F8749D1526850100A65F9A /* TaxonTwoNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F8749C1526850100A65F9A /* TaxonTwoNameTableViewCell.xib */; };
+		455DA6CC1DBA31AE0092AE17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60F6CEC016E29AD60031504A /* Localizable.strings */; };
+		45BCA3C31DDC568600B80764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45BCA3C21DDC568600B80764 /* GoogleService-Info.plist */; };
+		45BCA3CC1DDC9C2D00B80764 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */; };
+		45BCA3CD1DDC9C2D00B80764 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */; };
+		45BCA3CE1DDC9C2D00B80764 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */; };
+		45BCA3CF1DDC9C2D00B80764 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */; };
+		45BCA3D01DDC9C2D00B80764 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */; };
+		45BCA3D21DDDAA0D00B80764 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */; };
 		5FB0F51CA26D75263DE4B0D9 /* libPods-iNaturalistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF298F479BA4656B740090F1 /* libPods-iNaturalistTests.a */; };
 		6098FD1716F3BE4C0053987E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6098FD1616F3BE4C0053987E /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6098FD1916F3BE690053987E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6098FD1816F3BE690053987E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		60EBAD4F16E5C65B00BFCDAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60EBAD5116E5C65B00BFCDAF /* InfoPlist.strings */; };
-		60F6CEBE16E29AD60031504A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60F6CEC016E29AD60031504A /* Localizable.strings */; };
 		893FE7181B525BFD00BC7CC4 /* config.h.example in Resources */ = {isa = PBXBuildFile; fileRef = 893FE7171B525BFD00BC7CC4 /* config.h.example */; };
 		897569FF1B4557B500F0BFAD /* ObservationViewNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897569FE1B4557B500F0BFAD /* ObservationViewNormalCell.m */; };
 		899A00D41B53AADD0079162F /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 899A00D31B53AADD0079162F /* ProjectTableViewCell.m */; };
@@ -439,6 +446,17 @@
 		453CDFD71DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
 		453CDFD81DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		453CDFD91DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		455DA6CE1DBA3A660092AE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45BCA3BF1DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		45BCA3C01DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45BCA3C11DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45BCA3C21DDC568600B80764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		6089F2AD101D951581AA258B /* Pods-iNaturalistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNaturalistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNaturalistTests/Pods-iNaturalistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6098FD1416F3BE270053987E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6098FD1616F3BE4C0053987E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -803,6 +821,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198551FC14EC93AB00DB55C5 /* SystemConfiguration.framework in Frameworks */,
+				45BCA3D21DDDAA0D00B80764 /* SafariServices.framework in Frameworks */,
 				FA98B4DA1B30E8BC0023851D /* CoreTelephony.framework in Frameworks */,
 				19F3AC7617E138A9005706E8 /* libz.dylib in Frameworks */,
 				6098FD1916F3BE690053987E /* Social.framework in Frameworks */,
@@ -813,15 +833,18 @@
 				19A5F60914FB289B00757636 /* CoreLocation.framework in Frameworks */,
 				193BD57014F41FEA005209CA /* MapKit.framework in Frameworks */,
 				198551FE14EC93B900DB55C5 /* libxml2.dylib in Frameworks */,
-				198551FC14EC93AB00DB55C5 /* SystemConfiguration.framework in Frameworks */,
 				198551FA14EC93A200DB55C5 /* MobileCoreServices.framework in Frameworks */,
 				198551F814EC939900DB55C5 /* Security.framework in Frameworks */,
 				198551F414EC938700DB55C5 /* CFNetwork.framework in Frameworks */,
 				1927513C14E9CCC9000ABAC4 /* CoreGraphics.framework in Frameworks */,
+				45BCA3D01DDC9C2D00B80764 /* GoogleSymbolUtilities.framework in Frameworks */,
+				45BCA3CE1DDC9C2D00B80764 /* GoogleSignInDependencies.framework in Frameworks */,
 				1959CDB314EA30280036F363 /* QuartzCore.framework in Frameworks */,
 				1927513814E9CCC9000ABAC4 /* UIKit.framework in Frameworks */,
 				1927513A14E9CCC9000ABAC4 /* Foundation.framework in Frameworks */,
 				D84DD379F55E0C50302DAB12 /* libPods-iNaturalist.a in Frameworks */,
+				45BCA3CF1DDC9C2D00B80764 /* GoogleAppUtilities.framework in Frameworks */,
+				45BCA3CC1DDC9C2D00B80764 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +892,12 @@
 		1927513614E9CCC9000ABAC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */,
+				45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */,
+				45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */,
+				45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */,
+				45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */,
+				45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */,
 				FA98B4D91B30E8BC0023851D /* CoreTelephony.framework */,
 				6098FD1816F3BE690053987E /* Social.framework */,
 				6098FD1616F3BE4C0053987E /* Accounts.framework */,
@@ -1573,6 +1602,7 @@
 		FADE28B21B02D9AA00CA55FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				45BCA3C21DDC568600B80764 /* GoogleService-Info.plist */,
 				FADE28B31B02D9AA00CA55FF /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -1703,6 +1733,7 @@
 				pt,
 				he,
 				"es-ES",
+				ca,
 			);
 			mainGroup = 1927512814E9CCC8000ABAC4;
 			productRefGroup = 1927513414E9CCC9000ABAC4 /* Products */;
@@ -1720,6 +1751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BCA3CD1DDC9C2D00B80764 /* GoogleSignIn.bundle in Resources */,
 				1927514B14E9CCC9000ABAC4 /* MainStoryboard.storyboard in Resources */,
 				FA6F876C1B0E9C660019B157 /* inaturalisticons.ttf in Resources */,
 				19F8748D15252B6000A65F9A /* ProjectTableViewCell.xib in Resources */,
@@ -1729,8 +1761,8 @@
 				19E54CB2160997010036BA3B /* ObservationFieldValueDefaultCell.xib in Resources */,
 				19ADD5AC160A3D50001D886C /* ObservationFieldValueSwitchCell.xib in Resources */,
 				19E4CC3216240A5A00694E5D /* ObservationFieldValueStaticCell.xib in Resources */,
-				60F6CEBE16E29AD60031504A /* Localizable.strings in Resources */,
 				FA74A6221CB4C4EE002EBD0A /* RankedUserObsSpecies.xib in Resources */,
+				455DA6CC1DBA31AE0092AE17 /* Localizable.strings in Resources */,
 				60EBAD4F16E5C65B00BFCDAF /* InfoPlist.strings in Resources */,
 				FADD57EA19FEFF2500E141C9 /* Images.xcassets in Resources */,
 				FA753DBE1B7AC40E00EC13B7 /* Launch Screen.xib in Resources */,
@@ -1739,6 +1771,7 @@
 				FAA6EB1C1C90E17000F43552 /* RoundedButtonCell.xib in Resources */,
 				1904E5F317FB814A00725804 /* bootstrap.min.css in Resources */,
 				FA4C19601B30EDB70066CA22 /* partners.plist in Resources */,
+				45BCA3C31DDC568600B80764 /* GoogleService-Info.plist in Resources */,
 				FABC6B831A1ECC28009D5637 /* GooglePlusAuthViewController.xib in Resources */,
 				893FE7181B525BFD00BC7CC4 /* config.h.example in Resources */,
 			);
@@ -2123,6 +2156,7 @@
 				FA1B37C41AD88EED002A00A5 /* pt */,
 				890DE36A1B41357000207219 /* he */,
 				453CDFD71DB6440300C27125 /* es-ES */,
+				45BCA3BF1DCA120D00B80764 /* ca */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -2139,6 +2173,7 @@
 				FA1B37C51AD88EF3002A00A5 /* pt */,
 				890DE36B1B41357000207219 /* he */,
 				453CDFD81DB6440300C27125 /* es-ES */,
+				45BCA3C01DCA120D00B80764 /* ca */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2155,6 +2190,8 @@
 				FA1B37C21AD88EDC002A00A5 /* pt */,
 				890DE36C1B41357000207219 /* he */,
 				453CDFD91DB6440300C27125 /* es-ES */,
+				455DA6CE1DBA3A660092AE17 /* Base */,
+				45BCA3C11DCA120D00B80764 /* ca */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -2180,6 +2217,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos6.0;
 			};
 			name = Debug;
@@ -2199,6 +2240,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E370407E-FC62-4E98-9D47-120CA597D2CF";
 				SDKROOT = iphoneos6.0;
 				VALIDATE_PRODUCT = YES;
@@ -2240,6 +2285,7 @@
 					"-lsqlite3.0",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.gbif.natusfera.Natusfera;
 				PRODUCT_NAME = iNaturalist;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -2280,6 +2326,7 @@
 					"-lsqlite3.0",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.gbif.natusfera.Natusfera;
 				PRODUCT_NAME = iNaturalist;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";

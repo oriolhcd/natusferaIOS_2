@@ -40,6 +40,7 @@
 #import "Fave.h"
 #import "NewsItem.h"
 
+
 @interface INaturalistAppDelegate () {
     NSManagedObjectModel *managedObjectModel;
     RKManagedObjectStore *_inatObjectStore;
@@ -51,15 +52,32 @@
 
 @implementation INaturalistAppDelegate
 
+//modifico este metodo M.Lujano
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    return ([FBSession.activeSession handleOpenURL:url] || [GPPURLHandler handleURL:url
-                                                                 sourceApplication:sourceApplication
-                                                                        annotation:annotation]);
+    //return ([FBSession.activeSession handleOpenURL:url] || [GPPURLHandler handleURL:url
+    //                                                             sourceApplication:sourceApplication
+    //                                                                    annotation:annotation]);
+    
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
 }
+
+//implemento application:openURL:options: metodo en el app delegate M.Lujano
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+           options:(NSDictionary *)options
+{
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+            
+}
+
 
 
 
@@ -73,6 +91,7 @@
     [self showLoadingScreen];
     
     [self configureApplicationInBackground];
+    [GIDSignIn sharedInstance].clientID = @"118067285617-82ggdm3g9uembfd0t89muabo2pf636ps.apps.googleusercontent.com"; //linea añadida por M.Lujano.
     
     return YES;
 }
@@ -383,6 +402,52 @@
     return self.loginController.isLoggedIn;
 }
 
+-(void)signIn:(GIDSignIn *)signIn
+        didSignInForUser:(GIDGoogleUser *)user
+    withError:(NSError *)error {
+    
+    //perform any operations on signed in user here.
+    NSString *userId= user.userID;                   // For client-side use only
+    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+    NSString *fullName = user.profile.name;
+    NSString *givenName = user.profile.givenName;
+    NSString *familyName = user.profile.familyName;
+    NSString *email = user.profile.email;
+    
+    (void)userId;
+    (void)idToken;
+    (void)fullName;
+    (void)givenName;
+    (void)familyName;
+    (void)email;
+    
+    //start_exclude
+    
+    NSDictionary *statusText =@{@"statusText":
+                            [NSString stringWithFormat:@"Signed in user: %@",
+                             fullName]};
+    [[NSNotificationCenter defaultCenter]
+        postNotificationName:@"ToggleAuthUINotification"
+        object:nil
+     userInfo:statusText];
+     //END_EXCLUDE
+    
+}
+
+-(void)signIn:(GIDSignIn *)signIn
+        didDisconnectWithUser:(GIDGoogleUser *)user
+        withError:(NSError *)error {
+        //perform any operations when the user disconnects from app here
+        //start_exclude
+    NSDictionary *statusText =@{@"statusText": @"Disconnected user" };
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"ToggleAuthUINotification"
+     object:nil
+     userInfo:statusText];
+     // end_exlude
+}
+
 - (void)showMainUI {
     if (![self.window.rootViewController isKindOfClass:[INatUITabBarController class]]) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -419,6 +484,7 @@
     nav.delegate = self;
     [self.window setRootViewController:nav];
 }
+
 
 
 
