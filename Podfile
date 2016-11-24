@@ -19,7 +19,6 @@ target :iNaturalist do
   pod 'SlackTextViewController', '1.9'
   pod 'SVPullToRefresh', '0.4.1'
   pod 'PDKTStickySectionHeadersCollectionViewLayout', '0.1'
-  pod 'googleplus-ios-sdk', '1.7.1'
   pod 'SSZipArchive', '0.3.2'
   pod 'ActionSheetPicker-3.0', '1.3.12'
   pod 'NXOAuth2Client', '1.2.8'

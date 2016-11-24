@@ -97,10 +97,10 @@
 		19F8749B152684DF00A65F9A /* TaxonOneNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F8749A152684DF00A65F9A /* TaxonOneNameTableViewCell.xib */; };
 		19F8749D1526850100A65F9A /* TaxonTwoNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F8749C1526850100A65F9A /* TaxonTwoNameTableViewCell.xib */; };
 		455DA6CC1DBA31AE0092AE17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60F6CEC016E29AD60031504A /* Localizable.strings */; };
+		457B5BB91DE70FE000B10C77 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457B5BB81DE70FE000B10C77 /* GoogleSignInDependencies.framework */; };
 		45BCA3C31DDC568600B80764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45BCA3C21DDC568600B80764 /* GoogleService-Info.plist */; };
 		45BCA3CC1DDC9C2D00B80764 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */; };
 		45BCA3CD1DDC9C2D00B80764 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */; };
-		45BCA3CE1DDC9C2D00B80764 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */; };
 		45BCA3CF1DDC9C2D00B80764 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */; };
 		45BCA3D01DDC9C2D00B80764 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */; };
 		45BCA3D21DDDAA0D00B80764 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */; };
@@ -447,13 +447,13 @@
 		453CDFD81DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		453CDFD91DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		455DA6CE1DBA3A660092AE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		457B5BB81DE70FE000B10C77 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		45BCA3BF1DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		45BCA3C01DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		45BCA3C11DCA120D00B80764 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		45BCA3C21DDC568600B80764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
-		45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
 		45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -838,8 +838,8 @@
 				198551F414EC938700DB55C5 /* CFNetwork.framework in Frameworks */,
 				1927513C14E9CCC9000ABAC4 /* CoreGraphics.framework in Frameworks */,
 				45BCA3D01DDC9C2D00B80764 /* GoogleSymbolUtilities.framework in Frameworks */,
-				45BCA3CE1DDC9C2D00B80764 /* GoogleSignInDependencies.framework in Frameworks */,
 				1959CDB314EA30280036F363 /* QuartzCore.framework in Frameworks */,
+				457B5BB91DE70FE000B10C77 /* GoogleSignInDependencies.framework in Frameworks */,
 				1927513814E9CCC9000ABAC4 /* UIKit.framework in Frameworks */,
 				1927513A14E9CCC9000ABAC4 /* Foundation.framework in Frameworks */,
 				D84DD379F55E0C50302DAB12 /* libPods-iNaturalist.a in Frameworks */,
@@ -892,10 +892,10 @@
 		1927513614E9CCC9000ABAC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				457B5BB81DE70FE000B10C77 /* GoogleSignInDependencies.framework */,
 				45BCA3D11DDDAA0D00B80764 /* SafariServices.framework */,
 				45BCA3CB1DDC9C2D00B80764 /* GoogleSymbolUtilities.framework */,
 				45BCA3CA1DDC9C2D00B80764 /* GoogleAppUtilities.framework */,
-				45BCA3C91DDC9C2D00B80764 /* GoogleSignInDependencies.framework */,
 				45BCA3C81DDC9C2D00B80764 /* GoogleSignIn.bundle */,
 				45BCA3C71DDC9C2D00B80764 /* GoogleSignIn.framework */,
 				FA98B4D91B30E8BC0023851D /* CoreTelephony.framework */,
@@ -1661,14 +1661,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1927515114E9CCC9000ABAC4 /* Build configuration list for PBXNativeTarget "iNaturalist" */;
 			buildPhases = (
-				95412464BCD02D0970515C0B /* 📦 Check Pods Manifest.lock */,
+				95412464BCD02D0970515C0B /* [CP] Check Pods Manifest.lock */,
 				1927512F14E9CCC9000ABAC4 /* Sources */,
 				1927513014E9CCC9000ABAC4 /* Frameworks */,
 				1927513114E9CCC9000ABAC4 /* Resources */,
 				FA63FA2919E4D40F007306F9 /* ShellScript */,
 				FA88B7681ABCD34A0004B4C6 /* ShellScript */,
-				4AF2A9BB8F5A04E6D998ABEF /* 📦 Embed Pods Frameworks */,
-				C1291957619DA91F446C0A2E /* 📦 Copy Pods Resources */,
+				4AF2A9BB8F5A04E6D998ABEF /* [CP] Embed Pods Frameworks */,
+				C1291957619DA91F446C0A2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1683,12 +1683,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FADE28B81B02D9AA00CA55FF /* Build configuration list for PBXNativeTarget "iNaturalistTests" */;
 			buildPhases = (
-				372A626896B588BCEEF7E963 /* 📦 Check Pods Manifest.lock */,
+				372A626896B588BCEEF7E963 /* [CP] Check Pods Manifest.lock */,
 				FADE28AC1B02D9AA00CA55FF /* Sources */,
 				FADE28AD1B02D9AA00CA55FF /* Frameworks */,
 				FADE28AE1B02D9AA00CA55FF /* Resources */,
-				AF245D39B4F18595935E05EB /* 📦 Embed Pods Frameworks */,
-				8A16044633D5770D97CEA137 /* 📦 Copy Pods Resources */,
+				AF245D39B4F18595935E05EB /* [CP] Embed Pods Frameworks */,
+				8A16044633D5770D97CEA137 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1787,14 +1787,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		372A626896B588BCEEF7E963 /* 📦 Check Pods Manifest.lock */ = {
+		372A626896B588BCEEF7E963 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1802,14 +1802,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4AF2A9BB8F5A04E6D998ABEF /* 📦 Embed Pods Frameworks */ = {
+		4AF2A9BB8F5A04E6D998ABEF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1817,14 +1817,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNaturalist/Pods-iNaturalist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A16044633D5770D97CEA137 /* 📦 Copy Pods Resources */ = {
+		8A16044633D5770D97CEA137 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1832,14 +1832,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNaturalistTests/Pods-iNaturalistTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95412464BCD02D0970515C0B /* 📦 Check Pods Manifest.lock */ = {
+		95412464BCD02D0970515C0B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1847,14 +1847,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AF245D39B4F18595935E05EB /* 📦 Embed Pods Frameworks */ = {
+		AF245D39B4F18595935E05EB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1862,14 +1862,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iNaturalistTests/Pods-iNaturalistTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1291957619DA91F446C0A2E /* 📦 Copy Pods Resources */ = {
+		C1291957619DA91F446C0A2E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

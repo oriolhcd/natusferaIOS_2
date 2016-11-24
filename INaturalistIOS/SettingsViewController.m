@@ -12,8 +12,8 @@
 #import <MHVideoPhotoGallery/MHGalleryController.h>
 #import <MHVideoPhotoGallery/MHGallery.h>
 #import <MHVideoPhotoGallery/MHTransitionDismissMHGallery.h>
-#import <GooglePlus/GPPSignIn.h>
-#import <GoogleOpenSource/GTMOAuth2Authentication.h>
+//#import <GooglePlus/GPPSignIn.h>  //M.Lujano: 24/11/16
+//#import <GoogleOpenSource/GTMOAuth2Authentication.h> //M.Lujano: 24/11/16
 #import <ActionSheetPicker-3.0/ActionSheetStringPicker.h>
 #import <JDStatusBarNotification/JDStatusBarNotification.h>
 
@@ -119,7 +119,7 @@ static const int AutouploadSwitchTag = 101;
 - (void)localSignOut
 {
     // clear g+
-    if ([[GPPSignIn sharedInstance] hasAuthInKeychain]) [[GPPSignIn sharedInstance] disconnect];
+    //if ([[GPPSignIn sharedInstance] hasAuthInKeychain]) [[GPPSignIn sharedInstance] disconnect]; //comentado por M.Lujano:24/11/16
 
     // clear preference cached signin info & preferences
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

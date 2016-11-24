@@ -6,13 +6,16 @@
 //  Copyright (c) 2014 iNaturalist. All rights reserved.
 //
 
-#import <GoogleOpenSource/GoogleOpenSource.h>
+//#import <GoogleOpenSource/GoogleOpenSource.h>
+#import <UIKit/UIKit.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+//@interface GooglePlusAuthViewController : GTMOAuth2ViewControllerTouch //lineas comentadas por M.Lujano
+//@end    //linea comentada por M.Lujano
+@interface GooglePlusAuthViewController : UIViewController <GIDSignInUIDelegate>
 
-@interface GooglePlusAuthViewController : GTMOAuth2ViewControllerTouch //lineas comentadas por M.Lujano
-@end    //linea comentada por M.Lujano
-
+@end
 
 //reutilizo este archivo aunque no voy a utilizar el logueo de google plus M.Lujano
 
 
-#import <UIKit/UIKit.h>
+

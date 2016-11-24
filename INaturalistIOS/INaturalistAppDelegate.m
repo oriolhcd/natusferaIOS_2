@@ -10,7 +10,7 @@
 #import <IFTTTLaunchImage/UIImage+IFTTTLaunchImage.h>
 #import <UIColor-HTMLColors/UIColor+HTMLColors.h>
 #import <JDStatusBarNotification/JDStatusBarNotification.h>
-#import <GooglePlus/GPPURLHandler.h>
+//#import <GooglePlus/GPPURLHandler.h> //M.Lujano:24/11/16
 
 #import "INaturalistAppDelegate.h"
 #import "List.h"
