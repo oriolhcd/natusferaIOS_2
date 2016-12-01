@@ -9,8 +9,9 @@
 #import "GooglePlusAuthViewController.h"
 
 
-//@implementation GooglePlusAuthViewController
+@implementation GooglePlusAuthViewController
 
+@end
 //+ (NSString *)authNibName {
 //    // subclasses may override this to specify a custom nib name
 //    return @"GooglePlusAuthViewController";

@@ -91,6 +91,7 @@
     [self showLoadingScreen];
     
     [self configureApplicationInBackground];
+    
     [GIDSignIn sharedInstance].clientID = @"118067285617-82ggdm3g9uembfd0t89muabo2pf636ps.apps.googleusercontent.com"; //linea añadida por M.Lujano.
     
     return YES;
@@ -235,7 +236,8 @@
 - (void)configureRestKit
 {
     RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:[NSURL inat_baseURL]];
-    manager.objectStore = [self inatObjectStore];
+
+        manager.objectStore = [self inatObjectStore];
     
     // Auth
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -344,7 +346,7 @@
     NSString *storePath = [docDir stringByAppendingPathComponent:@"inaturalist.sqlite"];
     NSURL *storeURL = [NSURL fileURLWithPath:storePath];
     
-    NSString *momPath = [[NSBundle mainBundle] pathForResource:@"iNaturalist" ofType:@"momd"];
+    NSString *momPath = [[NSBundle mainBundle] pathForResource:@"Natusfera" ofType:@"momd"];
     if (!momPath) {
         return [NSManagedObjectModel mergedModelFromBundles:nil];
     }

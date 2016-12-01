@@ -11,7 +11,7 @@
 #import <FontAwesomeKit/FAKIonIcons.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <objc/runtime.h>
-
+#import <GoogleSignIn/GoogleSignIn.h>
 #import "SignupSplashViewController.h"
 #import "NSAttributedString+InatHelpers.h"
 #import "INaturalistAppDelegate.h"
@@ -337,26 +337,28 @@ static char PARTNER_ASSOCIATED_KEY;
     //[self toggleAuthUI];
     [self statusText].text = @"Google Sign in\niOS Demo";
     
-    //self.loginGButton = ({
-    //    SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
-    //    button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
-    //    button.translatesAutoresizingMaskIntoConstraints = NO;
     self.loginGButton = ({
-           SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
-            button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
-            button.translatesAutoresizingMaskIntoConstraints = NO;
+        SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
+        button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
+        button.translatesAutoresizingMaskIntoConstraints = NO;
+        
+    /*self.loginGButton = ({
+           GIDSignInButton *button = [[GIDSignInButton alloc] initWithFrame:CGRectZero];
+            button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural; button.translatesAutoresizingMaskIntoConstraints = NO;*/
         
     
         button.leadingTitleLabel.attributedText = ({
             FAKIcon *face = [FAKIonIcons socialGoogleplusIconWithSize:25.0f];
             face.attributedString;
+            
+        
         });
-        NSAttributedString *title = [NSAttributedString inat_attrStrWithBaseStr:NSLocalizedString(@"Log In with Google+", "@base text for g+ login button")
+        NSAttributedString *title = [NSAttributedString inat_attrStrWithBaseStr:NSLocalizedString(@"Log In with Google", "@base text for g+ login button")
                                                                       baseAttrs:@{
                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:16.0f],
                                                                                   NSParagraphStyleAttributeName: indentedParagraphStyle,
                                                                                   }
-                                                                       emSubstr:NSLocalizedString(@"Google+", @"portion of the base text for g+ login button that is bold. must be a substring of the base test.")
+                                                                       emSubstr:NSLocalizedString(@"Google", @"portion of the base text for google login button that is bold. must be a substring of the base test.")
                                                                         emAttrs:@{ NSFontAttributeName: [UIFont boldSystemFontOfSize:16.0f] }];
         
         button.trailingTitleLabel.attributedText = title;

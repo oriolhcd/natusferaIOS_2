@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class SplitTextButton;
 @class Partner;
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController  {
+    
+}
 
 @property UIImage *backgroundImage;
 @property BOOL cancellable;

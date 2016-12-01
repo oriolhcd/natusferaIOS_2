@@ -5,6 +5,9 @@
       location = "group:Madrid.gpx">
    </FileRef>
    <FileRef
+      location = "group:Madrid.gpx">
+   </FileRef>
+   <FileRef
       location = "group:iNaturalist.xcodeproj">
    </FileRef>
    <FileRef

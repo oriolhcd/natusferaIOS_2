@@ -443,6 +443,7 @@
 		19F8749C1526850100A65F9A /* TaxonTwoNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxonTwoNameTableViewCell.xib; sourceTree = "<group>"; };
 		19FFA16F191D82CE000A6EBA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		34A0E5D27A6C9BDDD11053CC /* Pods-iNaturalist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNaturalist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iNaturalist/Pods-iNaturalist.debug.xcconfig"; sourceTree = "<group>"; };
+		450DFCFE1DE864BF00740751 /* iNaturalist copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iNaturalist copy-Info.plist"; path = "/Users/gbif-apple/natusferaIphone/iNaturalist copy-Info.plist"; sourceTree = "<absolute>"; };
 		453CDFD71DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
 		453CDFD81DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		453CDFD91DB6440300C27125 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -877,6 +878,7 @@
 				1927513614E9CCC9000ABAC4 /* Frameworks */,
 				1927513414E9CCC9000ABAC4 /* Products */,
 				EFA12DFBF019DD1AEAA4CA45 /* Pods */,
+				450DFCFE1DE864BF00740751 /* iNaturalist copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

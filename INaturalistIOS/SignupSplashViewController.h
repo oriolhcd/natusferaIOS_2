@@ -29,7 +29,7 @@
 @property SplitTextButton *loginFaceButton;
 //@property SplitTextButton *loginGButton;
 //start loginviewcontroller_vars // las siguientes lineas han sido añadidas por M.Lujano
-@property (weak, nonatomic) IBOutlet GIDSignInButton *loginGButton;
+@property (strong, nonatomic) IBOutlet GIDSignInButton *loginGButton;
 @property (weak, nonatomic) IBOutlet UIButton * signOutButton;
 @property (weak, nonatomic) IBOutlet UIButton * disconnectButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusText;

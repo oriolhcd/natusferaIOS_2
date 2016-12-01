@@ -355,8 +355,12 @@ NSInteger INatMinPasswordLength = 6;
                                                                             clientSecret:nil
                                                                         keychainItemName:nil
                                                                                 delegate:self
-                                                                        finishedSelector:@selector(viewController:finishedAuth:error:)];
-    [nav pushViewController:vc animated:YES];*/
+                                                                        finishedSelector:@selector(viewController:finishedAuth:error:)];*/
+   
+   // GooglePlusAuthViewController *vc = [GooglePlusAuthViewController (UIViewController:finishedAuth:error)];
+    
+    
+    //[nav pushViewController:vc animated:YES];
     
     // inat green button tint
     [nav.navigationBar setTintColor:[UIColor inatTint]];
@@ -369,8 +373,9 @@ NSInteger INatMinPasswordLength = 6;
     [nav setNavigationBarHidden:NO];
 }
 
-/*- (NSString *)scopesForGoogleSignin {
-    GPPSignIn *signin = [GPPSignIn sharedInstance];
+- (NSString *)scopesForGoogleSignin {
+    //GPPSignIn *signin = [GPPSignIn sharedInstance];
+    GIDSignIn *signin= [GIDSignIn sharedInstance];
     
     // GTMOAuth2VCTouch takes a different scope format than GPPSignIn
     // @"plus.login plus.me userinfo.email"
@@ -383,32 +388,44 @@ NSInteger INatMinPasswordLength = 6;
     }];
     
     return scopes;
-}*/
+}
 
-//- (NSString *)clientIdForGoogleSignin {
-//    return [[GPPSignIn sharedInstance] clientID];
-//}
+- (NSString *)clientIdForGoogleSignin {
+    //return [[GPPSignIn sharedInstance] clientID];
+    return [[GIDSignIn sharedInstance] clientID];
+}
 
 //- (GPPSignIn *)googleSignin {
 //    return [GPPSignIn sharedInstance];
 //}
 
-//-(void) initGoogleLogin {
-//    // Google+ init
-//    GPPSignIn *googleSignIn = [GPPSignIn sharedInstance];
-//    googleSignIn.shouldFetchGoogleUserID=true; //M.Lujano:14/06/2016
-//
-//    googleSignIn.clientID = GoogleClientId;
-//
-//    googleSignIn.scopes = @[
-//                            kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
-//                            kGTLAuthScopePlusMe,
-//                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
-//                            ];
+- (GIDSignIn *)googleSignin {
+    return [GIDSignIn sharedInstance];
+}
+
+
+
+-(void) initGoogleLogin {
+    // Google+ init
+    //GPPSignIn *googleSignIn = [GPPSignIn sharedInstance]; linea comentada M.Lujano 1/12/2016
+    GIDSignIn *googleSignIn = [GIDSignIn sharedInstance];
+    //googleSignIn.shouldFetchGoogleUserID=true; //linea modificada M.Lujano:14/06/2016 y comentada M.Lujano 01/12/16
+    googleSignIn.shouldFetchBasicProfile = true;
+
+    googleSignIn.clientID = GoogleClientId;
+
+    /*googleSignIn.scopes = @[
+                            kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
+                            kGTLAuthScopePlusMe,
+                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
+                            ];*/ //lineas comentadas por M.Lujano:01/12/16
     
-//    googleSignIn.delegate = self;
-//    [googleSignIn trySilentAuthentication];
-//}
+    [googleSignIn setScopes:[NSArray arrayWithObject:@"http://www.googleapis.com/auth/plus.login"]];
+    
+    //googleSignIn.delegate = self; //linea comentada M.Lujano:01/12/16
+    [googleSignIn setDelegate:self];
+    //[googleSignIn trySilentAuthentication]; //linea comentada M.Lujano:01/12/16
+}
 
 /*- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
                    error:(NSError *)error {

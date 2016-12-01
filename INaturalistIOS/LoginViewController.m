@@ -23,8 +23,9 @@
 #import "INatWebController.h"
 
 
-@interface LoginViewController () <UITableViewDataSource, UITableViewDelegate, INatWebControllerDelegate> {
+@interface LoginViewController () <UITableViewDataSource, UITableViewDelegate, INatWebControllerDelegate, GIDSignInUIDelegate> {
     NSString *username, *password;
+    //[[GIDSignIn sharedInstance].uiDelegate]=self;
 }
 @end
 
@@ -37,6 +38,7 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Log In", @"title of the log in screen");
+    [GIDSignIn sharedInstance].uiDelegate = self; //añadido M.Lujano:30/11/16
     
     if (self.cancellable) {
         UIImage *closeImage = ({
@@ -130,14 +132,18 @@
     
     self.gButton = ({
         SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
+    //self.gButton = ({
+    //    GIDSignInButton *button = [[GIDSignInButton alloc]
+                                   //initWithFrame:CGRectZero];
         button.translatesAutoresizingMaskIntoConstraints = NO;
         
-        NSString *google = NSLocalizedString(@"Google", @"Name of Google for the G+ signin button");
+        NSString *google = NSLocalizedString(@"Google", @"Name of Google for the signin button");
         NSDictionary *attrs = @{
                                 NSFontAttributeName: [UIFont boldSystemFontOfSize:16.0f],
                                 };
         
-        button.trailingTitleLabel.textAlignment = NSTextAlignmentCenter;
+        button.trailingTitleLabel.textAlignment = NSTextAlignmentCenter;  //esta y las siguientes lineas han sido comentadas M.Lujano:30/11/16
+        
         button.trailingTitleLabel.attributedText = [[NSAttributedString alloc] initWithString:google
                                                                                 attributes:attrs];
 
