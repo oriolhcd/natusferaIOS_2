@@ -1,7 +1,7 @@
 INaturalistIOS
 ==============
 
-INaturalistIOS is the official iOS app for submitting data to [iNaturalist.org](http://www.inaturalist.org).
+INaturalistIOS is the official iOS app for submitting data to [iNaturalist.org](http://www.natusfera.org).
 
 Setup
 -----

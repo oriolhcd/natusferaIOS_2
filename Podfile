@@ -3,7 +3,7 @@ platform :ios, :deployment_target => '7.0'
 
 inhibit_all_warnings!
 
-target :iNaturalist do
+target :Natusfera do
   pod 'Fabric', '1.5.4'
   pod 'Crashlytics', '3.3.3'
   pod 'Flurry-iOS-SDK/FlurrySDK', '7.1.0'
@@ -47,7 +47,7 @@ target :iNaturalist do
   pod 'YLMoment', :git => 'https://github.com/inaturalist/YLMoment.git', :commit => '35521e9f80c23de6f885771f97a6c1febe245c00'
 end
 
-target :iNaturalistTests do
+target :NatusferaTests do
   pod 'Specta'
   pod 'Expecta'
 end

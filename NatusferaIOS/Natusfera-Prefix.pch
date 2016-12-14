@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'Natusfera' target in the 'Natusfera' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import <RestKit/RestKit.h>
+#import "constants.h"
+#import "config.h"
+#import "NSString+Helpers.h"
+#import "UIView+UIViewHelpers.h"
+#import "SystemVersionMacros.h"
