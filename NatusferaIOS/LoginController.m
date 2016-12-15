@@ -33,6 +33,8 @@
 
 @end
 
+#define NULL_TO_NIL(obj) ({ __typeof__ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
+
 #pragma mark - NSNotification names
 
 NSString *kUserLoggedInNotificationName = @"UserLoggedInNotificationName";
@@ -292,7 +294,7 @@ NSInteger INatMinPasswordLength = 6;
                                   user.recordID = [parsedData objectForKey:@"id"] ?: nil;
                                   user.observationsCount = [parsedData objectForKey:@"observations_count"] ?: nil;
                                   user.identificationsCount = [parsedData objectForKey:@"identifications_count"] ?: nil;
-                                  user.siteId = [parsedData objectForKey:@"site_id"] ?: nil;
+                                  user.siteId = NULL_TO_NIL([parsedData objectForKey:@"site_id"])?: [NSNumber numberWithInt:0];
                                   
                                   [[Analytics sharedClient] registerUserWithIdentifier:user.recordID.stringValue];
                                   

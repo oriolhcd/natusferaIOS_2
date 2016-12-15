@@ -22,20 +22,20 @@
 
 #ifdef DEBUG1
     //#define INatBaseURL @"http://localhost:3000"
-    #define INatBaseURL @"http://inaturalist.gbif.es"
+    #define INatBaseURL @"http://natusfera.gbif.es"
     //#define INatMediaBaseURL @"http://127.0.0.1:3000"
-    #define INatMediaBaseURL @"http://inaturalist.gbif.es"
+    #define INatMediaBaseURL @"http://natusfera.gbif.es"
     //#define INatWebBaseURL @"http://127.0.0.1:3000"
-    #define INatWebBaseURL @"http://inaturalist.gbif.es"
+    #define INatWebBaseURL @"http://natusfera.gbif.es"
 #else
     // base URL for all API requests
-    #define INatBaseURL @"http://inaturalist.gbif.es"
+    #define INatBaseURL @"http://natusfera.gbif.es"
 
     // base URL for all media upload API requests
-    #define INatMediaBaseURL @"http://inaturalist.gbif.es"
+    #define INatMediaBaseURL @"http://natusfera.gbif.es"
 
     // base URL for all website requests
-    #define INatWebBaseURL @"http://inaturalist.gbif.es"
+    #define INatWebBaseURL @"http://natusfera.gbif.es"
 #endif
 
 #endif
