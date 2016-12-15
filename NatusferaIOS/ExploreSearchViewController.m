@@ -690,12 +690,14 @@
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     });
 
-    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Location Fetch Error", nil)
-                                message:error.localizedDescription
-                               delegate:nil
-                      cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                      otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Location Fetch Error", nil)
+//                                message:error.localizedDescription
+//                               delegate:nil
+//                      cancelButtonTitle:NSLocalizedString(@"OK", nil)
+//                      otherButtonTitles:nil] show];
 
+    
+    
     isFetchingLocation = NO;
 }
 
@@ -753,6 +755,10 @@
 #pragma mark - Location Manager helpers
 
 - (void)startLookingForCurrentLocationNotify:(BOOL)shouldNotify {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        return;
+    }
+    
     if (isFetchingLocation)
         return;
     

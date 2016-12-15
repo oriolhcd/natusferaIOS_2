@@ -110,11 +110,9 @@
         // fetch using new search predicate(s)
         [self fetchObservationsShouldNotify:YES];
     } else {
-        //NSError *error = [NSError errorWithDomain:@"org.natusfera" //M.Lujano:10/06/2016
         NSError *error = [NSError errorWithDomain:@"es.gbif.natusfera"
                                              code:-1008
                                          userInfo:@{
-                                                    //NSLocalizedDescriptionKey: @"Network unavailable, cannot search Natusfera.org" //M.Lujano:10/06/2016
                                                     NSLocalizedDescriptionKey: @"Network unavailable, cannot search Natusfera.gbif.es"
                                                     }];
         dispatch_async(dispatch_get_main_queue(), ^{
