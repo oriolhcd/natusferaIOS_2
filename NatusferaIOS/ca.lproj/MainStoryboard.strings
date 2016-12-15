@@ -18,7 +18,7 @@
 "1hu-IK-XsQ.text" = "Nom científic";
 
 /* Class = "UILabel"; text = "your ID"; ObjectID = "1iK-3K-ACP"; */
-"1iK-3K-ACP.text" = "La seva identificació";
+"1iK-3K-ACP.text" = "El teu identificador";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "2oq-jA-OoV"; */
 "2oq-jA-OoV.text" = "Títol";
@@ -42,7 +42,7 @@
 "4is-uw-pth.text" = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l";
 
 /* Class = "UINavigationItem"; title = "Observation Activity"; ObjectID = "4vK-Bt-6LG"; */
-"4vK-Bt-6LG.title" = "Activitat observació";
+"4vK-Bt-6LG.title" = "Activitat d'observació";
 
 /* Class = "UILabel"; text = "taxon name here"; ObjectID = "6Ac-FE-Mys"; */
 "6Ac-FE-Mys.text" = "Nom del tàxon aquí";
@@ -54,7 +54,7 @@
 "6UX-BL-9DW.title" = "Projectes";
 
 /* Class = "UILabel"; text = "Love Natusfera? Rate us"; ObjectID = "6bP-NK-UmB"; */
-"6bP-NK-UmB.text" = "Mestresses Natusfera? Valora'ns";
+"6bP-NK-UmB.text" = "T'encanta Natusfera? Valora'ns";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "6cS-83-3B7"; */
 "6cS-83-3B7.title" = "Article";
@@ -66,7 +66,7 @@
 "9br-9C-J7v.headerTitle" = "Què vas veure?";
 
 /* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "AFb-0q-aeK"; */
-"AFb-0q-aeK.normalTitle" = "Acordar";
+"AFb-0q-aeK.normalTitle" = "D'acord";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Be1-xj-miA"; */
 "Be1-xj-miA.text" = "Etiqueta";
@@ -96,13 +96,13 @@
 "GKo-Sv-g5X.title" = "Observar";
 
 /* Class = "UIButton"; normalTitle = "Join"; ObjectID = "GOH-dl-HXL"; */
-"GOH-dl-HXL.normalTitle" = "Join";
+"GOH-dl-HXL.normalTitle" = "Apuntar-me";
 
 /* Class = "UILabel"; text = "R"; ObjectID = "GhD-Pv-hyV"; */
 "GhD-Pv-hyV.text" = "R";
 
 /* Class = "UILabel"; text = "Research Grade"; ObjectID = "Ghi-b0-mds"; */
-"Ghi-b0-mds.text" = "Grau d'investigació";
+"Ghi-b0-mds.text" = "Grau d'Investigació";
 
 /* Class = "UITabBarItem"; title = "Projects"; ObjectID = "GmQ-fX-MuU"; */
 "GmQ-fX-MuU.title" = "Projectes";
@@ -114,13 +114,13 @@
 "HB8-Oo-jRB.title" = "Tancar";
 
 /* Class = "UITableViewSection"; headerTitle = "Identification Taxon"; ObjectID = "Hhm-Rj-8gu"; */
-"Hhm-Rj-8gu.headerTitle" = "identificació Tàxon";
+"Hhm-Rj-8gu.headerTitle" = "Identificador del Tàxon";
 
 /* Class = "UITableViewSection"; headerTitle = "Version"; ObjectID = "I43-iz-miT"; */
 "I43-iz-miT.headerTitle" = "Versió";
 
 /* Class = "UILabel"; text = "Contact support"; ObjectID = "IvC-UJ-yev"; */
-"IvC-UJ-yev.text" = "Contactar suport";
+"IvC-UJ-yev.text" = "Demana suport";
 
 /* Class = "UILabel"; text = "Choose projects"; ObjectID = "J9i-XA-tlL"; */
 "J9i-XA-tlL.text" = "Escollir projectes";
@@ -144,13 +144,13 @@
 "Ldf-mk-Bj8.text" = "Natusfera";
 
 /* Class = "UILabel"; text = "Autocomplete names"; ObjectID = "M0h-Eg-gr3"; */
-"M0h-Eg-gr3.text" = "noms d'autocompletar";
+"M0h-Eg-gr3.text" = "Autocompleta noms";
 
 /* Class = "UILabel"; text = "???"; ObjectID = "M93-9f-xgT"; */
 "M93-9f-xgT.text" = "???";
 
 /* Class = "UINavigationItem"; title = "Add Identification"; ObjectID = "Ml3-QP-W2S"; */
-"Ml3-QP-W2S.title" = "Afegir identificació";
+"Ml3-QP-W2S.title" = "Afegeix un identificador";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "N7H-Hl-jcl"; */
 "N7H-Hl-jcl.normalTitle" = "Botó";
@@ -183,10 +183,10 @@
 "QBS-Et-vgb.text" = "Etiqueta";
 
 /* Class = "UILabel"; text = "Need ID help?"; ObjectID = "QYT-BR-dNq"; */
-"QYT-BR-dNq.text" = "Necessita ajuda ID?";
+"QYT-BR-dNq.text" = "Necessites ajuda amb l'ID?";
 
 /* Class = "UILabel"; text = "Needs ID"; ObjectID = "QaI-aC-heW"; */
-"QaI-aC-heW.text" = "Necessites ID";
+"QaI-aC-heW.text" = "Necessites un ID";
 
 /* Class = "UILabel"; text = "???"; ObjectID = "R4F-3k-D7x"; */
 "R4F-3k-D7x.text" = "???";
@@ -210,55 +210,55 @@
 "TdD-Oa-9ir.text" = "Publicat per l'usuari en la data";
 
 /* Class = "UILabel"; text = "Automatic Upload"; ObjectID = "TeG-HZ-eQD"; */
-"TeG-HZ-eQD.text" = "Automatic Upload";
+"TeG-HZ-eQD.text" = "Pujar automàticament";
 
 /* Class = "UIButton"; normalTitle = "About"; ObjectID = "TvY-6v-upW"; */
-"TvY-6v-upW.normalTitle" = "About";
+"TvY-6v-upW.normalTitle" = "Sobre l'App";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "UYT-WY-iEk"; */
 "UYT-WY-iEk.text" = "Etiqueta";
 
 /* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[0] = "Standard"; ObjectID = "VjR-qL-q95"; */
-"VjR-qL-q95.segmentTitles[0]" = "Standard";
+"VjR-qL-q95.segmentTitles[0]" = "Estàndar";
 
 /* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[1] = "Satellite"; ObjectID = "VjR-qL-q95"; */
-"VjR-qL-q95.segmentTitles[1]" = "Satellite";
+"VjR-qL-q95.segmentTitles[1]" = "Satèlit";
 
 /* Class = "UISegmentedControl"; VjR-qL-q95.segmentTitles[2] = "Hybrid"; ObjectID = "VjR-qL-q95"; */
-"VjR-qL-q95.segmentTitles[2]" = "Hybrid";
+"VjR-qL-q95.segmentTitles[2]" = "Híbrid";
 
 /* Class = "UINavigationItem"; title = "Edit"; ObjectID = "Vmt-AE-W0j"; */
-"Vmt-AE-W0j.title" = "Edit";
+"Vmt-AE-W0j.title" = "Edita";
 
 /* Class = "UILabel"; text = "Project title is way too long brother"; ObjectID = "X8Y-bf-fBQ"; */
-"X8Y-bf-fBQ.text" = "Project title is way too long brother";
+"X8Y-bf-fBQ.text" = "El títol del projecte és massa llarg company";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "XGD-Gw-yZr"; */
 "XGD-Gw-yZr.text" = "Etiqueta";
 
 /* Class = "UINavigationItem"; title = "Project Details"; ObjectID = "XXq-bW-vbF"; */
-"XXq-bW-vbF.title" = "Project Details";
+"XXq-bW-vbF.title" = "Detalls del projecte";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "XyN-zm-hAh"; */
 "XyN-zm-hAh.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "YDK-Qj-SES"; */
-"YDK-Qj-SES.text" = "Subtitle";
+"YDK-Qj-SES.text" = "Subtítol";
 
 /* Class = "UILabel"; text = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l"; ObjectID = "YzB-Lv-hOb"; */
 "YzB-Lv-hOb.text" = "lkasdjf lkajsdf lkajsdf jasdf lkjasdf lkjadsf lkjadsf lkjsadf kjdsflk jaslkfj lakjdsf lkjasdf lkj ljkasdf lkjasdf l";
 
 /* Class = "UITableViewSection"; headerTitle = "Date / Time"; ObjectID = "Z4l-tt-zMs"; */
-"Z4l-tt-zMs.headerTitle" = "Date / Time";
+"Z4l-tt-zMs.headerTitle" = "Data / Hora";
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "ZBp-ec-FjM"; */
-"ZBp-ec-FjM.title" = "Cancel";
+"ZBp-ec-FjM.title" = "Cancel·la";
 
 /* Class = "UITableViewSection"; headerTitle = "Projects"; ObjectID = "ZOk-5a-K6O"; */
 "ZOk-5a-K6O.headerTitle" = "Projectes";
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Zq5-BG-IXA"; */
-"Zq5-BG-IXA.title" = "Cancel";
+"Zq5-BG-IXA.title" = "Cancel·lar";
 
 /* Class = "UILabel"; text = "N"; ObjectID = "aGV-hu-Qk0"; */
 "aGV-hu-Qk0.text" = "N";
@@ -267,13 +267,13 @@
 "bDI-Jt-ccY.text" = "e";
 
 /* Class = "UILabel"; text = "Project title is way too long brother"; ObjectID = "bKM-7Q-aRA"; */
-"bKM-7Q-aRA.text" = "Project title is way too long brother";
+"bKM-7Q-aRA.text" = "El títol del projecte és massa llarg company";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bTy-8i-NnF"; */
 "bTy-8i-NnF.text" = "Etiqueta";
 
 /* Class = "UILabel"; text = "Scientific name"; ObjectID = "bW0-Pb-mB9"; */
-"bW0-Pb-mB9.text" = "Scientific name";
+"bW0-Pb-mB9.text" = "Nom científic";
 
 /* Class = "UILabel"; text = "50"; ObjectID = "bXi-Eq-fRG"; */
 "bXi-Eq-fRG.text" = "50";
@@ -282,28 +282,28 @@
 "cFt-Xm-dZF.text" = "Etiqueta";
 
 /* Class = "UITableViewSection"; headerTitle = "More"; ObjectID = "cQc-hZ-KcA"; */
-"cQc-hZ-KcA.headerTitle" = "More";
+"cQc-hZ-KcA.headerTitle" = "Més";
 
 /* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "cSZ-cD-dfS"; */
-"cSZ-cD-dfS.title" = "Add";
+"cSZ-cD-dfS.title" = "Afegeix";
 
 /* Class = "UINavigationItem"; title = "Guide Title"; ObjectID = "cTI-n2-vmb"; */
-"cTI-n2-vmb.title" = "Guide Title";
+"cTI-n2-vmb.title" = "Títol de la Guia";
 
 /* Class = "UILabel"; text = "Add observation"; ObjectID = "dYu-ti-1gC"; */
-"dYu-ti-1gC.text" = "Add observation";
+"dYu-ti-1gC.text" = "Afegeix observació";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ddP-Sx-hMc"; */
 "ddP-Sx-hMc.text" = "Etiqueta";
 
 /* Class = "UIButton"; normalTitle = "Comment"; ObjectID = "drv-xl-rKi"; */
-"drv-xl-rKi.normalTitle" = "Comment";
+"drv-xl-rKi.normalTitle" = "Comenta";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "duv-dw-uXw"; */
-"duv-dw-uXw.text" = "Detail";
+"duv-dw-uXw.text" = "Detall";
 
 /* Class = "UILabel"; text = "Unknown"; ObjectID = "e0j-MT-hzk"; */
-"e0j-MT-hzk.text" = "Unknown";
+"e0j-MT-hzk.text" = "Desconegut";
 
 /* Class = "UILabel"; text = "Acc."; ObjectID = "eMN-g3-ANY"; */
 "eMN-g3-ANY.text" = "Acc.";
@@ -321,13 +321,13 @@
 "fI4-Ti-IhX.text" = "Etiqueta";
 
 /* Class = "UILabel"; text = "Captive / Cultivated"; ObjectID = "fMy-Kd-WzB"; */
-"fMy-Kd-WzB.text" = "Captive / Cultivated";
+"fMy-Kd-WzB.text" = "Captiu / Conreat";
 
 /* Class = "UILabel"; text = "Natusfera Network"; ObjectID = "g3B-dy-Lka"; */
-"g3B-dy-Lka.text" = "Natusfera Network";
+"g3B-dy-Lka.text" = "Xarxa Natusfera";
 
 /* Class = "UITableViewSection"; headerTitle = "Observation Rules"; ObjectID = "gDe-P6-41D"; */
-"gDe-P6-41D.headerTitle" = "Observation Rules";
+"gDe-P6-41D.headerTitle" = "Normes d'Observació";
 
 /* Class = "UILabel"; text = "C"; ObjectID = "gNg-CF-5w6"; */
 "gNg-CF-5w6.text" = "C";
@@ -339,19 +339,19 @@
 "gq3-Sv-hEY.text" = "Lat:";
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "hKK-sS-qAN"; */
-"hKK-sS-qAN.title" = "Cancel";
+"hKK-sS-qAN.title" = "Cancel·la";
 
 /* Class = "UINavigationItem"; title = "Add Comment"; ObjectID = "hQf-3u-7NV"; */
-"hQf-3u-7NV.title" = "Add Comment";
+"hQf-3u-7NV.title" = "Afegeix un comentari";
 
 /* Class = "UIButton"; normalTitle = "View on Natusfera"; ObjectID = "hX2-Qg-qfb"; */
-"hX2-Qg-qfb.normalTitle" = "View on Natusfera";
+"hX2-Qg-qfb.normalTitle" = "Mira-ho a Natusfera";
 
 /* Class = "UILabel"; text = "Log In / Sign Up"; ObjectID = "hfA-vB-13u"; */
-"hfA-vB-13u.text" = "Log In / Sign Up";
+"hfA-vB-13u.text" = "Inicia sessió / Registra't";
 
 /* Class = "UILabel"; text = "Not Logged In"; ObjectID = "i9A-56-hiU"; */
-"i9A-56-hiU.text" = "Not Logged In";
+"i9A-56-hiU.text" = "No has iniciat sessió";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "iEA-QW-8rJ"; */
 "iEA-QW-8rJ.text" = "Etiqueta";
@@ -363,25 +363,25 @@
 "j77-Rx-AEr.text" = "Err";
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "jaz-9S-FvT"; */
-"jaz-9S-FvT.title" = "Cancel";
+"jaz-9S-FvT.title" = "Cancel·la";
 
 /* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "jjH-JI-aEw"; */
-"jjH-JI-aEw.title" = "Desar";
+"jjH-JI-aEw.title" = "Desa";
 
 /* Class = "UILabel"; text = "Common name"; ObjectID = "ju8-if-UDh"; */
-"ju8-if-UDh.text" = "nom comú";
+"ju8-if-UDh.text" = "Nom comú";
 
 /* Class = "UILabel"; text = "Username"; ObjectID = "kJ8-TA-cdz"; */
-"kJ8-TA-cdz.text" = "Username";
+"kJ8-TA-cdz.text" = "Usuari";
 
 /* Class = "UITableViewSection"; headerTitle = "Description"; ObjectID = "kaD-3n-Xuk"; */
-"kaD-3n-Xuk.headerTitle" = "Description";
+"kaD-3n-Xuk.headerTitle" = "Descripció";
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "l3n-dl-Zr0"; */
-"l3n-dl-Zr0.title" = "Settings";
+"l3n-dl-Zr0.title" = "Configuració";
 
 /* Class = "UILabel"; text = "Choose a map type"; ObjectID = "lol-PH-r6p"; */
-"lol-PH-r6p.text" = "Choose a map type";
+"lol-PH-r6p.text" = "Escull un tipus de mapa";
 
 /* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "mgd-CX-pVK"; */
 "mgd-CX-pVK.title" = "Fet";
@@ -402,13 +402,13 @@
 "o0O-Ue-qQo.text" = "Etiqueta";
 
 /* Class = "UITableViewSection"; headerTitle = "Your Account"; ObjectID = "oWq-bA-sYY"; */
-"oWq-bA-sYY.headerTitle" = "Your Account";
+"oWq-bA-sYY.headerTitle" = "El teu compte";
 
 /* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "pL9-Nd-0JB"; */
-"pL9-Nd-0JB.headerTitle" = "Help";
+"pL9-Nd-0JB.headerTitle" = "Ajuda";
 
 /* Class = "UITextField"; placeholder = "Species name"; ObjectID = "pmm-Vg-XgJ"; */
-"pmm-Vg-XgJ.placeholder" = "nom de l'espècie";
+"pmm-Vg-XgJ.placeholder" = "Nom de l'espècie";
 
 /* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "qJK-jT-EPE"; */
 "qJK-jT-EPE.headerTitle" = "Notes";
@@ -417,34 +417,34 @@
 "qok-8r-tzc.text" = "Nom del tàxon aquí";
 
 /* Class = "UILabel"; text = "Project title"; ObjectID = "qsE-wG-WNP"; */
-"qsE-wG-WNP.text" = "Project title";
+"qsE-wG-WNP.text" = "Títol del projecte";
 
 /* Class = "UILabel"; text = "Project name"; ObjectID = "r3N-gL-j8R"; */
-"r3N-gL-j8R.text" = "Project name";
+"r3N-gL-j8R.text" = "Nom del projecte";
 
 /* Class = "UITabBarItem"; title = "Observations"; ObjectID = "s0d-iz-ydn"; */
-"s0d-iz-ydn.title" = "Observations";
+"s0d-iz-ydn.title" = "Observacions";
 
 /* Class = "UILabel"; text = "Casual Grade"; ObjectID = "sFv-C3-tQc"; */
-"sFv-C3-tQc.text" = "Casual Grade";
+"sFv-C3-tQc.text" = "Grau Informal";
 
 /* Class = "UIBarButtonItem"; title = "Observe"; ObjectID = "sit-XC-ixQ"; */
-"sit-XC-ixQ.title" = "Observar";
+"sit-XC-ixQ.title" = "Observa";
 
 /* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "sxb-6N-VGO"; */
-"sxb-6N-VGO.headerTitle" = "About";
+"sxb-6N-VGO.headerTitle" = "Sobre";
 
 /* Class = "UILabel"; text = "00:00 AM"; ObjectID = "tn8-cj-klM"; */
 "tn8-cj-klM.text" = "00:00 AM";
 
 /* Class = "UITableViewSection"; headerTitle = "Terms"; ObjectID = "tnA-n3-DOC"; */
-"tnA-n3-DOC.headerTitle" = "Terms";
+"tnA-n3-DOC.headerTitle" = "Termes";
 
 /* Class = "UIButton"; normalTitle = "Details"; ObjectID = "tp5-5y-3mX"; */
 "tp5-5y-3mX.normalTitle" = "Detalls";
 
 /* Class = "UINavigationItem"; title = "Observations"; ObjectID = "uR8-0q-Vnf"; */
-"uR8-0q-Vnf.title" = "Observations";
+"uR8-0q-Vnf.title" = "Observacions";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "uVH-g7-EIc"; */
 "uVH-g7-EIc.text" = "Etiqueta";
@@ -453,19 +453,19 @@
 "uoB-WQ-RJP.normalTitle" = "Botó";
 
 /* Class = "UIButton"; normalTitle = "Suggest ID"; ObjectID = "vUq-gN-XYD"; */
-"vUq-gN-XYD.normalTitle" = "Suggest ID";
+"vUq-gN-XYD.normalTitle" = "Suggereix ID";
 
 /* Class = "UIBarButtonItem"; title = "Join"; ObjectID = "wCV-Z1-3g6"; */
-"wCV-Z1-3g6.title" = "Join";
+"wCV-Z1-3g6.title" = "Apunta't";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "xE8-Wh-GqW"; */
-"xE8-Wh-GqW.text" = "Detail";
+"xE8-Wh-GqW.text" = "Detall";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "xOz-Sg-Gxs"; */
 "xOz-Sg-Gxs.text" = "Etiqueta";
 
 /* Class = "UILabel"; text = "Guide name"; ObjectID = "xdk-Tu-cps"; */
-"xdk-Tu-cps.text" = "Guide name";
+"xdk-Tu-cps.text" = "Nom de la guia";
 
 /* Class = "UILabel"; text = "50"; ObjectID = "yNr-7b-Prg"; */
 "yNr-7b-Prg.text" = "50";
@@ -480,13 +480,13 @@
 "zHl-Cq-k7v.headerTitle" = "Notes";
 
 /* Class = "UILabel"; text = "Acknowledgements"; ObjectID = "zPB-Sx-9Uh"; */
-"zPB-Sx-9Uh.text" = "Acknowledgements";
+"zPB-Sx-9Uh.text" = "Reconeixements";
 
 /* Class = "UILabel"; text = "00:00 AM"; ObjectID = "zY1-k8-meb"; */
 "zY1-k8-meb.text" = "00:00 AM";
 
 /* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "zb7-C4-rX1"; */
-"zb7-C4-rX1.normalTitle" = "Acordar";
+"zb7-C4-rX1.normalTitle" = "D'acord";
 
 /* Class = "UINavigationItem"; title = "Edit Location"; ObjectID = "zpr-b5-V8G"; */
-"zpr-b5-V8G.title" = "Editar ubicació";
+"zpr-b5-V8G.title" = "Edita la ubicació";

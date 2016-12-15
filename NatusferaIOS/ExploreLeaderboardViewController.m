@@ -158,15 +158,19 @@ static NSString *LeaderboardCellReuseID = @"LeaderboardCell";
     // obs leaderboard, leaving them with 0 apparent observations in the JSON. this is obviously
     // incorrect, but we don't want to do another API call for every row, so just show * like on
     // the web.
+    
+    NSString *observations = NSLocalizedString(@"Observations", "");
     if (obsCount > 0) {
-        cell.observationCount.text = [NSString stringWithFormat:@"Observations: %ld", (long)obsCount];
+        cell.observationCount.text = [NSString stringWithFormat:@"%@: %ld", observations, (long)obsCount];
     } else {
-        cell.observationCount.text = @"Observations: *";
+        cell.observationCount.text = [NSString stringWithFormat:@"%@: *", observations];
     }
+    
+    NSString *species = NSLocalizedString(@"Species", "");
     if (speciesCount > 0) {
-        cell.speciesCount.text = [NSString stringWithFormat:@"Species: %ld", (long)speciesCount];
+        cell.speciesCount.text = [NSString stringWithFormat:@"%@: %ld", species, (long)speciesCount];
     } else {
-        cell.speciesCount.text = @"Species: *";
+        cell.speciesCount.text = [NSString stringWithFormat:@"%@: *", species];
     }
     
     if (![userIconUrl isEqual:[NSNull null]] && ![userIconUrl isEqualToString:@""]) {
