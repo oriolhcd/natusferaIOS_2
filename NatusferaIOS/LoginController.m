@@ -47,7 +47,7 @@ NSInteger INatMinPasswordLength = 6;
         self.uploadManager = [[UploadManager alloc] init];
         
         [self initOAuth2Service];
-        //[self initGoogleLogin];
+        [self initGoogleLogin];
     }
     
     return self;
@@ -365,14 +365,16 @@ NSInteger INatMinPasswordLength = 6;
     //[nav pushViewController:vc animated:YES];
     
     // inat green button tint
-    [nav.navigationBar setTintColor:[UIColor inatTint]];
+//    [nav.navigationBar setTintColor:[UIColor inatTint]];
+//    
+//    // standard navigation bar
+//    [nav.navigationBar setBackgroundImage:nil
+//                            forBarMetrics:UIBarMetricsDefault];
+//    [nav.navigationBar setShadowImage:nil];
+//    [nav.navigationBar setTranslucent:YES];
+//    [nav setNavigationBarHidden:NO];
     
-    // standard navigation bar
-    [nav.navigationBar setBackgroundImage:nil
-                            forBarMetrics:UIBarMetricsDefault];
-    [nav.navigationBar setShadowImage:nil];
-    [nav.navigationBar setTranslucent:YES];
-    [nav setNavigationBarHidden:NO];
+    [[GIDSignIn sharedInstance] signIn];
 }
 
 - (NSString *)scopesForGoogleSignin {
@@ -426,8 +428,9 @@ NSInteger INatMinPasswordLength = 6;
     
     //googleSignIn.delegate = self; //linea comentada M.Lujano:01/12/16
     [googleSignIn setDelegate:self];
-    //[googleSignIn trySilentAuthentication]; //linea comentada M.Lujano:01/12/16
+    [googleSignIn signInSilently]; //linea comentada M.Lujano:01/12/16
 }
+
 
 /*- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
                    error:(NSError *)error {
@@ -464,6 +467,10 @@ NSInteger INatMinPasswordLength = 6;
     
     
 }*/
+
+-(void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    NSLog(@"Google signed in!");
+}
 
 #pragma mark - Success / Failure helpers
 
