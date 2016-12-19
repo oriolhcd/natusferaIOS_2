@@ -373,7 +373,7 @@ NSInteger INatMinPasswordLength = 6;
 //    [nav.navigationBar setShadowImage:nil];
 //    [nav.navigationBar setTranslucent:YES];
 //    [nav setNavigationBarHidden:NO];
-    
+    [[GIDSignIn sharedInstance] signOut];
     [[GIDSignIn sharedInstance] signIn];
 }
 
@@ -424,7 +424,7 @@ NSInteger INatMinPasswordLength = 6;
                             @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
                             ];*/ //lineas comentadas por M.Lujano:01/12/16
     
-    [googleSignIn setScopes:[NSArray arrayWithObject:@"http://www.googleapis.com/auth/plus.login"]];
+//    [googleSignIn setScopes:[NSArray arrayWithObject:@"http://www.googleapis.com/auth/plus.login"]];
     
     //googleSignIn.delegate = self; //linea comentada M.Lujano:01/12/16
     [googleSignIn setDelegate:self];
@@ -469,7 +469,23 @@ NSInteger INatMinPasswordLength = 6;
 }*/
 
 -(void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-    NSLog(@"Google signed in!");
+    externalAccessToken = [[[user authentication] accessToken] copy];
+
+    if (externalAccessToken != nil) {
+        [[Analytics sharedClient] event:kAnalyticsEventLogin
+                         withProperties:@{ @"Via": @"Google+" }];
+        
+        accountType = kINatAuthServiceExtToken;
+        [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:accountType
+                                                             assertionType:[NSURL URLWithString:@"http://google.com"]
+                                                                 assertion:externalAccessToken];
+//        [[NSUserDefaults standardUserDefaults] setValue:user.profile.name
+//                                                 forKey:INatUsernamePrefKey];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+
+        tryingGoogleReauth = NO;
+        [self executeSuccess:nil];
+    }
 }
 
 #pragma mark - Success / Failure helpers
@@ -590,7 +606,8 @@ NSInteger INatMinPasswordLength = 6;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *username = [defaults objectForKey:INatUsernamePrefKey];
     NSString *inatToken = [defaults objectForKey:INatTokenPrefKey];
-    return ((username && username.length > 0) || (inatToken && inatToken.length > 0));
+    
+    return ((username && username.length > 0) || (inatToken && inatToken.length > 0)) || externalAccessToken != nil;
 }
 
 @end

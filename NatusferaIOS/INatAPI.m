@@ -11,7 +11,7 @@
 @implementation INatAPI
 
 - (NSString *)apiBaseUrl {
-    return @"http://api.natusfera.org/v1";
+    return @"http://api.inaturalist.org/v1";
 }
 
 - (void)fetch:(NSString *)path mapping:(RKObjectMapping *)mapping handler:(INatAPIFetchCompletionHandler)done {

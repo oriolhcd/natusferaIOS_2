@@ -368,6 +368,7 @@ static const int AutouploadSwitchTag = 101;
             cell.textLabel.textColor = [UIColor inatTint];
             if (appDelegate.loginController.isLoggedIn) {
                 cell.textLabel.text = NSLocalizedString(@"Sign out",nil);
+                cell.detailTextLabel.text = appDelegate.loginController.fetchMe.login;
             } else {
                 cell.textLabel.text = NSLocalizedString(@"Log In / Sign Up",nil);
             }
