@@ -37,6 +37,7 @@
 #import "LoginController.h"
 #import "UploadManager.h"
 #import "UIColor+Natusfera.h"
+#import "GooglePlusAuthViewController.h"
 
 static const int CreditsSection = 3;
 
@@ -121,6 +122,13 @@ static const int AutouploadSwitchTag = 101;
     // clear g+
     //if ([[GPPSignIn sharedInstance] hasAuthInKeychain]) [[GPPSignIn sharedInstance] disconnect]; //comentado por M.Lujano:24/11/16
 
+    if ([[GIDSignIn sharedInstance] currentUser] != nil) {
+        [[GIDSignIn sharedInstance] disconnect];
+        
+        NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[UIApplication sharedApplication].delegate;
+        [appDelegate.loginController setExternalAccessToken:nil];
+    }
+    
     // clear preference cached signin info & preferences
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:INatUsernamePrefKey];
@@ -371,6 +379,7 @@ static const int AutouploadSwitchTag = 101;
                 cell.detailTextLabel.text = appDelegate.loginController.fetchMe.login;
             } else {
                 cell.textLabel.text = NSLocalizedString(@"Log In / Sign Up",nil);
+                cell.detailTextLabel.text = nil;
             }
         }
     }

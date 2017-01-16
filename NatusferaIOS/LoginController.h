@@ -48,5 +48,6 @@ typedef void (^LoginErrorBlock)(NSError *error);
 
 @property (readonly) BOOL isLoggedIn;
 @property UploadManager *uploadManager;
+@property (nonatomic, strong) NSString* externalAccessToken;
 
 @end
