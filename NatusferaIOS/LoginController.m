@@ -21,7 +21,6 @@
 #import "Taxon.h"
 
 @interface LoginController ()  {
-    NSString    *externalAccessToken;
     NSString    *iNatAccessToken;
     NSString    *accountType;
     BOOL        isLoginCompleted;
@@ -30,7 +29,6 @@
 }
 @property (atomic, readwrite, copy) LoginSuccessBlock currentSuccessBlock;
 @property (atomic, readwrite, copy) LoginErrorBlock currentErrorBlock;
-
 @end
 
 #define NULL_TO_NIL(obj) ({ __typeof__ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
@@ -41,13 +39,14 @@ NSString *kUserLoggedInNotificationName = @"UserLoggedInNotificationName";
 NSInteger INatMinPasswordLength = 6;
 
 @implementation LoginController
+@synthesize externalAccessToken;
 
 - (instancetype)init {
     if (self = [super init]) {
         self.uploadManager = [[UploadManager alloc] init];
         
         [self initOAuth2Service];
-        //[self initGoogleLogin];
+        [self initGoogleLogin];
     }
     
     return self;
@@ -352,35 +351,13 @@ NSInteger INatMinPasswordLength = 6;
     accountType = kINatAuthServiceExtToken;
     isLoginCompleted = NO;
 
-    /*GooglePlusAuthViewController *vc = [GooglePlusAuthViewController controllerWithScope:self.scopesForGoogleSignin
-                                                                                clientID:self.clientIdForGoogleSignin
-                                                                            clientSecret:nil
-                                                                        keychainItemName:nil
-                                                                                delegate:self
-                                                                        finishedSelector:@selector(viewController:finishedAuth:error:)];*/
-   
-   // GooglePlusAuthViewController *vc = [GooglePlusAuthViewController (UIViewController:finishedAuth:error)];
-    
-    
-    //[nav pushViewController:vc animated:YES];
-    
-    // inat green button tint
-    [nav.navigationBar setTintColor:[UIColor inatTint]];
-    
-    // standard navigation bar
-    [nav.navigationBar setBackgroundImage:nil
-                            forBarMetrics:UIBarMetricsDefault];
-    [nav.navigationBar setShadowImage:nil];
-    [nav.navigationBar setTranslucent:YES];
-    [nav setNavigationBarHidden:NO];
+    [[GIDSignIn sharedInstance] signOut];
+    [[GIDSignIn sharedInstance] signIn];
 }
 
 - (NSString *)scopesForGoogleSignin {
-    //GPPSignIn *signin = [GPPSignIn sharedInstance];
     GIDSignIn *signin= [GIDSignIn sharedInstance];
     
-    // GTMOAuth2VCTouch takes a different scope format than GPPSignIn
-    // @"plus.login plus.me userinfo.email"
     __block NSString *scopes;
     [signin.scopes enumerateObjectsUsingBlock:^(NSString *scope, NSUInteger idx, BOOL *stop) {
         if (idx == 0)
@@ -393,13 +370,8 @@ NSInteger INatMinPasswordLength = 6;
 }
 
 - (NSString *)clientIdForGoogleSignin {
-    //return [[GPPSignIn sharedInstance] clientID];
     return [[GIDSignIn sharedInstance] clientID];
 }
-
-//- (GPPSignIn *)googleSignin {
-//    return [GPPSignIn sharedInstance];
-//}
 
 - (GIDSignIn *)googleSignin {
     return [GIDSignIn sharedInstance];
@@ -408,46 +380,22 @@ NSInteger INatMinPasswordLength = 6;
 
 
 -(void) initGoogleLogin {
-    // Google+ init
-    //GPPSignIn *googleSignIn = [GPPSignIn sharedInstance]; linea comentada M.Lujano 1/12/2016
     GIDSignIn *googleSignIn = [GIDSignIn sharedInstance];
-    //googleSignIn.shouldFetchGoogleUserID=true; //linea modificada M.Lujano:14/06/2016 y comentada M.Lujano 01/12/16
     googleSignIn.shouldFetchBasicProfile = true;
 
     googleSignIn.clientID = GoogleClientId;
 
-    /*googleSignIn.scopes = @[
-                            kGTLAuthScopePlusLogin, // defined in GTLPlusConstants.h
-                            kGTLAuthScopePlusMe,
-                            @"https://www.googleapis.com/auth/plus.login", //@"https://www.googleapis.com/auth/userinfo.email",
-                            ];*/ //lineas comentadas por M.Lujano:01/12/16
-    
-    [googleSignIn setScopes:[NSArray arrayWithObject:@"http://www.googleapis.com/auth/plus.login"]];
-    
-    //googleSignIn.delegate = self; //linea comentada M.Lujano:01/12/16
     [googleSignIn setDelegate:self];
-    //[googleSignIn trySilentAuthentication]; //linea comentada M.Lujano:01/12/16
+    [googleSignIn signInSilently]; //linea comentada M.Lujano:01/12/16
 }
 
-/*- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth
-                   error:(NSError *)error {
-    
-    
-    if (error || (!auth.accessToken && tryingGoogleReauth)) {
-        
-        [[Analytics sharedClient] event:kAnalyticsEventLoginFailed
-                         withProperties:@{ @"from": @"Google" }];
-        tryingGoogleReauth = NO;
-        [self executeError:error];
-    } else if (!auth.accessToken && !tryingGoogleReauth) {
-        tryingGoogleReauth = YES;
-        [[GPPSignIn sharedInstance] signOut];
-        [self initGoogleLogin];
-    } else {
+-(void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    externalAccessToken = [[[user authentication] accessToken] copy];
+
+    if (externalAccessToken != nil) {
         [[Analytics sharedClient] event:kAnalyticsEventLogin
                          withProperties:@{ @"Via": @"Google+" }];
-        externalAccessToken = [[auth accessToken] copy];
-        accountType = nil;
+        
         accountType = kINatAuthServiceExtToken;
         [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:accountType
                                                              assertionType:[NSURL URLWithString:@"http://google.com"]
@@ -455,15 +403,11 @@ NSInteger INatMinPasswordLength = 6;
         tryingGoogleReauth = NO;
         [self executeSuccess:nil];
     }
-}*/
+}
 
-/*- (void)viewController:(GTMOAuth2ViewControllerTouch *)vc
-          finishedAuth:(GTMOAuth2Authentication *)auth
-                 error:(NSError *)error {
-    [self finishedWithAuth:auth error:error];
-    
-    
-}*/
+-(void)signIn:(GIDSignIn *)signIn didDisconnectWithUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    externalAccessToken = nil;
+}
 
 #pragma mark - Success / Failure helpers
 
@@ -583,7 +527,8 @@ NSInteger INatMinPasswordLength = 6;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *username = [defaults objectForKey:INatUsernamePrefKey];
     NSString *inatToken = [defaults objectForKey:INatTokenPrefKey];
-    return ((username && username.length > 0) || (inatToken && inatToken.length > 0));
+    
+    return ((username && username.length > 0) || (inatToken && inatToken.length > 0)) || externalAccessToken != nil;
 }
 
 @end

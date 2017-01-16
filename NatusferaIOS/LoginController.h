@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleSignIn/GoogleSignIn.h>
 
 @class Partner;
 @class User;
@@ -18,7 +19,7 @@ extern NSInteger INatMinPasswordLength;
 typedef void (^LoginSuccessBlock)(NSDictionary *info);
 typedef void (^LoginErrorBlock)(NSError *error);
 
-@interface LoginController : NSObject
+@interface LoginController : NSObject<GIDSignInDelegate>
 
 - (void)loginWithFacebookSuccess:(LoginSuccessBlock)success
                          failure:(LoginErrorBlock)error;
@@ -47,5 +48,6 @@ typedef void (^LoginErrorBlock)(NSError *error);
 
 @property (readonly) BOOL isLoggedIn;
 @property UploadManager *uploadManager;
+@property (nonatomic, strong) NSString* externalAccessToken;
 
 @end
