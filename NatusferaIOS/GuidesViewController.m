@@ -348,13 +348,13 @@ static const int ListControlIndexNearby = 2;
         
         self.title = NSLocalizedString(@"Guides", nil);
 
-        self.tabBarItem.image = ({
+        self.navigationController.tabBarItem.image = ({
             FAKIcon *bookOutline = [FAKIonIcons iosBookOutlineIconWithSize:35];
             [bookOutline addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
             [bookOutline imageWithSize:CGSizeMake(34, 45)];
         });
         
-        self.tabBarItem.selectedImage =({
+        self.navigationController.tabBarItem.selectedImage =({
             FAKIcon *bookFilled = [FAKIonIcons iosBookIconWithSize:35];
             [bookFilled addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
             [bookFilled imageWithSize:CGSizeMake(34, 45)];
