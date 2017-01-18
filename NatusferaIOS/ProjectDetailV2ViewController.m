@@ -68,9 +68,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     [self.projectHeaderBackground addSubview:effectView];
     
-    [self.projectHeaderBackground removeFromSuperview];
     self.projectHeaderBackground.clipsToBounds = YES;
-    [self.projectHeader insertSubview:self.projectHeaderBackground atIndex:0];
     
     self.projectThumbnail.layer.cornerRadius = 2.0f;
     self.projectThumbnail.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -126,6 +124,8 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     [self.aboutButton addTarget:self
                          action:@selector(aboutTapped:)
                forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view layoutIfNeeded];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -231,7 +231,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     [UIView animateWithDuration:0.3 animations:^{
         self.projectHeader.layer.transform = CATransform3DIdentity;
         self.container.frame = CGRectMake(0,
-                                          200,
+                                          self.projectHeader.frame.size.height,
                                           self.view.bounds.size.width,
                                           self.view.bounds.size.height - self.projectHeader.frame.size.height);
         for (UIButton *btn in @[ self.joinButton, self.newsButton, self.aboutButton ]) {
@@ -245,6 +245,9 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
 }
 
 - (void)containedScrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentSize.height <= self.view.bounds.size.height) {
+        return;
+    }
     CGFloat offset = scrollView.contentOffset.y;
     CATransform3D headerTransform = CATransform3DIdentity;
     
@@ -255,7 +258,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
             btn.userInteractionEnabled = YES;
         }
         self.container.frame = CGRectMake(0,
-                                          200,
+                                          self.projectHeader.frame.size.height,
                                           self.view.bounds.size.width,
                                           self.view.bounds.size.height - self.projectHeader.frame.size.height);
     } else {
@@ -293,9 +296,9 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
 
         headerTransform = CATransform3DTranslate(headerTransform, 0, tz, 0);
         self.container.frame = CGRectMake(0,
-                                          200 + tz,
+                                          self.projectHeader.frame.size.height + tz,
                                           self.view.bounds.size.width,
-                                          self.view.bounds.size.height - 200 - tz);
+                                          self.view.bounds.size.height - self.projectHeader.frame.size.height - tz);
     }
     self.projectHeader.layer.transform = headerTransform;
 }
