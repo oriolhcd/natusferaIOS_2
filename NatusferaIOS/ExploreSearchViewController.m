@@ -210,11 +210,13 @@
     [self.viewControllers bk_each:^(UIViewController *vc) {
         if ([vc conformsToProtocol:@protocol(ExploreViewControllerControlIcon)]) {
             [self.segmentedControl insertSegmentWithImage:[((id <ExploreViewControllerControlIcon>)vc) controlIcon]
-                          atIndex:[self.viewControllers indexOfObject:vc]
+                                                  atIndex:[self.viewControllers indexOfObject:vc]
                                                  animated:NO];
         }
     }];
     
+    [self.navigationController.navigationBar setNeedsLayout];
+
     // display first item
     [self.segmentedControl setSelectedSegmentIndex:0];
     [self displayContentController:mapVC];
