@@ -153,7 +153,7 @@
     [mapping mapKeyPath:@"thumb_url" toAttribute:@"thumbURL"];
     [mapping mapKeyPath:@"large_url" toAttribute:@"largeURL"];
     [mapping mapKeyPath:@"small_url" toAttribute:@"smallURL"];
-    [mapping mapKeyPath:@"url" toAttribute:@"url"];
+    [mapping mapKeyPath:@"medium_url" toAttribute:@"url"];
     
     return mapping;
 }

@@ -11,7 +11,7 @@
 @implementation INatAPI
 
 - (NSString *)apiBaseUrl {
-    return @"http://api.inaturalist.org/v1";
+    return @"http://natusfera.gbif.es";
 }
 
 - (void)fetch:(NSString *)path mapping:(RKObjectMapping *)mapping handler:(INatAPIFetchCompletionHandler)done {
@@ -30,7 +30,7 @@
                         });
                     } else {
                         NSError *error = nil;
-                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                        NSArray *json = [NSJSONSerialization JSONObjectWithData:data
                                                                              options:NSJSONReadingAllowFragments
                                                                                error:&error];
                         
@@ -40,8 +40,13 @@
                             });
                         } else {
                             dispatch_async(dispatch_get_main_queue(), ^{
-                                NSArray *resultsArray = [json valueForKey:@"results"];
-                                
+                                NSArray *resultsArray;
+                                if (resultsArray != nil && [resultsArray.firstObject objectForKey:@"results"]) {
+                                    resultsArray = [json valueForKey:@"results"];
+                                }
+                                else {
+                                    resultsArray = (NSArray*) json;
+                                }
                                 NSMutableArray *output = [NSMutableArray array];
                                 for (id result in resultsArray) {
                                     Class mappingClass = [mapping objectClass];

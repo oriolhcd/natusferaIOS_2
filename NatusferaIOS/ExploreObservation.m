@@ -64,11 +64,11 @@
 }
 
 - (NSNumber *)privateLatitude {
-    return @(0);
+    return [NSNumber numberWithDouble:_latitude];
 }
 
 - (NSNumber *)privateLongitude {
-    return @(0);
+    return [NSNumber numberWithDouble:_longitude];
 }
 
 - (NSNumber *)privatePositionalAccuracy {
@@ -176,7 +176,7 @@
 }
 
 - (CLLocationCoordinate2D)coordinate {
-    return CLLocationCoordinate2DMake(self.latitude.floatValue, self.longitude.floatValue);
+    return CLLocationCoordinate2DMake(_latitude, _longitude);
 }
 
 - (NSString *)title {
