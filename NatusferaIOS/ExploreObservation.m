@@ -64,11 +64,11 @@
 }
 
 - (NSNumber *)privateLatitude {
-    return @(0);
+    return [NSNumber numberWithDouble:_latitude];
 }
 
 - (NSNumber *)privateLongitude {
-    return @(0);
+    return [NSNumber numberWithDouble:_longitude];
 }
 
 - (NSNumber *)privatePositionalAccuracy {

@@ -125,8 +125,8 @@
         ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.observationPhotos.firstObject;
         
         if (photo) {
-            NSString *mediumUrlString = [photo.url stringByReplacingOccurrencesOfString:@"square"
-                                                                             withString:@"medium"];
+            NSString *mediumUrlString = [photo.squareURL stringByReplacingOccurrencesOfString:@"square"
+                                                                                   withString:@"medium"];
             
             [observationImageView sd_setImageWithURL:[NSURL URLWithString:mediumUrlString]
                                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

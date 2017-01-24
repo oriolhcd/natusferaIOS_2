@@ -48,7 +48,7 @@
     ExploreObservation *obs = (ExploreObservation *)self.observations[indexPath.item];
     ExploreObservationPhoto *photo = obs.observationPhotos.firstObject;
     if (photo) {
-        NSString *mediumUrlString = [photo.url stringByReplacingOccurrencesOfString:@"square"
+        NSString *mediumUrlString = [photo.squareURL stringByReplacingOccurrencesOfString:@"square"
                                                                          withString:@"small"];
         [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:mediumUrlString]];
     } else {
