@@ -30,11 +30,17 @@ static RKObjectMapping *defaultSerializationMapping = nil;
 }
 
 - (NSString *)userName {
-    return self.user.login;
+    if ([self.user respondsToSelector:@selector(login)]) {
+        return self.user.login;
+    }
+    return @"";
 }
 
 - (NSURL *)userIconUrl {
-    return [NSURL URLWithString:self.user.userIconURL];
+    if ([self.user respondsToSelector:@selector(userIconURL)]) {
+        return [NSURL URLWithString:self.user.userIconURL];
+    }
+    return nil;
 }
 
 + (RKManagedObjectMapping *)mapping

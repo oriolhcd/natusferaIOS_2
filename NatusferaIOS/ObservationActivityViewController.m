@@ -402,11 +402,12 @@ static UIImage *defaultPersonImage;
 		Comment *comment = (Comment *)activity;
         
         [imageView sd_cancelCurrentImageLoad];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:comment.user.userIconURL]
-                     placeholderImage:defaultPersonImage];
-
+        if (comment.user != nil) {
+            [imageView sd_setImageWithURL:[NSURL URLWithString:comment.user.userIconURL]
+                         placeholderImage:defaultPersonImage];
+            byline.text = [NSString stringWithFormat:@"Posted by %@ on %@", comment.user.login, comment.createdAtShortString];
+        }
         body.text = [comment.body stringByStrippingHTML];
-		byline.text = [NSString stringWithFormat:@"Posted by %@ on %@", comment.user.login, comment.createdAtShortString];
         
         // Adding auto layout.
         body.textAlignment = NSTextAlignmentNatural;
