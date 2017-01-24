@@ -176,7 +176,7 @@
 }
 
 - (CLLocationCoordinate2D)coordinate {
-    return CLLocationCoordinate2DMake(self.latitude.floatValue, self.longitude.floatValue);
+    return CLLocationCoordinate2DMake(_latitude, _longitude);
 }
 
 - (NSString *)title {

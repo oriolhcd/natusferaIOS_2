@@ -213,7 +213,7 @@
 }
 
 - (NSString *)pathForFetchWithSearchPredicates:(NSArray *)predicates {
-    NSString *pathPattern = @"observations";
+    NSString *pathPattern = @"observations.json";
     // for iOS, we treat "mappable" as "exploreable"
     NSString *query = @"?per_page=100&mappable=true";
     
@@ -298,7 +298,7 @@
         }];
         
         self.observations = [[NSOrderedSet alloc] initWithArray:orderedObservations];
-        
+
         if (shouldNotify) {
             if (results.count > 0)
                 dispatch_async(dispatch_get_main_queue(), ^{
