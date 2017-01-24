@@ -83,8 +83,8 @@ static const int GutterWidth  = 5;
     self.searchBar.translucent = NO;
     [self.view addSubview:self.searchBar];
     
-    [self.collectionView setContentOffset:CGPointMake(0, 44)];
-    
+    self.collectionView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
+
     SWRevealViewController *revealController = [self revealViewController];
     [self.view addGestureRecognizer:revealController.panGestureRecognizer];
     
