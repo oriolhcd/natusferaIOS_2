@@ -1735,7 +1735,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */;
+			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1815,7 +1815,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4AF2A9BB8F5A04E6D998ABEF /* [CP] Embed Pods Frameworks */ = {
@@ -1860,7 +1860,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AF245D39B4F18595935E05EB /* [CP] Embed Pods Frameworks */ = {
@@ -2477,7 +2477,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */ = {
+		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1927514F14E9CCC9000ABAC4 /* Debug */,

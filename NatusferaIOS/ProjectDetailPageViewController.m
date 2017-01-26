@@ -67,7 +67,7 @@
     __weak typeof(self)weakSelf = self;
     [self.api observationsForProject:self.project handler:^(NSArray *results, NSInteger totalCount, NSError *error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.projObservationsVC.observations = results;
+        strongSelf.projObservationsVC.observations = (results != nil) ? results : [[NSArray alloc] init];
         strongSelf.numObservations = totalCount;
         dispatch_async(dispatch_get_main_queue(), ^{
             [strongSelf reloadData];
@@ -77,7 +77,7 @@
     
     [self.api speciesCountsForProject:self.project handler:^(NSArray *results, NSInteger totalCount, NSError *error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.projSpeciesVC.speciesCounts = results;
+        strongSelf.projSpeciesVC.speciesCounts = (results != nil) ? results : [[NSArray alloc] init];
         strongSelf.numSpecies = totalCount;
         dispatch_async(dispatch_get_main_queue(), ^{
             [strongSelf reloadData];
@@ -87,7 +87,7 @@
     
     [self.api observerCountsForProject:self.project handler:^(NSArray *results, NSInteger totalCount, NSError *error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.projObserversVC.observerCounts = results;
+        strongSelf.projObserversVC.observerCounts = (results != nil) ? results : [[NSArray alloc] init];
         strongSelf.numObservers = totalCount;
         dispatch_async(dispatch_get_main_queue(), ^{
             [strongSelf reloadData];
@@ -97,7 +97,7 @@
     
     [self.api identifierCountsForProject:self.project handler:^(NSArray *results, NSInteger totalCount, NSError *error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.projIdentifiersVC.identifierCounts = results;
+        strongSelf.projIdentifiersVC.identifierCounts = (results != nil) ? results : [[NSArray alloc] init];
         strongSelf.numIdentifers = totalCount;
         dispatch_async(dispatch_get_main_queue(), ^{
             [strongSelf reloadData];

@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, :deployment_target => '7.0'
 
+project 'natusfera.xcodeproj'
+
 inhibit_all_warnings!
 
 target :Natusfera do
