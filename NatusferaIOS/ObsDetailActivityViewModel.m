@@ -587,7 +587,7 @@
         Observation *obs = (Observation *)self.observation;
         
         [[Analytics sharedClient] debugLog:@"Network - Viewed Updates"];
-        [[RKClient sharedClient] put:[NSString stringWithFormat:@"/observations/%@/viewed_updates", self.observation.inatRecordId]
+        [[RKClient sharedClient] put:[NSString stringWithFormat:@"/observations/%@/viewed_updates.json", self.observation.inatRecordId]
                               params:nil
                             delegate:self];
         obs.hasUnviewedActivity = [NSNumber numberWithBool:NO];

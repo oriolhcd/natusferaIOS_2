@@ -184,7 +184,7 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (actionSheet == shareActionSheet) {
-        NSString *observationPath = [NSString stringWithFormat:@"/observations/%ld", (long)self.observation.observationId];
+        NSString *observationPath = [NSString stringWithFormat:@"/observations/%ld.json", (long)self.observation.observationId];
         NSURL *observationURL = [[NSURL inat_baseURL] URLByAppendingPathComponent:observationPath];
 
         switch (buttonIndex) {
@@ -234,7 +234,7 @@
 #pragma mark - ActionSheet targets
 
 - (void)shareObservation:(ExploreObservation *)observation {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld",
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld.json",
                                        INatWebBaseURL, (long)self.observation.observationId]];
     UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:@[url]
                                                                            applicationActivities:nil];

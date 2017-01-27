@@ -41,11 +41,14 @@
                         } else {
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 NSArray *resultsArray;
-                                if (resultsArray != nil && [resultsArray.firstObject objectForKey:@"results"]) {
-                                    resultsArray = [json valueForKey:@"results"];
+                                
+                                NSArray* jsonData = [json isKindOfClass:[NSArray class]] ? json : [[NSArray alloc] initWithObjects:json, nil];
+                                
+                                if (jsonData != nil && [jsonData.firstObject objectForKey:@"results"] && [jsonData.firstObject objectForKey:@"total_results"]) {
+                                    resultsArray = [jsonData valueForKey:@"results"];
                                 }
                                 else {
-                                    resultsArray = (NSArray*) json;
+                                    resultsArray = (NSArray*) jsonData;
                                 }
                                 NSMutableArray *output = [NSMutableArray array];
                                 for (id result in resultsArray) {
@@ -89,7 +92,7 @@
                         });
                     } else {
                         NSError *error = nil;
-                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                        id json = [NSJSONSerialization JSONObjectWithData:data
                                                                              options:NSJSONReadingAllowFragments
                                                                                error:&error];
                         
@@ -99,8 +102,19 @@
                             });
                         } else {
                             dispatch_async(dispatch_get_main_queue(), ^{
-                                NSArray *resultsArray = [json valueForKey:@"results"];
-                                NSInteger totalResults = [[json valueForKey:@"total_results"] integerValue];
+                                NSArray *resultsArray;
+                                NSInteger totalResults = 0;
+                                
+                                NSArray* jsonData = [json isKindOfClass:[NSArray class]] ? json : [[NSArray alloc] initWithObjects:json, nil];
+
+                                if (jsonData != nil && [jsonData.firstObject objectForKey:@"results"] && [jsonData.firstObject objectForKey:@"total_results"]) {
+                                    resultsArray = [jsonData valueForKey:@"results"];
+                                    totalResults = [[jsonData valueForKey:@"total_results"] integerValue];
+                                }
+                                else {
+                                    resultsArray = (NSArray*) jsonData;
+                                    totalResults = [jsonData count];
+                                }
                                 
                                 NSMutableArray *output = [NSMutableArray array];
                                 for (id result in resultsArray) {

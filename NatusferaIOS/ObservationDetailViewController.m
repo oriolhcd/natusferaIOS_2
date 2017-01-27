@@ -914,7 +914,7 @@ NSString *const ObservationFieldValueSwitchCell = @"ObservationFieldValueSwitchC
 - (void)viewActionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
-        NSString *observationPath = [NSString stringWithFormat:@"/observations/%d", [self.observation.recordID intValue]];
+        NSString *observationPath = [NSString stringWithFormat:@"/observations/%d.json", [self.observation.recordID intValue]];
         NSURL *url = [[NSURL inat_baseURL] URLByAppendingPathComponent:observationPath];
         [[UIApplication sharedApplication] openURL:url];
     }

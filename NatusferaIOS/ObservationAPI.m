@@ -16,7 +16,7 @@
 
 - (void)observationWithId:(NSInteger)identifier handler:(INatAPIFetchCompletionHandler)done {
     [[Analytics sharedClient] debugLog:@"Network - fetch observation from node"];
-    NSString *path = [NSString stringWithFormat:@"observations/%ld", (long)identifier];
+    NSString *path = [NSString stringWithFormat:@"observations/%ld.json", (long)identifier];
     [self fetch:path mapping:[ExploreMappingProvider observationMapping] handler:done];
 }
 

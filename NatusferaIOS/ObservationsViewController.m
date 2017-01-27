@@ -376,7 +376,7 @@
 		NSString *iso8601String = [dateFormatter stringFromDate:lastSyncDate];
 		
         [[Analytics sharedClient] debugLog:@"Network - Get My Recent Observations"];
-		[[RKClient sharedClient] get:[NSString stringWithFormat:@"/observations/%@?updated_since=%@", username, iso8601String] delegate:self];
+		[[RKClient sharedClient] get:[NSString stringWithFormat:@"/observations/%@.json?updated_since=%@", username, iso8601String] delegate:self];
 	}
 }
 

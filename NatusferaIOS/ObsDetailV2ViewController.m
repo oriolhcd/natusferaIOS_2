@@ -206,7 +206,7 @@
     [[Analytics sharedClient] debugLog:@"Network - Load complete observation details"];
     if ([self.observation isKindOfClass:[Observation class]]) {
         Observation *obs = (Observation *)self.observation;
-        NSString *path = [NSString stringWithFormat:@"/observations/%@", obs.recordID];
+        NSString *path = [NSString stringWithFormat:@"/observations/%@.json", obs.recordID];
         
         //[[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", obs.recordID]
        //                                              objectMapping:[Observation mapping]
@@ -304,7 +304,7 @@
         
         [[Analytics sharedClient] event:kAnalyticsEventObservationShareStarted];
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld",
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld.json",
                                            INatWebBaseURL, (long)self.observation.inatRecordId.longLongValue]];
         UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:@[url]
                                                                                applicationActivities:nil];

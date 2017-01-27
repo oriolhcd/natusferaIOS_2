@@ -242,7 +242,7 @@ static UIImage *defaultPersonImage;
 {
 	if (self.observation.recordID && self.observation.hasUnviewedActivity.boolValue) {
         [[Analytics sharedClient] debugLog:@"Network - Viewed Updates"];
-		[[RKClient sharedClient] put:[NSString stringWithFormat:@"/observations/%@/viewed_updates", self.observation.recordID] params:nil delegate:self];
+		[[RKClient sharedClient] put:[NSString stringWithFormat:@"/observations/%@/viewed_updates.json", self.observation.recordID] params:nil delegate:self];
 		self.observation.hasUnviewedActivity = [NSNumber numberWithBool:NO];
 		NSError *error = nil;
 		[[[RKObjectManager sharedManager] objectStore] save:&error];
@@ -262,7 +262,7 @@ static UIImage *defaultPersonImage;
 		//											 objectMapping:[Observation mapping]
 		//												  delegate:self];
         
-        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@", self.observation.recordID]
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/observations/%@.json", self.observation.recordID]
                                                         usingBlock:^(RKObjectLoader *loader){
                                                             loader.objectMapping=[Observation mapping];
                                                             loader.delegate=self;
