@@ -468,21 +468,7 @@ static const int ListControlIndexNearby = 2;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Project *selectedProject = nil;
-    
-    // be defensive
-    @try {
-        selectedProject = [self.projects objectAtIndex:indexPath.item];
-    }
-    @catch (NSException *exception) {
-        if ([exception.name isEqualToString:NSRangeException])
-            selectedProject = nil;
-        else
-            @throw exception;
-    }
-    
-    if (selectedProject && [selectedProject isKindOfClass:[Project class]])
-        [self performSegueWithIdentifier:@"projectDetailSegue" sender:selectedProject];
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
