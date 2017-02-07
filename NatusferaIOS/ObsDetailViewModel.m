@@ -322,20 +322,11 @@
             selector.activityButton.count = 0;
         }
         
-        [selector.favesButton addTarget:self
-                                 action:@selector(selectedFaves:)
-                       forControlEvents:UIControlEventTouchUpInside];
-        // don't show faves count for now
-        selector.favesButton.count = 0;
-        
         if (self.sectionType == ObsDetailSectionInfo) {
             selector.infoButton.enabled = NO;
         } else if (self.sectionType == ObsDetailSectionActivity) {
             selector.activityButton.enabled = NO;
-        } else if (self.sectionType == ObsDetailSectionFaves) {
-            selector.favesButton.enabled = NO;
         }
-
         return selector;
     }
     return nil;

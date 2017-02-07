@@ -335,7 +335,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="cnB-zK-8oP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Observations" image="notebook-tab.png" id="s0d-iz-ydn"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="Pyp-ZA-ogu">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="Pyp-ZA-ogu">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -572,7 +572,7 @@
                         <viewControllerLayoutGuide type="top" id="ydy-5u-alQ"/>
                         <viewControllerLayoutGuide type="bottom" id="oTh-Et-78w"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="Lau-j2-fhR">
+                    <view key="view" contentMode="scaleToFill" id="Lau-j2-fhR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -672,26 +672,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt1-Cf-PtX">
-                                                    <rect key="frame" x="215" y="16" width="70" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7H-Hl-jcl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="52.5"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7H-Hl-jcl">
-                                                    <rect key="frame" x="35" y="16" width="70" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKp-Oy-RjD">
-                                                    <rect key="frame" x="125" y="16" width="70" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKp-Oy-RjD">
+                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="52.5"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="N7H-Hl-jcl" secondAttribute="bottom" id="Cms-bW-jot"/>
+                                                <constraint firstAttribute="trailing" secondItem="PKp-Oy-RjD" secondAttribute="trailing" id="Ld1-ei-lcI"/>
+                                                <constraint firstItem="PKp-Oy-RjD" firstAttribute="leading" secondItem="N7H-Hl-jcl" secondAttribute="trailing" id="aHR-aZ-UHd"/>
+                                                <constraint firstItem="PKp-Oy-RjD" firstAttribute="height" secondItem="N7H-Hl-jcl" secondAttribute="height" id="d1Z-lT-1AA"/>
+                                                <constraint firstItem="PKp-Oy-RjD" firstAttribute="width" secondItem="N7H-Hl-jcl" secondAttribute="width" id="gY2-RD-aoC"/>
+                                                <constraint firstAttribute="bottom" secondItem="PKp-Oy-RjD" secondAttribute="bottom" id="hZh-Ex-Kea"/>
+                                                <constraint firstItem="PKp-Oy-RjD" firstAttribute="top" secondItem="pyg-Te-MoW" secondAttribute="top" id="iyv-DK-SaM"/>
+                                                <constraint firstItem="N7H-Hl-jcl" firstAttribute="leading" secondItem="pyg-Te-MoW" secondAttribute="leading" id="mPX-f1-Isl"/>
+                                                <constraint firstItem="N7H-Hl-jcl" firstAttribute="top" secondItem="pyg-Te-MoW" secondAttribute="top" id="tYS-pX-0z1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="activityButton" destination="PKp-Oy-RjD" id="fCa-Cr-lAC"/>
-                                            <outlet property="favesButton" destination="mt1-Cf-PtX" id="YwI-cX-O6Y"/>
                                             <outlet property="infoButton" destination="N7H-Hl-jcl" id="mv8-Vl-6RW"/>
                                         </connections>
                                     </tableViewCell>
@@ -1048,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxe-Vc-fQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-1170"/>
+            <point key="canvasLocation" x="88.5" y="-1170.5"/>
         </scene>
         <!--Gallery Controller-->
         <scene sceneID="GdM-dG-ZOl">
@@ -1173,7 +1176,7 @@
                 <navigationController id="wLq-gj-SFK" userLabel="News" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" id="sjI-hI-4Xz" userLabel="News"/>
                     <navigationItem key="navigationItem" id="wDZ-zo-qK9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="exw-83-NBH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="exw-83-NBH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1209,7 +1212,7 @@
             <objects>
                 <navigationController id="2go-53-3Kx" userLabel="Explore" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="6cS-83-3B7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2Ih-nZ-tvp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Ih-nZ-tvp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1485,7 +1488,7 @@
             <objects>
                 <navigationController id="Bfq-b0-Jra" userLabel="Projects" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Projects" id="SKe-fr-0qo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7RK-Mi-XZL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7RK-Mi-XZL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1582,7 +1585,7 @@
                         <viewControllerLayoutGuide type="top" id="vqP-XV-Gco"/>
                         <viewControllerLayoutGuide type="bottom" id="Hed-CA-1mp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="nK0-Cv-YyA">
+                    <view key="view" contentMode="scaleToFill" id="nK0-Cv-YyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1946,7 +1949,7 @@
             <objects>
                 <navigationController id="6d8-Lg-yXV" userLabel="Guides" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3qN-6c-EVN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="13s-D1-1gp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="13s-D1-1gp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2202,7 +2205,7 @@
         <scene sceneID="Dqk-6u-5Pp">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" id="2LB-6A-M1H" customClass="GuideCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="emC-j4-824">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="emC-j4-824">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2483,10 +2486,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqc-O0-oU6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1H7-So-OUO">
-                                            <rect key="frame" x="0.0" y="207" width="375" height="33"/>
+                                            <rect key="frame" x="0.0" y="206" width="375" height="33"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoB-WQ-RJP">
                                                     <rect key="frame" x="15" y="0.0" width="352" height="33"/>
@@ -2575,7 +2578,7 @@
                 <navigationController definesPresentationContext="YES" id="qac-rZ-LpT" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="IiT-HW-DhC">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="IiT-HW-DhC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2685,7 +2688,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="OkY-L0-NP4" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="bNa-Oh-4hz">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="bNa-Oh-4hz">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2762,7 +2765,7 @@
                 <navigationController definesPresentationContext="YES" id="cey-Gr-CWF" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ixx-vq-ex3"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="hAe-3W-FKC">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="hAe-3W-FKC">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2833,7 +2836,7 @@
         <scene sceneID="hfu-uU-85E">
             <objects>
                 <collectionViewController storyboardIdentifier="projObservationsVC" id="Wo0-yx-kcl" customClass="ProjectDetailObservationsViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="uzG-6r-sEL">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uzG-6r-sEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fym-EJ-5zF">
@@ -2893,7 +2896,7 @@
                 <navigationController definesPresentationContext="YES" id="9AX-vc-dhX" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="P1d-tN-epc">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="P1d-tN-epc">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

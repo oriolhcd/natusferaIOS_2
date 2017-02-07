@@ -37,17 +37,6 @@
             button;
         });
         
-        self.favesButton = ({
-            ObsDetailSelectorButton *button = [ObsDetailSelectorButton buttonWithSelectorType:ObsDetailSelectorButtonTypeFaves];
-            button.translatesAutoresizingMaskIntoConstraints = NO;
-            button.frame = CGRectZero;
-            
-            button.enabled = YES;
-
-            button;
-        });
-        
-        
         UIView *edge = ({
             UIView *view = [UIView new];
             view.frame = CGRectZero;
@@ -61,16 +50,14 @@
         
         [self addSubview:self.infoButton];
         [self addSubview:self.activityButton];
-        [self addSubview:self.favesButton];
         
         NSDictionary *views = @{
                                 @"info": self.infoButton,
                                 @"activity": self.activityButton,
-                                @"faves": self.favesButton,
                                 @"edge": edge,
                                 };
         
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[info]-[activity(==info)]-[faves(==info)]-|"
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[info]-[activity(==info)]-|"
                                                                      options:0
                                                                      metrics:0
                                                                        views:views]];
@@ -88,10 +75,6 @@
                                                                      options:0
                                                                      metrics:0
                                                                        views:views]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[faves]-0-|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:views]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[edge(==0.5)]-0-|"
                                                                      options:0
                                                                      metrics:0
@@ -104,7 +87,7 @@
 }
 
 - (void)prepareForReuse {
-    [@[ self.infoButton, self.activityButton, self.favesButton ] enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL * _Nonnull stop) {
+    [@[ self.infoButton, self.activityButton ] enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL * _Nonnull stop) {
         button.enabled = YES;
     }];
 }
