@@ -1397,7 +1397,7 @@
                     ofv.syncedAt = now;
                 }
 			}
-		}
+        }
         
         // don't update records that need to be synced
         if (o.needsSync) {

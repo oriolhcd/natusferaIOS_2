@@ -131,9 +131,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (!self.observation.needsUpload) {
-        [self reloadObservation];
-    }
+//    if (!self.observation.needsUpload) {
+//        [self reloadObservation];
+//    }
     
     [[Analytics sharedClient] timedEvent:kAnalyticsEventNavigateObservationDetail];
 }

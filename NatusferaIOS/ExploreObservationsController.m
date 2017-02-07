@@ -427,7 +427,7 @@
 
 - (NSString *)pathForLeaderboardSearchPredicates:(NSArray *)predicates {
     
-    NSString *path = @"observations/observers";
+    NSString *path = @"observations/observers.json";
     
     NSString *query = @"";
     
