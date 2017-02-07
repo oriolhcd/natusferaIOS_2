@@ -91,12 +91,6 @@
                                                                                 action:@selector(searchPressed)];
         self.navigationItem.leftBarButtonItem = search;
         
-        leaderboardItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Stats", @"Title for button in the explore tab that leads to the stats leaderboard.")
-                                                           style:UIBarButtonItemStylePlain
-                                                          target:self
-                                                          action:@selector(leaderboardPressed)];
-        self.navigationItem.rightBarButtonItem = leaderboardItem;
-        
         spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         spinnerItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
 
@@ -247,13 +241,6 @@
 
 
 #pragma mark - UIControl targets
-
-- (void)leaderboardPressed {
-    ExploreLeaderboardViewController *vc = [[ExploreLeaderboardViewController alloc] initWithNibName:nil bundle:nil];
-    vc.observationsController = observationsController;
-    
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)removeSearchPressed {
     [searchMenu hideActiveSearch];
