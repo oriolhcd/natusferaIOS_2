@@ -388,5 +388,16 @@
 /* Class = "UILabel"; text = "Casual Grade"; ObjectID = "sFv-C3-tQc"; */
 "sFv-C3-tQc.text" = "Grado informal";
 
+/* Class = "UILabel"; text = "Automatic Upload"; ObjectID = "TeG-HZ-eQD"; */
+"TeG-HZ-eQD.text" = "Subir automáticamente";
+
+/* Class = "UINavigationItem"; title = "Add Comment"; ObjectID = "hQf-3u-7NV"; */
+"hQf-3u-7NV.title" = "Añadir un comentario";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "jjH-JI-aEw"; */
+"jjH-JI-aEw.title" = "Guardar";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "3BD-cp-ntb"; */
+"3BD-cp-ntb.title" = "Guardar";
 
 
