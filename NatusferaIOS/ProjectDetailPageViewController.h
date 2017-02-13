@@ -13,7 +13,7 @@
 
 @class Project;
 
-@interface ProjectDetailPageViewController : ViewPagerController
+@interface ProjectDetailPageViewController : UIViewController
 
 @property Project *project;
 @property (assign) id <ProjectDetailV2Delegate> projectDetailDelegate;
