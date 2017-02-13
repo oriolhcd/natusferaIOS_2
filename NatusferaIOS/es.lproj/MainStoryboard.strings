@@ -357,3 +357,50 @@
 
 /* Class = "IBUINavigationItem"; title = "Edit Location"; ObjectID = "zpr-b5-V8G"; */
 "zpr-b5-V8G.title" = "Editar ubicación";
+
+/* Class = "UITabBarItem"; title = "Projects"; ObjectID = "SKe-fr-0qo"; */
+"SKe-fr-0qo.title" = "Proyectos";
+
+/* Class = "UILabel"; text = "Love Natusfera? Rate us"; ObjectID = "6bP-NK-UmB"; */
+"6bP-NK-UmB.text" = "¿Te encanta Natusfera? Valóranos";
+
+/* Class = "UIButton"; normalTitle = "Suggest ID"; ObjectID = "vUq-gN-XYD"; */
+"vUq-gN-XYD.normalTitle" = "Sugerir ID";
+
+/* Class = "UIButton"; normalTitle = "Comment"; ObjectID = "drv-xl-rKi"; */
+"drv-xl-rKi.normalTitle" = "Comentar";
+
+/* Class = "UITableViewSection"; headerTitle = "Identification Taxon"; ObjectID = "Hhm-Rj-8gu"; */
+"Hhm-Rj-8gu.headerTitle" = "Identificador del Taxón";
+
+/* Class = "UITextField"; placeholder = "Species name"; ObjectID = "NdE-AU-Gkn"; */
+"NdE-AU-Gkn.placeholder" = "Nombre de la especie";
+
+/* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "qJK-jT-EPE"; */
+"qJK-jT-EPE.headerTitle" = "Notas";
+
+/* Class = "UILabel"; text = "Research Grade"; ObjectID = "Ghi-b0-mds"; */
+"Ghi-b0-mds.text" = "Grado de investigación";
+
+/* Class = "UILabel"; text = "Needs ID"; ObjectID = "QaI-aC-heW"; */
+"QaI-aC-heW.text" = "Necessita ID";
+
+/* Class = "UILabel"; text = "Casual Grade"; ObjectID = "sFv-C3-tQc"; */
+"sFv-C3-tQc.text" = "Grado informal";
+
+/* Class = "UILabel"; text = "Automatic Upload"; ObjectID = "TeG-HZ-eQD"; */
+"TeG-HZ-eQD.text" = "Subir automáticamente";
+
+/* Class = "UINavigationItem"; title = "Add Comment"; ObjectID = "hQf-3u-7NV"; */
+"hQf-3u-7NV.title" = "Añadir un comentario";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "jjH-JI-aEw"; */
+"jjH-JI-aEw.title" = "Guardar";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "3BD-cp-ntb"; */
+"3BD-cp-ntb.title" = "Guardar";
+
+/* Class = "UIBarButtonItem"; title = "Observe"; ObjectID = "GKo-Sv-g5X"; */
+"GKo-Sv-g5X.title" = "Observar";
+
+

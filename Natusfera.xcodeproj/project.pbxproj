@@ -2334,11 +2334,11 @@
 					"-lsqlite3.0",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "es.gbif.natusfera.Natusfera-oriol";
+				PRODUCT_BUNDLE_IDENTIFIER = natusfera.Natusfera;
 				PRODUCT_NAME = Natusfera;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2376,12 +2376,12 @@
 					"-lsqlite3.0",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "es.gbif.natusfera.Natusfera-oriol";
+				PRODUCT_BUNDLE_IDENTIFIER = natusfera.Natusfera;
 				PRODUCT_NAME = Natusfera;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};

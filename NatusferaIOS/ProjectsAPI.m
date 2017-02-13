@@ -19,7 +19,7 @@
 
 - (void)observationsForProject:(Project *)project handler:(INatAPIFetchCompletionCountHandler)done {
     [[Analytics sharedClient] debugLog:@"Network - fetch observations for project from node"];
-    NSString *path = [NSString stringWithFormat:@"observations.json?project_id=%ld&per_page=200",
+    NSString *path = [NSString stringWithFormat:@"observations/project/%ld.json",
                       (long)project.recordID.integerValue];
     [self fetchWithCount:path mapping:[ExploreMappingProvider observationMapping] handler:done];
 }
