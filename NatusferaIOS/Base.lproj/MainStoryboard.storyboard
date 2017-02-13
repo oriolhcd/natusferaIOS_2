@@ -1582,7 +1582,7 @@
                         <viewControllerLayoutGuide type="top" id="vqP-XV-Gco"/>
                         <viewControllerLayoutGuide type="bottom" id="Hed-CA-1mp"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="nK0-Cv-YyA">
+                    <view key="view" contentMode="scaleToFill" id="nK0-Cv-YyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1610,7 +1610,7 @@
                                         <rect key="frame" x="10" y="153" width="355" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOH-dl-HXL">
-                                                <rect key="frame" x="0.0" y="6" width="172.5" height="27"/>
+                                                <rect key="frame" x="0.0" y="6" width="173" height="27"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Join">
@@ -1618,7 +1618,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvY-6v-upW">
-                                                <rect key="frame" x="182.5" y="6" width="172.5" height="27"/>
+                                                <rect key="frame" x="183" y="6" width="172" height="27"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="About">

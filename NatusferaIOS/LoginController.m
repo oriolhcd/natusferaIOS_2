@@ -6,10 +6,8 @@
 //  Copyright (c) 2015 Natusfera. All rights reserved.
 //
 
-#import <FacebookSDK/FacebookSDK.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <NXOAuth2Client/NXOAuth2.h>
-//#import <GooglePlus/GPPSignIn.h> //M.Lujano: 24/11/16
-//#import <GoogleSignIn/GoogleSignIn.h>
 #import "LoginController.h"
 #import "Analytics.h"
 #import "NatusferaAppDelegate.h"
@@ -58,8 +56,9 @@ NSInteger INatMinPasswordLength = 6;
 
 #pragma mark - Facebook
 
-- (void)loginWithFacebookSuccess:(LoginSuccessBlock)successBlock
-                         failure:(LoginErrorBlock)errorBlock {
+- (void)loginWithFacebookUsingViewController:(UIViewController *)viewController
+                                     success:(LoginSuccessBlock)successBlock
+                                     failure:(LoginErrorBlock)errorBlock {
     
     self.currentSuccessBlock = successBlock;
     self.currentErrorBlock = errorBlock;
@@ -68,52 +67,37 @@ NSInteger INatMinPasswordLength = 6;
     accountType = kINatAuthServiceExtToken;
     isLoginCompleted = NO;
 
-    NSArray *perms = @[@"email"];
-    FBSession *session = [[FBSession alloc] initWithAppID:nil
-                                              permissions:perms
-                                          urlSchemeSuffix:@"inat"
-                                       tokenCacheStrategy:nil];
-    [FBSession setActiveSession:session];
-    [session openWithBehavior:FBSessionLoginBehaviorForcingSafari
-            completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
-                
-                if (error) {
-                    [[Analytics sharedClient] event:kAnalyticsEventLoginFailed
-                                     withProperties:@{ @"from": @"Facebook",
-                                                       @"code": @(error.code) }];
-                    
-                    [self executeError:error];
-                    
-                    return;
-                }
-
-                switch (state) {
-                    case FBSessionStateOpen:
-                        externalAccessToken = [session.accessTokenData.accessToken copy];
-                        accountType = nil;
-                        accountType = kINatAuthServiceExtToken;
-                        [[Analytics sharedClient] event:kAnalyticsEventLogin
-                                         withProperties:@{ @"Via": @"Facebook" }];
-                        [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:accountType
-                                                                             assertionType:[NSURL URLWithString:@"http://facebook.com"]
-                                                                                 assertion:externalAccessToken];
-                                                
-                        break;
-                    case FBSessionStateClosed:
-                        NSLog(@"session FBSessionStateClosed");
-                        break;
-                    case FBSessionStateClosedLoginFailed:
-                        NSLog(@"session FBSessionStateClosedLoginFailed");
-                        [FBSession.activeSession closeAndClearTokenInformation];
-                        externalAccessToken = nil;
-                        
-                        [self executeError:nil];
-                        break;
-                    default:
-                        break;
-                }
-            }];
-    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login
+     logInWithReadPermissions: @[@"email"]
+     fromViewController:viewController
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             if (error) {
+                 [[Analytics sharedClient] event:kAnalyticsEventLoginFailed
+                                  withProperties:@{ @"from": @"Facebook",
+                                                    @"code": @(error.code) }];
+                 
+                 [self executeError:error];
+                 
+                 return;
+             }
+         } else if (result.isCancelled) {
+             externalAccessToken = nil;
+             
+             [self executeError:nil];
+         } else {
+             externalAccessToken = [[[FBSDKAccessToken currentAccessToken] tokenString] copy];
+             accountType = nil;
+             accountType = kINatAuthServiceExtToken;
+             [[Analytics sharedClient] event:kAnalyticsEventLogin
+                              withProperties:@{ @"Via": @"Facebook" }];
+             [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:accountType
+                                                                  assertionType:[NSURL URLWithString:@"http://facebook.com"]
+                                                                      assertion:externalAccessToken];
+             [self executeSuccess:nil];
+         }
+     }];
 }
 
 #pragma mark - INat OAuth Login

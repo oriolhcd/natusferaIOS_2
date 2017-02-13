@@ -7,7 +7,6 @@
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>
-#import <FacebookSDK/FacebookSDK.h>
 #import <FontAwesomeKit/FAKIonicons.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <NXOAuth2Client/NXOAuth2.h>
@@ -223,7 +222,8 @@
             
             NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[[UIApplication sharedApplication] delegate];
             __weak typeof(self)weakSelf = self;
-            [appDelegate.loginController loginWithFacebookSuccess:^(NSDictionary *info) {
+            [appDelegate.loginController loginWithFacebookUsingViewController: self
+             success:^(NSDictionary *info) {
                 __strong typeof(weakSelf)strongSelf = weakSelf;
                 if ([appDelegate.window.rootViewController isEqual:strongSelf.navigationController]) {
                     [appDelegate showMainUI];

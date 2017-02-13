@@ -1,7 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, :deployment_target => '7.0'
 
+<<<<<<< Updated upstream
+project 'natusfera.xcodeproj'
+=======
 project 'Natusfera.xcodeproj'
+>>>>>>> Stashed changes
 
 inhibit_all_warnings!
 

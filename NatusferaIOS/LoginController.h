@@ -21,7 +21,8 @@ typedef void (^LoginErrorBlock)(NSError *error);
 
 @interface LoginController : NSObject<GIDSignInDelegate>
 
-- (void)loginWithFacebookSuccess:(LoginSuccessBlock)success
+- (void)loginWithFacebookUsingViewController:(UIViewController *)viewController
+                         success:(LoginSuccessBlock)success
                          failure:(LoginErrorBlock)error;
 - (void)loginWithGoogleUsingNavController:(UINavigationController *)nav
                                   success:(LoginSuccessBlock)success

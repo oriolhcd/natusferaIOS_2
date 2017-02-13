@@ -16,7 +16,12 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - Bolts (1.1.3)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - cocoa-oauth (0.0.1):
     - NSData+Base64 (~> 1.0)
   - CocoaAsyncSocket (7.4.3):
@@ -34,8 +39,12 @@ PODS:
   - Fabric (1.5.4):
     - Fabric/Base (= 1.5.4)
   - Fabric/Base (1.5.4)
-  - Facebook-iOS-SDK (3.20.0):
-    - Bolts (~> 1.0)
+  - FBSDKCoreKit (4.18.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.18.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.18.0):
+    - FBSDKCoreKit
   - FileMD5Hash (0.0.1)
   - Flurry-iOS-SDK/FlurrySDK (7.1.0)
   - FontAwesomeKit (2.2.0):
@@ -138,7 +147,7 @@ DEPENDENCIES:
   - ActionSheetPicker-3.0 (= 1.3.12)
   - AFNetworking (= 1.3.4)
   - BlocksKit (= 2.2.5)
-  - Bolts (= 1.1.3)
+  - Bolts (~> 1.8.4)
   - CocoaAsyncSocket
   - Crashlytics (= 3.3.3)
   - CustomIOSAlertView (= 0.9.3)
@@ -146,7 +155,9 @@ DEPENDENCIES:
   - DZNEmptyDataSet (= 1.7.3)
   - Expecta
   - Fabric (= 1.5.4)
-  - Facebook-iOS-SDK (= 3.20.0)
+  - FBSDKCoreKit (~> 4.18.0)
+  - FBSDKLoginKit (~> 4.18.0)
+  - FBSDKShareKit (~> 4.18.0)
   - FileMD5Hash (from `https://github.com/JoeKun/FileMD5Hash.git`, commit `6864c180c010ab4b0514ba5c025091e12ab01199`)
   - Flurry-iOS-SDK/FlurrySDK (= 7.1.0)
   - FontAwesomeKit (= 2.2.0)
@@ -211,7 +222,7 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 9fd0713777fad3a3f3b89ea58c75d59ccdef28f4
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  Bolts: e431c88fd02115d4a34016c2100bbfa4d2d5b146
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   cocoa-oauth: 1200a2170276a62a975f2786d505dab6e2db1fa8
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   Crashlytics: 9120a5c1515655e57a65e565e2eae8dd326be2e9
@@ -220,7 +231,9 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
   Fabric: 93e3053474839d8df33a61a29c328a48c83792c8
-  Facebook-iOS-SDK: 7f22c5d87e0f5da398f7d2a231bf55149f004585
+  FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
+  FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
+  FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
   FileMD5Hash: 81918bf9f82de8bce6a2ae38584c2cc95b7b078c
   Flurry-iOS-SDK: 7b3fe6c3344c82b73c4c84163652eada84fbfcf4
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
@@ -260,6 +273,6 @@ SPEC CHECKSUMS:
   XMLReader: c7e54b707c368e2fa545d8313276b4de13a36ff5
   YLMoment: a342e85269150756105901c4b701070154f82c16
 
-PODFILE CHECKSUM: e1df67a4c0b0076a4bc2f3651eb7a0c8c2b53a1d
+PODFILE CHECKSUM: 61d6e42f310b2b5e99c5d8aec8f5224bb5e63f1b
 
 COCOAPODS: 1.2.0.rc.1

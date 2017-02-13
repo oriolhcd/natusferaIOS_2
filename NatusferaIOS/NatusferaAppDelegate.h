@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleSignIn/GoogleSignIn.h> //añadido por M.Lujano
-
-
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @class LoginController;
 

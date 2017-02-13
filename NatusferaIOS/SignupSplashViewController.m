@@ -278,7 +278,8 @@ static char PARTNER_ASSOCIATED_KEY;
             }
             
             NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[[UIApplication sharedApplication] delegate];
-            [appDelegate.loginController loginWithFacebookSuccess:^(NSDictionary *info) {
+            [appDelegate.loginController loginWithFacebookUsingViewController: self
+              success:^(NSDictionary *info) {
                 __strong typeof(weakSelf)strongSelf = weakSelf;
                 if ([appDelegate.window.rootViewController isEqual:strongSelf.navigationController]) {
                     [appDelegate showMainUI];

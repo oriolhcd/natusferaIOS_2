@@ -6,11 +6,9 @@
 //  Copyright (c) 2012 Natusfera. All rights reserved.
 //
 
-#import <FacebookSDK/FacebookSDK.h>
 #import <IFTTTLaunchImage/UIImage+IFTTTLaunchImage.h>
 #import <UIColor-HTMLColors/UIColor+HTMLColors.h>
 #import <JDStatusBarNotification/JDStatusBarNotification.h>
-//#import <GooglePlus/GPPURLHandler.h> //M.Lujano:24/11/16
 
 #import "NatusferaAppDelegate.h"
 #import "List.h"
@@ -58,13 +56,14 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    //return ([FBSession.activeSession handleOpenURL:url] || [GPPURLHandler handleURL:url
-    //                                                             sourceApplication:sourceApplication
-    //                                                                    annotation:annotation]);
-    
-    return [[GIDSignIn sharedInstance] handleURL:url
+    BOOL signedInWithGoogle = [[GIDSignIn sharedInstance] handleURL:url
                                sourceApplication:sourceApplication
                                       annotation:annotation];
+    BOOL signedInWithFacebook = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                               openURL:url
+                                                                     sourceApplication:sourceApplication
+                                                                            annotation:annotation];
+    return signedInWithGoogle || signedInWithFacebook;
 }
 
 //implemento application:openURL:options: metodo en el app delegate M.Lujano
@@ -72,14 +71,19 @@
            openURL:(NSURL *)url
            options:(NSDictionary *)options
 {
-    return [[GIDSignIn sharedInstance] handleURL:url
-                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
-            
+    BOOL signedInWithGoogle = [[GIDSignIn sharedInstance] handleURL:url
+                                                  sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                         annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    BOOL signedInWithFacebook = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                               openURL:url
+                                                                     sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                                            annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    return signedInWithGoogle || signedInWithFacebook;
 }
 
-
-
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -93,7 +97,9 @@
     [self configureApplicationInBackground];
     
     [GIDSignIn sharedInstance].clientID = @"118067285617-82ggdm3g9uembfd0t89muabo2pf636ps.apps.googleusercontent.com"; //linea añadida por M.Lujano.
-    
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+
     return YES;
 }
 
