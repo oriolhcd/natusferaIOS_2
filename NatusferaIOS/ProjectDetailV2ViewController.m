@@ -25,7 +25,6 @@
 #import "ProjectAboutViewController.h"
 #import "NewsViewController.h"
 #import "UIImage+Natusfera.h"
-#import "ProjectNewsButton.h"
 
 // At this offset the Header stops its transformations
 // 200 is the height of the header
@@ -41,7 +40,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
 @property IBOutlet UIImageView *projectHeaderBackground;
 
 @property IBOutlet UIButton *joinButton;
-@property IBOutlet ProjectNewsButton *newsButton;
 @property IBOutlet UIButton *aboutButton;
 
 @property IBOutlet UIView *container;
@@ -81,10 +79,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
                      forState:UIControlStateNormal];
     self.aboutButton.layer.cornerRadius = 15.0f;
     
-    self.newsButton.newsTextLabel.text = [NSLocalizedString(@"News",a @"News project button") uppercaseString];
-    self.newsButton.layer.cornerRadius = 15.0f;
-    [self configureNewsButton];
-    
     NSURL *projectThumbUrl = [NSURL URLWithString:self.project.iconURL];
     if (projectThumbUrl) {
         [self.projectThumbnail sd_setImageWithURL:projectThumbUrl];
@@ -117,9 +111,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     
     [self.joinButton addTarget:self
                         action:@selector(joinTapped:)
-              forControlEvents:UIControlEventTouchUpInside];
-    [self.newsButton addTarget:self
-                        action:@selector(newsTapped:)
               forControlEvents:UIControlEventTouchUpInside];
     [self.aboutButton addTarget:self
                          action:@selector(aboutTapped:)
@@ -175,7 +166,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
             }
             
             strongSelf.project = (Project *)object;
-            [strongSelf configureNewsButton];
         };
     }];
     
@@ -234,7 +224,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
                                           self.projectHeader.frame.size.height,
                                           self.view.bounds.size.width,
                                           self.view.bounds.size.height - self.projectHeader.frame.size.height);
-        for (UIButton *btn in @[ self.joinButton, self.newsButton, self.aboutButton ]) {
+        for (UIButton *btn in @[ self.joinButton, self.aboutButton ]) {
             btn.alpha = 1.0f;
             btn.userInteractionEnabled = YES;
         }
@@ -253,7 +243,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     
     if (offset <= 0) {
         CGFloat newAlpha = 1.0f;
-        for (UIButton *btn in @[ self.joinButton, self.newsButton, self.aboutButton ]) {
+        for (UIButton *btn in @[ self.joinButton, self.aboutButton ]) {
             btn.alpha = newAlpha;
             btn.userInteractionEnabled = YES;
         }
@@ -276,7 +266,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
         } else {
             newAlpha = 1.0 - (offset / 86);
         }
-        for (UIButton *btn in @[ self.joinButton, self.newsButton, self.aboutButton ]) {
+        for (UIButton *btn in @[ self.joinButton, self.aboutButton ]) {
             btn.alpha = newAlpha;
             btn.userInteractionEnabled = (newAlpha > 0.99f);
         }
@@ -340,10 +330,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     }
 }
 
-- (void)newsTapped:(UIButton *)button {
-    [self performSegueWithIdentifier:@"projectNewsSegue" sender:self.project];
-}
-
 - (void)aboutTapped:(UIButton *)button {
     [self performSegueWithIdentifier:@"projectAboutSegue" sender:self.project];
 }
@@ -356,11 +342,6 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
         [self.joinButton setTitle:[NSLocalizedString(@"Join", @"Join project button") uppercaseString]
                          forState:UIControlStateNormal];
     }
-}
-
-- (void)configureNewsButton {
-    self.newsButton.countLabel.text = [NSString stringWithFormat:@"%ld", (long)self.project.newsItemCount.integerValue];
-    self.newsButton.enabled = (self.project.newsItemCount > 0);
 }
 
 #pragma mark - UIAlertViewDelegate

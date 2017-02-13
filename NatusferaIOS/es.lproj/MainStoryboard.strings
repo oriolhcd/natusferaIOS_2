@@ -400,3 +400,7 @@
 /* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "3BD-cp-ntb"; */
 "3BD-cp-ntb.title" = "Guardar";
 
+/* Class = "UIBarButtonItem"; title = "Observe"; ObjectID = "GKo-Sv-g5X"; */
+"GKo-Sv-g5X.title" = "Observar";
+
+

@@ -73,9 +73,7 @@
     ExploreObservation *obs = (ExploreObservation *)self.observations[indexPath.item];
     UIViewController *parent = self.parentViewController;
     UIViewController *grandParent = parent.parentViewController;
-    UIViewController *greatGrandParent = grandParent.parentViewController;
-    NSLog(@"greatGrandParent is %@", greatGrandParent);
-    [greatGrandParent performSegueWithIdentifier:@"segueToObservationDetail"
+    [grandParent performSegueWithIdentifier:@"segueToObservationDetail"
                                           sender:obs];
 }
 

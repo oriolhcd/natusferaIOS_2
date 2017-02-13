@@ -14,6 +14,5 @@
 
 @property ObsDetailSelectorButton *infoButton;
 @property ObsDetailSelectorButton *activityButton;
-@property ObsDetailSelectorButton *favesButton;
 
 @end
