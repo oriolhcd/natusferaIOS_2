@@ -356,22 +356,11 @@ static char PROJECT_ASSOCIATED_KEY;
     
     NSString *firstObsText = NSLocalizedString(@"Make your first observation", @"Tooltip prompting users to make their first observation");
     
-    // ugly but how else to get the frame of a UITabBarItem?
-    CGPoint origin;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        origin = CGPointMake(self.view.bounds.size.width * 3.0 / 7.0,
-                             self.view.bounds.size.height - self.tabBar.frame.size.height - 5);
-    } else {
-        origin = CGPointMake(self.view.bounds.size.width / 2,
-                             self.view.bounds.size.height - self.tabBar.frame.size.height - 5);
-        
-    }
-    makeFirstObsTooltip = [[INatTooltipView alloc] initWithTargetPoint:origin
-                                                              hostView:self.view
-                                                           tooltipText:firstObsText
-                                                        arrowDirection:JDFTooltipViewArrowDirectionDown
-                                                                 width:200];
-
+    makeFirstObsTooltip = [[INatTooltipView alloc] initWithTargetBarButtonItem: (UIBarButtonItem*) [self.tabBar.items objectAtIndex:OBSERVE_TAB_INDEX]
+                                                hostView:self.view
+                                             tooltipText:firstObsText
+                                          arrowDirection:JDFTooltipViewArrowDirectionDown
+                                                   width:200];
     makeFirstObsTooltip.tooltipBackgroundColour = [UIColor inatTint];
     makeFirstObsTooltip.shouldCenter = YES;
     
