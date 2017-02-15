@@ -195,67 +195,6 @@
     });
     [socialContainer addSubview:self.gButton];
     
-    self.faceButton = ({
-        SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
-        button.translatesAutoresizingMaskIntoConstraints = NO;
-        
-        NSString *face = NSLocalizedString(@"Facebook", @"Name of Facebook for the Facebook signin button");
-        NSDictionary *attrs = @{
-                                NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f],
-                                };
-        
-        button.trailingTitleLabel.textAlignment = NSTextAlignmentCenter;
-        button.trailingTitleLabel.attributedText = [[NSAttributedString alloc] initWithString:face
-                                                                                attributes:attrs];
-
-        button.leadingTitleLabel.attributedText = [FAKIonIcons socialFacebookIconWithSize:25.0f].attributedString;
-
-        [button bk_addEventHandler:^(id sender) {
-            if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Internet connection required",nil)
-                                            message:NSLocalizedString(@"Try again next time you're connected to the Internet.", nil)
-                                           delegate:nil
-                                  cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                  otherButtonTitles:nil] show];
-                return;
-            }
-            
-            NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[[UIApplication sharedApplication] delegate];
-            __weak typeof(self)weakSelf = self;
-            [appDelegate.loginController loginWithFacebookUsingViewController: self
-             success:^(NSDictionary *info) {
-                __strong typeof(weakSelf)strongSelf = weakSelf;
-                if ([appDelegate.window.rootViewController isEqual:strongSelf.navigationController]) {
-                    [appDelegate showMainUI];
-                } else {
-                    [strongSelf dismissViewControllerAnimated:YES completion:nil];
-                }
-                if (strongSelf.selectedPartner) {
-                    [appDelegate.loginController loggedInUserSelectedPartner:strongSelf.selectedPartner
-                                                                  completion:nil];
-                }
-            } failure:^(NSError *error) {
-                NSString *alertTitle = NSLocalizedString(@"Oops", @"Title error with oops text.");
-                NSString *alertMsg;
-                if (error) {
-                    alertMsg = error.localizedDescription;
-                } else {
-                    alertMsg = NSLocalizedString(@"Failed to login to Facebook. Please try again later.",
-                                            @"Unknown facebook login error");
-                }
-                [[[UIAlertView alloc] initWithTitle:alertTitle
-                                           message:alertMsg
-                                          delegate:nil
-                                 cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil] show];
-            }];
-        } forControlEvents:UIControlEventTouchUpInside];
-        
-        button;
-
-    });
-    [socialContainer addSubview:self.faceButton];
-    
     UIView *spacer = [UIView new];
     UIView *spacer2 = [UIView new];
     
@@ -273,7 +212,6 @@
                             @"spacer2": spacer2,
                             @"or": self.orLabel,
                             @"g": self.gButton,
-                            @"face": self.faceButton,
                             @"top": self.topLayoutGuide,
                             @"social": socialContainer,
                             };
@@ -312,7 +250,7 @@
                                                           attribute:NSLayoutAttributeNotAnAttribute
                                                          multiplier:1.0f
                                                            constant:290.0f]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[g]-[face(==g)]-0-|"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[g]-0-|"
                                                                       options:0
                                                                       metrics:0
                                                                         views:views]];
@@ -320,11 +258,6 @@
                                                                       options:0
                                                                       metrics:0
                                                                         views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[face]-0-|"
-                                                                      options:0
-                                                                      metrics:0
-                                                                        views:views]];
-    
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[top]-20-[tv(==152)]"
                                                                       options:0
                                                                       metrics:0

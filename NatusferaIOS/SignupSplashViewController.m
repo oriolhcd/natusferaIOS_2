@@ -67,7 +67,6 @@ static char PARTNER_ASSOCIATED_KEY;
     [self.navigationController.navigationBar setTranslucent:YES];
     
     if (self.animateIn) {
-        self.loginFaceButton.alpha = 0.0f;
         self.loginGButton.alpha = 0.0f;
         self.skipButton.alpha = 0.0f;
         self.signinEmailButton.alpha = 0.0f;
@@ -116,7 +115,6 @@ static char PARTNER_ASSOCIATED_KEY;
         
         [UIView animateWithDuration:0.3f
                          animations:^{
-                             self.loginFaceButton.alpha = 1.0f;
                              self.loginGButton.alpha = 1.0f;
                              self.signupEmailButton.alpha = 1.0f;
                              self.signinEmailButton.alpha = 1.0f;
@@ -243,75 +241,6 @@ static char PARTNER_ASSOCIATED_KEY;
         style.tailIndent = -10.0f;
         style;
     });
-
-    self.loginFaceButton = ({
-        SplitTextButton *button = [[SplitTextButton alloc] initWithFrame:CGRectZero];
-        button.trailingTitleLabel.textAlignment = NSTextAlignmentNatural;
-        button.translatesAutoresizingMaskIntoConstraints = NO;
-        
-        button.leadingTitleLabel.attributedText = ({
-            FAKIcon *face = [FAKIonIcons socialFacebookIconWithSize:25.0f];
-            face.attributedString;
-        });
-
-        
-        NSAttributedString *title = [NSAttributedString inat_attrStrWithBaseStr:NSLocalizedString(@"Log In with Facebook", "@base text for fb login button")
-                                                                      baseAttrs:@{
-                                                                                  NSFontAttributeName: [UIFont systemFontOfSize:16.0f],
-                                                                                  NSParagraphStyleAttributeName: indentedParagraphStyle,
-                                                                                  }
-                                                                       emSubstr:NSLocalizedString(@"Facebook", @"portion of the base text for fb login button that is bold. must be a substring of the base test.")
-                                                                        emAttrs:@{ NSFontAttributeName: [UIFont boldSystemFontOfSize:16.0f] }];
-        button.trailingTitleLabel.attributedText = title;
-        
-        __weak typeof(self)weakSelf = self;
-        [button bk_addEventHandler:^(id sender) {
-            [[Analytics sharedClient] event:kAnalyticsEventSplashFacebook];
-            
-            if (![[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Internet connection required",nil)
-                                            message:NSLocalizedString(@"Try again next time you're connected to the Internet.", nil)
-                                           delegate:nil
-                                  cancelButtonTitle:NSLocalizedString(@"OK",nil)
-                                  otherButtonTitles:nil] show];
-                return;
-            }
-            
-            NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[[UIApplication sharedApplication] delegate];
-            [appDelegate.loginController loginWithFacebookUsingViewController: self
-              success:^(NSDictionary *info) {
-                __strong typeof(weakSelf)strongSelf = weakSelf;
-                if ([appDelegate.window.rootViewController isEqual:strongSelf.navigationController]) {
-                    [appDelegate showMainUI];
-                } else {
-                    [weakSelf dismissViewControllerAnimated:YES completion:nil];
-                }
-                if (strongSelf.selectedPartner) {
-                    [appDelegate.loginController loggedInUserSelectedPartner:strongSelf.selectedPartner
-                                                                  completion:nil];
-                }
-            } failure:^(NSError *error) {
-                NSString *alertTitle = NSLocalizedString(@"Log In Problem", @"Title for login problem alert");
-                NSString *alertMsg;
-                if (error) {
-                    alertMsg = error.localizedDescription;
-                } else {
-                    alertMsg = NSLocalizedString(@"Failed to login to Facebook. Please try again later.",
-                                                 @"Unknown facebook login error");
-                }
-                
-                [[[UIAlertView alloc] initWithTitle:alertTitle
-                                            message:alertMsg
-                                           delegate:nil
-                                  cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                  otherButtonTitles:nil] show];
-            }];
-
-        } forControlEvents:UIControlEventTouchUpInside];
-        
-        button;
-    });
-    [self.view addSubview:self.loginFaceButton];
     
     [GIDSignIn sharedInstance].uiDelegate = self;//añadido M.Lujano
     
@@ -507,7 +436,6 @@ static char PARTNER_ASSOCIATED_KEY;
     NSDictionary *views = @{
                             @"logo": self.logoImageView,
                             @"bg": self.backgroundImageView,
-                            @"face": self.loginFaceButton,
                             @"g": self.loginGButton,
                             @"emailSignup": self.signupEmailButton,
                             @"skip": self.skipButton,
@@ -533,13 +461,6 @@ static char PARTNER_ASSOCIATED_KEY;
                                                                       metrics:0
                                                                         views:views]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginFaceButton
-                                                         attribute:NSLayoutAttributeWidth
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:nil
-                                                         attribute:NSLayoutAttributeNotAnAttribute
-                                                        multiplier:1.0f
-                                                           constant:290.0f]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginGButton
                                                           attribute:NSLayoutAttributeWidth
                                                           relatedBy:NSLayoutRelationEqual
@@ -556,13 +477,6 @@ static char PARTNER_ASSOCIATED_KEY;
                                                            constant:290.0f]];
 
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginFaceButton
-                                                          attribute:NSLayoutAttributeCenterX
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeCenterX
-                                                         multiplier:1.0f
-                                                           constant:0.0f]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.loginGButton
                                                           attribute:NSLayoutAttributeCenterX
                                                           relatedBy:NSLayoutRelationEqual
@@ -596,7 +510,7 @@ static char PARTNER_ASSOCIATED_KEY;
                                                                                     options:0
                                                                                     metrics:0
                                                                                       views:views]];
-    [mutableConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[logo]-30-[face(==44)]-[g(==44)]-[emailSignup(==44)]-20-[skip(==30)]-20-[emailSignin(==44)]-0-|"
+    [mutableConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[logo]-30-[g(==44)]-[emailSignup(==44)]-20-[skip(==30)]-20-[emailSignin(==44)]-0-|"
                                                                                     options:0
                                                                                     metrics:0
                                                                                       views:views]];
@@ -607,7 +521,7 @@ static char PARTNER_ASSOCIATED_KEY;
                                                                                     options:0
                                                                                     metrics:0
                                                                                       views:views]];
-    [mutableConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[face(==44)]-[g(==44)]-[emailSignup(==44)]-20-[skip(==30)]-20-[emailSignin(==44)]-0-|"
+    [mutableConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[g(==44)]-[emailSignup(==44)]-20-[skip(==30)]-20-[emailSignin(==44)]-0-|"
                                                                                     options:0
                                                                                     metrics:0
                                                                                       views:views]];
