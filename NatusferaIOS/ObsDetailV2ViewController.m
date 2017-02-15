@@ -304,7 +304,7 @@
         
         [[Analytics sharedClient] event:kAnalyticsEventObservationShareStarted];
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld.json",
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/observations/%ld",
                                            INatWebBaseURL, (long)self.observation.inatRecordId.longLongValue]];
         UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:@[url]
                                                                                applicationActivities:nil];
