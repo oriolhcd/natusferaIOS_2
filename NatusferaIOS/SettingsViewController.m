@@ -199,7 +199,7 @@ static const int AutouploadSwitchTag = 101;
 
 - (void)sendSupportEmail
 {
-    NSString *email = [NSString stringWithFormat:@"mailto://inaturalist.gbif.es?cc=&subject=Natusfera iPhone help: version %@",
+    NSString *email = [NSString stringWithFormat:@"mailto://natusfera.gbif.es?cc=&subject=Natusfera iPhone help: version %@",
                        self.versionText];
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
@@ -228,8 +228,8 @@ static const int AutouploadSwitchTag = 101;
     VTAcknowledgementsViewController *creditsVC = [VTAcknowledgementsViewController acknowledgementsViewController];
     
     NSString *credits = [NSString stringWithFormat:@"%@\n\n%@\n\n%@\n\n%@\n\n%@",
-                         NSLocalizedString(@"Natusfera was inspired on Natusfera.\n\nThis app uses numerous open source and Creative Common-licensed materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artists!", @"funding thank yous"),
-                         NSLocalizedString(@"Natusfera is an adaptation of Natusfera (www.natusfera.org) developed by CREAF (www.creaf.cat/es).", @"inat core team, alphabetically"),
+                         NSLocalizedString(@"Natusfera was inspired on iNaturalist.\n\nThis app uses numerous open source and Creative Common-licenced materials, including Three20, Restkit, TapkuLibrary by Devin Ross, DejalActivityView by David Sinclair, and Glyphish icons by Joseph Wain. Many thanks to these generous and talented engineers and artist!", @"funding thank yous"),
+                         NSLocalizedString(@"Natusfera is an adaptation of iNaturalist (www.inaturalist.org) developed by CREAF (www.creaf.cat/es).", @"inat core team, alphabetically"),
                          NSLocalizedString(@"It is funded by the FECYT, Spanish Foundation for Science and Technology (www.fecyt.es) Obra Social La Caixa (www.lacaixa.es),funded by the Royal Botanical Garden-CSIC through the National Biodiversity Node in Spain, GBIF.ES (www.gbif.es) and the Institute of the Sea (www.icm.csic.es) Sciences.", @"open source contributions"),
                          NSLocalizedString(@"The administration, coordination, maintenance and content management is performed through the CREAF and GBIF.ES.", @"inat ios translation team, alphabetically"),
                          @""];
