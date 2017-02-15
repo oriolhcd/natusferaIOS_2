@@ -37,7 +37,8 @@
 #import "DeletedRecord.h"
 #import "Fave.h"
 #import "NewsItem.h"
-
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface NatusferaAppDelegate () {
     NSManagedObjectModel *managedObjectModel;
@@ -96,6 +97,7 @@
     
     [self configureApplicationInBackground];
     
+    [Fabric with:@[[Crashlytics class]]];
     [GIDSignIn sharedInstance].clientID = @"118067285617-82ggdm3g9uembfd0t89muabo2pf636ps.apps.googleusercontent.com"; //linea añadida por M.Lujano.
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

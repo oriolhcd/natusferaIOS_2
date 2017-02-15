@@ -31,14 +31,13 @@ PODS:
     - CocoaAsyncSocket/RunLoop
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
-  - Crashlytics (3.3.3)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
   - CustomIOSAlertView (0.9.3)
   - DCRoundSwitch (0.0.1)
   - DZNEmptyDataSet (1.7.3)
   - Expecta (1.0.2)
-  - Fabric (1.5.4):
-    - Fabric/Base (= 1.5.4)
-  - Fabric/Base (1.5.4)
+  - Fabric (1.6.11)
   - FBSDKCoreKit (4.18.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.18.0):
@@ -149,12 +148,12 @@ DEPENDENCIES:
   - BlocksKit (= 2.2.5)
   - Bolts (~> 1.8.4)
   - CocoaAsyncSocket
-  - Crashlytics (= 3.3.3)
+  - Crashlytics
   - CustomIOSAlertView (= 0.9.3)
   - DCRoundSwitch (= 0.0.1)
   - DZNEmptyDataSet (= 1.7.3)
   - Expecta
-  - Fabric (= 1.5.4)
+  - Fabric
   - FBSDKCoreKit (~> 4.18.0)
   - FBSDKLoginKit (~> 4.18.0)
   - FBSDKShareKit (~> 4.18.0)
@@ -225,12 +224,12 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   cocoa-oauth: 1200a2170276a62a975f2786d505dab6e2db1fa8
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  Crashlytics: 9120a5c1515655e57a65e565e2eae8dd326be2e9
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   CustomIOSAlertView: 94d2401e34fcfb0ac0134679d6947f5e251b0446
   DCRoundSwitch: 86d348f35be4d6ef18dbc9331c682aab6f85e980
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
-  Fabric: 93e3053474839d8df33a61a29c328a48c83792c8
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
   FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
   FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
@@ -273,6 +272,6 @@ SPEC CHECKSUMS:
   XMLReader: c7e54b707c368e2fa545d8313276b4de13a36ff5
   YLMoment: a342e85269150756105901c4b701070154f82c16
 
-PODFILE CHECKSUM: 61d6e42f310b2b5e99c5d8aec8f5224bb5e63f1b
+PODFILE CHECKSUM: 93213fcdcd7b94223d4dfd3a6992218c0b229f61
 
 COCOAPODS: 1.2.0.rc.1

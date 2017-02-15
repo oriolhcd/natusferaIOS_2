@@ -6,8 +6,8 @@ project 'Natusfera.xcodeproj'
 inhibit_all_warnings!
 
 target :Natusfera do
-  pod 'Fabric', '1.5.4'
-  pod 'Crashlytics', '3.3.3'
+  pod 'Fabric', '1.6.11'
+  pod 'Crashlytics', '3.8.3'
   pod 'Flurry-iOS-SDK/FlurrySDK', '7.1.0'
   pod 'FBSDKCoreKit', '~> 4.18.0'
   pod 'FBSDKLoginKit', '~> 4.18.0'

@@ -1686,6 +1686,7 @@
 				FA88B7681ABCD34A0004B4C6 /* ShellScript */,
 				4AF2A9BB8F5A04E6D998ABEF /* [CP] Embed Pods Frameworks */,
 				C1291957619DA91F446C0A2E /* [CP] Copy Pods Resources */,
+				BB8A03471E51A0C6002DE748 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -1728,6 +1729,7 @@
 				TargetAttributes = {
 					1927513214E9CCC9000ABAC4 = {
 						DevelopmentTeam = K8VGA488X5;
+						ProvisioningStyle = Automatic;
 					};
 					FADE28AF1B02D9AA00CA55FF = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -1877,6 +1879,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NatusferaTests/Pods-NatusferaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BB8A03471E51A0C6002DE748 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 09113958b4b4bc86dd1f3b3383d0158d64f5d4ef dbfc393cc267650fd2f8983da390ac56c9b21090783ada054c2b7f22a4faf9dd";
 		};
 		C1291957619DA91F446C0A2E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
