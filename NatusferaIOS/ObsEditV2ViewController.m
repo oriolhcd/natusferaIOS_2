@@ -760,7 +760,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
     [[Analytics sharedClient] event:kAnalyticsEventObservationIDPleaseChanged
                      withProperties:@{
                                       @"Via": [self analyticsVia],
-                                      @"New Value": switcher.isOn ? @"Yes": @"No"
+                                      @"New Value": switcher.isOn ? NSLocalizedString(@"Yes", nil) : NSLocalizedString(@"No", nil)
                                       }];
     
     self.observation.idPlease = [NSNumber numberWithBool:switcher.isOn];
@@ -890,7 +890,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
                      withProperties:@{
                                       @"Via": [self analyticsVia],
                                       @"New Value": newTaxonName,
-                                      @"Is Taxon": @"Yes",
+                                      @"Is Taxon": NSLocalizedString(@"Yes", nil),
                                       }];
 
     [self.navigationController popToViewController:self animated:YES];
@@ -1215,7 +1215,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
             } else if (indexPath.item == 4) {
                 // captive/cultivated
                 
-                NSArray *captiveOptions = @[@"No", @"Yes"];
+                NSArray *captiveOptions = @[NSLocalizedString(@"No", nil), NSLocalizedString(@"Yes", nil)];
                 NSInteger selectedIndex = self.observation.captive.integerValue;
                 
                 __weak typeof(self) weakSelf = self;
@@ -1227,7 +1227,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
                                                           [[Analytics sharedClient] event:kAnalyticsEventObservationCaptiveChanged
                                                                            withProperties:@{
                                                                                             @"Via": [self analyticsVia],
-                                                                                            @"New Value": selectedIndex == 0 ? @"No": @"Yes",
+                                                                                            @"New Value": selectedIndex == 0 ? NSLocalizedString(@"No", nil) : NSLocalizedString(@"Yes", nil),
                                                                                             }];
                                                           
                                                           __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -1414,6 +1414,8 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
     cell.accessoryType = UITableViewCellAccessoryNone;
     
     UISwitch *switcher = [[UISwitch alloc] initWithFrame:CGRectZero];
+    NSNumber* switcherOn = self.observation.idPlease;
+    [switcher setOn:[switcherOn boolValue]];
     [switcher addTarget:self action:@selector(idPleaseChanged:) forControlEvents:UIControlEventValueChanged];
     cell.accessoryView = switcher;
     
