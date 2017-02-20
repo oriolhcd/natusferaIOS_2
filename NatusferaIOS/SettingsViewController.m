@@ -43,10 +43,9 @@ static const int CreditsSection = 3;
 
 static const int UsernameCellTag = 0;
 static const int AccountActionCellTag = 1;
-static const int TutorialActionCellTag = 2;
-static const int ContactActionCellTag = 3;
-static const int RateUsCellTag = 4;
-static const int VersionCellTag = 5;
+static const int ContactActionCellTag = 2;
+static const int RateUsCellTag = 3;
+static const int VersionCellTag = 4;
 
 static const int NetworkDetailLabelTag = 14;
 static const int NetworkTextLabelTag = 15;
@@ -77,12 +76,10 @@ static const int AutouploadSwitchTag = 101;
 
     UITableViewCell *usernameCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     UITableViewCell *accountActionCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-    UITableViewCell *tutorialActionCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2]];
     UITableViewCell *contactActionCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:2]];
     UITableViewCell *rateUsActionCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:2]];
     usernameCell.tag = UsernameCellTag;
     accountActionCell.tag = AccountActionCellTag;
-    tutorialActionCell.tag = TutorialActionCellTag;
     contactActionCell.tag = ContactActionCellTag;
     rateUsActionCell.tag = RateUsCellTag;
     
@@ -155,46 +152,6 @@ static const int AutouploadSwitchTag = 101;
     // update UI
     [(INatUITabBarController *)self.tabBarController setObservationsTabBadge];
     [self initUI];
-}
-
-- (void)launchTutorial
-{
-    [[Analytics sharedClient] timedEvent:kAnalyticsEventNavigateTutorial];
-    
-    NSArray *tutorialImages = @[
-                                [UIImage imageNamed:@"tutorial1"],
-                                [UIImage imageNamed:@"tutorial2"],
-                                [UIImage imageNamed:@"tutorial3"],
-                                [UIImage imageNamed:@"tutorial4"],
-                                [UIImage imageNamed:@"tutorial5"],
-                                [UIImage imageNamed:@"tutorial6"],
-                                [UIImage imageNamed:@"tutorial7"],
-                                ];
-    
-    NSArray *galleryData = [tutorialImages bk_map:^id(UIImage *image) {
-        return [MHGalleryItem itemWithImage:image];
-    }];
-    
-    MHUICustomization *customization = [[MHUICustomization alloc] init];
-    customization.showOverView = NO;
-    customization.showMHShareViewInsteadOfActivityViewController = NO;
-    customization.hideShare = YES;
-    customization.useCustomBackButtonImageOnImageViewer = NO;
-    
-    MHGalleryController *gallery = [MHGalleryController galleryWithPresentationStyle:MHGalleryViewModeImageViewerNavigationBarShown];
-    gallery.galleryItems = galleryData;
-    gallery.presentationIndex = 0;
-    gallery.UICustomization = customization;
-    
-    __weak MHGalleryController *blockGallery = gallery;
-    
-    gallery.finishedCallback = ^(NSUInteger currentIndex,UIImage *image,MHTransitionDismissMHGallery *interactiveTransition,MHGalleryViewMode viewMode){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[Analytics sharedClient] endTimedEvent:kAnalyticsEventNavigateTutorial];
-            [blockGallery dismissViewControllerAnimated:YES completion:nil];
-        });
-    };
-    [self presentMHGalleryController:gallery animated:YES completion:nil];
 }
 
 - (void)sendSupportEmail
@@ -561,15 +518,7 @@ static const int AutouploadSwitchTag = 101;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     switch (cell.tag) {
         case UsernameCellTag:
-            if ([defaults objectForKey:INatUsernamePrefKey] || [defaults objectForKey:INatTokenPrefKey]) {
-                [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-            } else {
-                if ([[[RKClient sharedClient] reachabilityObserver] isNetworkReachable]) {
-                    [self presentSignup];
-                } else {
-                    [self networkUnreachableAlert];
-                }
-            }
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         case AccountActionCellTag:
             if ([defaults objectForKey:INatUsernamePrefKey]|| [defaults objectForKey:INatTokenPrefKey]) {
@@ -581,9 +530,6 @@ static const int AutouploadSwitchTag = 101;
                     [self networkUnreachableAlert];
                 }
             }
-            break;
-        case TutorialActionCellTag:
-            [self launchTutorial];
             break;
         case ContactActionCellTag:
             [self sendSupportEmail];

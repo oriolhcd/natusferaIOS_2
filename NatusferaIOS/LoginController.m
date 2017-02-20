@@ -200,12 +200,20 @@ NSInteger INatMinPasswordLength = 6;
                                                       if (!isLoginCompleted) {
                                                           [self finishWithAuth2Login];
                                                       }
+
+                                                      NSDictionary* userInfo = [aNotification userInfo];
+                                                      NXOAuth2Account* account = userInfo[NXOAuth2AccountStoreNewAccountUserInfoKey];
+                                                      if ([account.accessToken.accessToken isEqualToString:externalAccessToken]) {
+                                                          [self executeSuccess:nil];
+                                                      }
                                                   }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:NXOAuth2AccountStoreDidFailToRequestAccessNotification
                                                       object:[NXOAuth2AccountStore sharedStore]
                                                        queue:nil
                                                   usingBlock:^(NSNotification *aNotification) {
+                                                      self.externalAccessToken = nil;
+
                                                       id err = [aNotification.userInfo objectForKey:NXOAuth2AccountStoreErrorKey];
                                                       NSLog(@"err is %@", err);
                                                       if (err && [err isKindOfClass:[NSError class]]) {
@@ -385,7 +393,6 @@ NSInteger INatMinPasswordLength = 6;
                                                              assertionType:[NSURL URLWithString:@"http://google.com"]
                                                                  assertion:externalAccessToken];
         tryingGoogleReauth = NO;
-        [self executeSuccess:nil];
     }
 }
 

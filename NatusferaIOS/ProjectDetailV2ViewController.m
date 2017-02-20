@@ -369,7 +369,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     }
     [[RKObjectManager sharedManager] postObject:self.projectUser usingBlock:^(RKObjectLoader *loader) {
         loader.delegate = self;
-        loader.resourcePath = [NSString stringWithFormat:@"/projects/%d/join", self.project.recordID.intValue];
+        loader.resourcePath = [NSString stringWithFormat:@"/projects/%d/join.json", self.project.recordID.intValue];
         loader.objectMapping = [ProjectUser mapping];
     }];
 }
@@ -384,7 +384,7 @@ static CGFloat OffsetHeaderStop = 200 - 44 - 20;
     
     [[RKObjectManager sharedManager] deleteObject:self.projectUser usingBlock:^(RKObjectLoader *loader) {
         loader.delegate = self;
-        loader.resourcePath = [NSString stringWithFormat:@"/projects/%d/leave", self.project.recordID.intValue];
+        loader.resourcePath = [NSString stringWithFormat:@"/projects/%d/leave.json", self.project.recordID.intValue];
     }];
 }
 

@@ -14,7 +14,6 @@
 #import "Project.h"
 #import "ProjectUser.h"
 #import "Analytics.h"
-#import "TutorialSinglePageViewController.h"
 #import "SignupSplashViewController.h"
 #import "NatusferaAppDelegate.h"
 #import "NatusferaAppDelegate+TransitionAnimators.h"
@@ -395,24 +394,6 @@ static const int ListControlIndexNearby = 2;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[Analytics sharedClient] timedEvent:kAnalyticsEventNavigateProjects];
-    
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:kDefaultsKeyOldTutorialSeen] &&
-        ![[NSUserDefaults standardUserDefaults] boolForKey:kDefaultsKeyTutorialNeverAgain] &&
-        ![[NSUserDefaults standardUserDefaults] boolForKey:kDefaultsKeyTutorialSeenProjects]) {
-        
-        TutorialSinglePageViewController *vc = [[TutorialSinglePageViewController alloc] initWithNibName:nil bundle:nil];
-        vc.tutorialImage = [UIImage imageNamed:@"tutorial_projects"];
-        vc.tutorialTitle = NSLocalizedString(@"Projects are collections of observations with a common purpose", @"Title for projects tutorial screen");
-        vc.tutorialSubtitleOne = NSLocalizedString(@"Join projects to select them when you record observations", @"Subtitle above image for projects tutorial screen");
-        NSString *tutorialSubtitleTwoBase = NSLocalizedString(@"Visit %@ to create your own projects",
-                                                              @"Subtitle below image for projects tutorial screen. The string is the URL for iNat (or partner site)");
-        vc.tutorialSubtitleTwo = [NSString stringWithFormat:tutorialSubtitleTwoBase, [NSURL inat_baseURL]];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self presentViewController:vc animated:YES completion:nil];
-        });
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kDefaultsKeyTutorialSeenProjects];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
     
     if (self.locationManager) {
         [self.locationManager startUpdatingLocation];

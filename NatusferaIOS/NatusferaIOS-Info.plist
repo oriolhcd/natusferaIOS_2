@@ -50,11 +50,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>326</string>
+	<string>327</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>7baaee0ca8a376b3d129b908c1e03be6ecbe5786</string>
+		<string>09113958b4b4bc86dd1f3b3383d0158d64f5d4ef</string>
 		<key>Kits</key>
 		<array>
 			<dict>
@@ -67,17 +67,17 @@
 	</dict>
 	<key>FacebookAppID</key>
 	<string>359071117810673</string>
-    <key>FacebookDisplayName</key>
-    <string>Natusfera iOS</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>FacebookDisplayName</key>
+	<string>Natusfera iOS</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -107,19 +107,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>Fabric</key>
-    <dict>
-        <key>APIKey</key>
-        <string>09113958b4b4bc86dd1f3b3383d0158d64f5d4ef</string>
-        <key>Kits</key>
-        <array>
-            <dict>
-                <key>KitInfo</key>
-                <dict/>
-                <key>KitName</key>
-                <string>Crashlytics</string>
-            </dict>
-        </array>
-    </dict>
 </dict>
 </plist>
