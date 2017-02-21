@@ -227,6 +227,7 @@
             // notify finished with this observation
             [self.observationsToUpload removeObject:observation];
             [self uploadNextObservation];
+
             return;
         }
         
@@ -573,10 +574,27 @@
                 thisObservation = ((ObservationFieldValue *)object).observation;
             }
             if (thisObservation) {
-                [self uploadOneRecordForObservation:thisObservation];
+                Observation* observation = [self updateObservationFromFetchedObservation:thisObservation];
+                [self uploadOneRecordForObservation:observation];
+                if (observation != thisObservation) {
+                    thisObservation.syncedAt = nil;
+                    [thisObservation destroy];
+                }
             }
         }
     }
+}
+
+-(Observation*) updateObservationFromFetchedObservation: (Observation*) fetchedObservation {
+    for (Observation* observation in _observationsToUpload) {
+        if ([observation.uuid.lowercaseString isEqualToString:fetchedObservation.uuid.lowercaseString]) {
+            observation.recordID = fetchedObservation.recordID;
+            observation.syncedAt = fetchedObservation.syncedAt;
+            observation.userID = fetchedObservation.userID;
+            return observation;
+        }
+    }
+    return nil;
 }
 
 #pragma mark - Long-running background task
