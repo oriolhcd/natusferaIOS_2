@@ -1737,7 +1737,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */;
+			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2319,7 +2319,6 @@
 			baseConfigurationReference = E985CB55B165455F0B84ED98 /* Pods-Natusfera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2365,7 +2364,6 @@
 			baseConfigurationReference = 4EC832F0AD81442FD907C44B /* Pods-Natusfera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2493,7 +2491,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */ = {
+		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1927514F14E9CCC9000ABAC4 /* Debug */,

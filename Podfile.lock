@@ -24,19 +24,15 @@ PODS:
   - Bolts/Tasks (1.8.4)
   - cocoa-oauth (0.0.1):
     - NSData+Base64 (~> 1.0)
-  - CocoaAsyncSocket (7.4.3):
-    - CocoaAsyncSocket/All (= 7.4.3)
-  - CocoaAsyncSocket/All (7.4.3):
-    - CocoaAsyncSocket/GCD
-    - CocoaAsyncSocket/RunLoop
-  - CocoaAsyncSocket/GCD (7.4.3)
-  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - CustomIOSAlertView (0.9.3)
   - DCRoundSwitch (0.0.1)
   - DZNEmptyDataSet (1.7.3)
-  - Expecta (1.0.2)
+  - Expecta (1.0.5)
   - Fabric (1.6.11)
   - FBSDKCoreKit (4.18.0):
     - Bolts (~> 1.7)
@@ -65,7 +61,7 @@ PODS:
   - HexColors (2.3.0)
   - ICViewPager (1.5.1)
   - IFTTTLaunchImage (0.4.4)
-  - ISO8601DateFormatter (0.7)
+  - ISO8601DateFormatter (0.8)
   - JDFTooltips (1.0)
   - JDStatusBarNotification (1.5.2)
   - JSONKit (1.5pre)
@@ -75,9 +71,9 @@ PODS:
   - librato-iOS (1.0.3):
     - AFNetworking (~> 1.0)
     - Mantle (~> 1.3)
-  - Mantle (1.5.7):
-    - Mantle/extobjc (= 1.5.7)
-  - Mantle/extobjc (1.5.7)
+  - Mantle (1.5.8):
+    - Mantle/extobjc (= 1.5.8)
+  - Mantle/extobjc (1.5.8)
   - MBProgressHUD (0.9.1)
   - MHVideoPhotoGallery (1.6.6):
     - SDWebImage
@@ -130,7 +126,7 @@ PODS:
   - SDWebImage/Core (3.7.3)
   - SlackTextViewController (1.9)
   - SOCKit (1.1)
-  - Specta (1.0.3)
+  - Specta (1.0.6)
   - SSZipArchive (0.3.2)
   - SVPullToRefresh (0.4.1)
   - SWRevealViewController (2.3.0)
@@ -148,12 +144,12 @@ DEPENDENCIES:
   - BlocksKit (= 2.2.5)
   - Bolts (~> 1.8.4)
   - CocoaAsyncSocket
-  - Crashlytics
+  - Crashlytics (= 3.8.3)
   - CustomIOSAlertView (= 0.9.3)
   - DCRoundSwitch (= 0.0.1)
   - DZNEmptyDataSet (= 1.7.3)
   - Expecta
-  - Fabric
+  - Fabric (= 1.6.11)
   - FBSDKCoreKit (~> 4.18.0)
   - FBSDKLoginKit (~> 4.18.0)
   - FBSDKShareKit (~> 4.18.0)
@@ -223,12 +219,12 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   cocoa-oauth: 1200a2170276a62a975f2786d505dab6e2db1fa8
-  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   CustomIOSAlertView: 94d2401e34fcfb0ac0134679d6947f5e251b0446
   DCRoundSwitch: 86d348f35be4d6ef18dbc9331c682aab6f85e980
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
-  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
   FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
@@ -240,14 +236,14 @@ SPEC CHECKSUMS:
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   ICViewPager: 74e83c8bebd572b3baebac5959875d0fb5e70000
   IFTTTLaunchImage: ab84d453e2c51b3c2aa83daad99cf45f27688c96
-  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
   JDFTooltips: 439e3f1010b5e689e8438f66fce8448726e59897
   JDStatusBarNotification: a36d09ccbb047217572b074a61e7ca10dddc5f0a
   JSONKit: d64c81f94cf4fa7a11ee1e0e996237ab672e1e0d
   LibComponentLogging-Core: 769c6f596b96348911fe75f9825728213d334941
   LibComponentLogging-NSLog: ae0ad111653e6c955e3f93b95386285fcdf94ab3
   librato-iOS: 5e9f2581f3f7fafb6adf9bcea7b22f587351d3f9
-  Mantle: 4af47cf9547a4d0ad145a48cd0be3b411a5ae2b8
+  Mantle: f03b2b606c3f0cabd80214ad8a2fed6b464a7359
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MHVideoPhotoGallery: 0e16b8a70fccbaedc30081c8d2c7b3de281cd57c
   NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
@@ -260,7 +256,7 @@ SPEC CHECKSUMS:
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SlackTextViewController: d51503f7be846cb9976a273499dc90f2445e9447
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
-  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
+  Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
   SSZipArchive: 11801759495fa4efb7512ef652eb0042d68305d7
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
@@ -272,6 +268,6 @@ SPEC CHECKSUMS:
   XMLReader: c7e54b707c368e2fa545d8313276b4de13a36ff5
   YLMoment: a342e85269150756105901c4b701070154f82c16
 
-PODFILE CHECKSUM: 93213fcdcd7b94223d4dfd3a6992218c0b229f61
+PODFILE CHECKSUM: abb0ecf4c9b61bcba4d88137d900b2a5d8c0dcbc
 
 COCOAPODS: 1.2.0.rc.1
