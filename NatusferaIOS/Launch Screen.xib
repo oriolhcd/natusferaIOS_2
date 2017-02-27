@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iNat Logo for Launch Screen XIB" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-ca-M62">
-                    <rect key="frame" x="90" y="90" width="300" height="300"/>
+                    <rect key="frame" x="140" y="140" width="200" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="FUB-2D-WQn"/>
-                        <constraint firstAttribute="height" constant="300" id="hkr-3p-yQI"/>
+                        <constraint firstAttribute="width" constant="200" id="FUB-2D-WQn"/>
+                        <constraint firstAttribute="height" constant="200" id="hkr-3p-yQI"/>
                     </constraints>
                 </imageView>
             </subviews>
