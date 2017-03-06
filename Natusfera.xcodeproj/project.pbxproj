@@ -1737,7 +1737,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */;
+			buildConfigurationList = 1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2351,7 +2351,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = viaintermedia.Natusfera;
 				PRODUCT_NAME = Natusfera;
-				PROVISIONING_PROFILE = "0ee464d8-7182-4679-84d7-0ff41b3dc5cf";
+				PROVISIONING_PROFILE = "a4331a53-30d9-46bd-87ee-8d8f3bbf8d17";
 				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: *";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2393,9 +2393,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = viaintermedia.Natusfera;
 				PRODUCT_NAME = Natusfera;
-				PROVISIONING_PROFILE = "6d23983f-cb56-48d7-8051-75703cd7cb21";
+				PROVISIONING_PROFILE = "cfd3029f-0444-4cac-b893-39be7b2c6148";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				PROVISIONING_PROFILE_SPECIFIER = "Natusfera Distribution";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2493,7 +2493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "natusfera" */ = {
+		1927512D14E9CCC8000ABAC4 /* Build configuration list for PBXProject "Natusfera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1927514F14E9CCC9000ABAC4 /* Debug */,
