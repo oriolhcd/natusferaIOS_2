@@ -302,8 +302,8 @@
 /* Class = "UILabel"; text = "Detail"; ObjectID = "duv-dw-uXw"; */
 "duv-dw-uXw.text" = "Detalle";
 
-/* Class = "UILabel"; text = "Unknown"; ObjectID = "e0j-MT-hzk"; */
-"e0j-MT-hzk.text" = "Desconocido";
+/* Class = "UILabel"; text = "Date"; ObjectID = "e0j-MT-hzk"; */
+"e0j-MT-hzk.text" = "Fecha";
 
 /* Class = "UILabel"; text = "Acc."; ObjectID = "eMN-g3-ANY"; */
 "eMN-g3-ANY.text" = "Acc.";

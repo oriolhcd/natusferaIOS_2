@@ -241,7 +241,7 @@
 "dYu-ti-1gC.text" = "Add observation";
 
 /* Class = "IBUILabel"; text = "Unknown"; ObjectID = "e0j-MT-hzk"; */
-"e0j-MT-hzk.text" = "Unknown";
+"e0j-MT-hzk.text" = "Date";
 
 /* Class = "IBUILabel"; text = "Acc."; ObjectID = "eMN-g3-ANY"; */
 "eMN-g3-ANY.text" = "Acc.";

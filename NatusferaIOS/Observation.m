@@ -229,7 +229,7 @@ static RKObjectMapping *defaultSerializationMapping = nil;
 
 - (NSString *)observedOnPrettyString
 {
-    if (!self.localObservedOn) return @"Unknown";
+    if (!self.localObservedOn) return NSLocalizedString(@"Date", @"");
     return [Observation.prettyDateFormatter stringFromDate:self.localObservedOn];
 }
 
