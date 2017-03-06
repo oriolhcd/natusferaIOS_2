@@ -215,6 +215,8 @@
         // upload the observation itself
         loaderBlock = ^(RKObjectLoader *loader) {
             loader.objectMapping = [Observation mapping];
+            NSString *newURLString = [[loader.URL absoluteString] stringByAppendingPathComponent:@"?ignore_photos=1"];
+            loader.URL = [NSURL URLWithString:newURLString];
             loader.delegate = self;
         };
         recordToUpload = observation;
@@ -319,7 +321,6 @@
                                               @"Type": className,
                                               @"Method": @"PUT"
                                               }];
-
             [objectManager putObject:recordToUpload usingBlock:loaderBlock];
         } else {
             NSString *msg = [NSString stringWithFormat:@"Network - Post One %@ Record During Upload", className];
