@@ -124,9 +124,9 @@
     [mapping mapKeyPath:@"quality_grade" toAttribute:@"qualityGrade"];
     [mapping mapKeyPath:@"id_please" toAttribute:@"idPlease"];
     
-    [mapping mapKeyPath:@"user.id" toAttribute:@"observerId"];
-    [mapping mapKeyPath:@"user.login" toAttribute:@"observerName"];
-    [mapping mapKeyPath:@"user.icon_url" toAttribute:@"observerIconUrl"];
+    [mapping mapKeyPath:@"user_id" toAttribute:@"observerId"];
+    [mapping mapKeyPath:@"user_login" toAttribute:@"observerName"];
+    [mapping mapKeyPath:@"user_icon_url" toAttribute:@"observerIconUrl"];
 
     [mapping mapKeyPath:@"identifications_count" toAttribute:@"identificationsCount"];
     [mapping mapKeyPath:@"comments_count" toAttribute:@"commentsCount"];
@@ -135,7 +135,8 @@
     [mapping mapKeyPath:@"coordinates_obscured" toAttribute:@"coordinatesObscured"];
     [mapping mapKeyPath:@"place_guess" toAttribute:@"placeGuess"];
     
-    [mapping mapKeyPath:@"photos" toRelationship:@"observationPhotos" withMapping:[self observationPhotoMapping]];
+    [mapping mapKeyPath:@"photos" toRelationship:@"explorePhotos" withMapping:[self exploreObservationPhotoMapping]];
+    [mapping mapKeyPath:@"observation_photos" toRelationship:@"observationPhotos" withMapping:[self observationPhotoMapping]];
     [mapping mapKeyPath:@"comments" toRelationship:@"comments" withMapping:[self commentMapping]];
     [mapping mapKeyPath:@"identifications" toRelationship:@"identifications" withMapping:[self identificationMapping]];
     [mapping mapKeyPath:@"faves" toRelationship:@"faves" withMapping:[self faveMapping]];
@@ -146,6 +147,19 @@
 }
 
 + (RKObjectMapping *)observationPhotoMapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[ExploreObservationPhoto class]];
+    
+    [mapping mapKeyPath:@"photo.medium_url" toAttribute:@"mediumURL"];
+    [mapping mapKeyPath:@"photo.square_url" toAttribute:@"squareURL"];
+    [mapping mapKeyPath:@"photo.thumb_url" toAttribute:@"thumbURL"];
+    [mapping mapKeyPath:@"photo.large_url" toAttribute:@"largeURL"];
+    [mapping mapKeyPath:@"photo.small_url" toAttribute:@"smallURL"];
+    [mapping mapKeyPath:@"photo.medium_url" toAttribute:@"url"];
+    
+    return mapping;
+}
+
++ (RKObjectMapping *)exploreObservationPhotoMapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[ExploreObservationPhoto class]];
     
     [mapping mapKeyPath:@"medium_url" toAttribute:@"mediumURL"];

@@ -34,6 +34,7 @@
 #import "ActivityVisualization.h"
 #import "ExploreComment.h"
 #import "UIImage+Natusfera.h"
+#import "Comment.h"
 
 @interface ObsDetailActivityViewModel () <RKRequestDelegate> {
     BOOL hasSeenNewActivity;
@@ -632,6 +633,13 @@
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response {
     
     [self.delegate hideProgressHud];
+
+    NSError *saveError;
+    [[Comment managedObjectContext] save:&saveError];
+    
+    if (request.method == RKRequestMethodGET) {
+        return;
+    }
 
     // set "seen" call returns 204 on success, add ID returns 200
     if (response.statusCode == 200 || response.statusCode == 204) {

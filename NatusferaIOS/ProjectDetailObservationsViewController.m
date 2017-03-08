@@ -46,7 +46,7 @@
                                                                            forIndexPath:indexPath];
     
     ExploreObservation *obs = (ExploreObservation *)self.observations[indexPath.item];
-    ExploreObservationPhoto *photo = obs.observationPhotos.firstObject;
+    ExploreObservationPhoto *photo = obs.getPhotos.firstObject;
     if (photo) {
         NSString *mediumUrlString = [photo.squareURL stringByReplacingOccurrencesOfString:@"square"
                                                                          withString:@"small"];

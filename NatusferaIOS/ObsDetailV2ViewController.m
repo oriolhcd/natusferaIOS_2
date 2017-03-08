@@ -34,7 +34,9 @@
 #import "ObservationValidationErrorView.h"
 #import "INatPhoto.h"
 #import "ExploreObservation.h"
+#import "ExploreMappingProvider.h"
 #import "ObservationAPI.h"
+#import "Activity.h"
 
 @interface ObsDetailV2ViewController () <ObsDetailViewModelDelegate, RKObjectLoaderDelegate, RKRequestDelegate>
 
@@ -131,9 +133,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-//    if (!self.observation.needsUpload) {
-//        [self reloadObservation];
-//    }
+    if (!self.observation.needsUpload) {
+        [self reloadObservation];
+    }
     
     [[Analytics sharedClient] timedEvent:kAnalyticsEventNavigateObservationDetail];
 }
@@ -185,6 +187,7 @@
     if ([self.observation isKindOfClass:[ExploreObservation class]]) {
         ObservationAPI *api = [[ObservationAPI alloc] init];
         __weak typeof(self) weakSelf = self;
+        
         [api observationWithId:[[self.observation inatRecordId] integerValue]
                        handler:^(NSArray *results, NSError *error) {
                            __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -214,7 +217,7 @@
         //Comentado por M.Lujano  (8/06/2016)
         [[RKObjectManager sharedManager] loadObjectsAtResourcePath:path usingBlock:^(RKObjectLoader *loader)
          {
-             loader.objectMapping =[Observation mapping];
+             loader.objectMapping = [Observation mapping];
              loader.delegate=self;
              
          }];
@@ -393,11 +396,10 @@
     NSError *error = nil;
     // save will trigger a tableview reload
     [[[RKObjectManager sharedManager] objectStore] save:&error];
-    
-    
-    
-    [self.tableView reloadData];
-    
+    if ([[((Observation*) objects.firstObject).comments allObjects] count] > 0) {
+        Activity* comment = [((Observation*) objects.firstObject).comments allObjects].firstObject;
+        NSLog(@"comment: %@", comment.body);
+    }
     if (self.observation.hasUnviewedActivity.boolValue && self.activeSection == ObsDetailSectionActivity) {
         
         NSInteger lastSection = [self.tableView numberOfSections] - 1;
@@ -433,6 +435,8 @@
             [activityViewModel markActivityAsSeen];
         }
     }
+    
+    [self.tableView reloadData];
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {

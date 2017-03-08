@@ -307,12 +307,12 @@
     ExploreObservationDetailHeader *view = [[ExploreObservationDetailHeader alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 200)];
     [view setObservation:self.observation];
     
-    if (self.observation.observationPhotos.count > 0) {
+    if (self.observation.getPhotos.count > 0) {
         
         view.photoImageView.userInteractionEnabled = YES;
         [view.photoImageView addGestureRecognizer:[UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
             
-            NSArray *galleryData = [self.observation.observationPhotos bk_map:^id(ExploreObservationPhoto *observationPhoto) {
+            NSArray *galleryData = [self.observation.getPhotos bk_map:^id(ExploreObservationPhoto *observationPhoto) {
                 return [MHGalleryItem itemWithURL:[observationPhoto bestAvailableUrlString]
                                      thumbnailURL:observationPhoto.thumbURL];
             }];

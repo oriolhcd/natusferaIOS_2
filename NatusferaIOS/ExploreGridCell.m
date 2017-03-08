@@ -121,8 +121,8 @@
     // start by setting the image to the iconic taxon image
     observationImageView.image = [UIImage imageForIconicTaxon:observation.iconicTaxonName];
     
-    if (observation.observationPhotos.count > 0) {
-        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.observationPhotos.firstObject;
+    if (observation.getPhotos.count > 0) {
+        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.getPhotos.firstObject;
         
         if (photo) {
             NSString *mediumUrlString = [photo.squareURL stringByReplacingOccurrencesOfString:@"square"

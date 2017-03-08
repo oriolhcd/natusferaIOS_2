@@ -69,5 +69,6 @@ typedef NS_ENUM(NSInteger, ObsDataQuality) {
 - (NSString *)uuid;
 - (NSString *)validationErrorMsg;
 - (NSString *)captive;
+- (NSArray*) getPhotos;
 
 @end

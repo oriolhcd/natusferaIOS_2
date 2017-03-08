@@ -25,6 +25,7 @@
 @property (nonatomic, copy) NSString *taxonRank;
 @property (nonatomic, copy) NSString *commonName;
 @property (nonatomic, copy) NSArray *observationPhotos;
+@property (nonatomic, copy) NSArray *explorePhotos;
 @property (nonatomic, copy) NSDate *timeObservedAt;
 @property (nonatomic, copy) NSDate *observedOn;
 @property (nonatomic, copy) NSString *qualityGrade;
@@ -52,5 +53,7 @@
 @property (nonatomic, readonly) BOOL commentsAndIdentificationsSynchronized;
 
 @property (nonatomic) Taxon *taxon;
+
+-(NSArray*) getPhotos;
 
 @end

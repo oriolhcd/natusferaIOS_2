@@ -389,11 +389,11 @@ static UIImage *userIconPlaceholder;
     self.photoImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.photoImageView.image = [UIImage imageForIconicTaxon:observation.iconicTaxonName];
     
-    if (observation.observationPhotos.count > 0) {
+    if (observation.getPhotos.count > 0) {
         imageLoadingSpinner.hidden = NO;
         [imageLoadingSpinner startAnimating];
         
-        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.observationPhotos.firstObject;
+        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.getPhotos.firstObject;
         [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:[photo bestAvailableUrlStringMax:ExploreObsPhotoUrlSizeMedium]]
                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                           [imageLoadingSpinner stopAnimating];  // automatically hides itself

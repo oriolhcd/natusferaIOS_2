@@ -168,7 +168,7 @@
 }
 
 - (NSArray *)sortedObservationPhotos {
-    return self.observationPhotos;
+    return self.getPhotos;
 }
 
 - (NSNumber *)positionalAccuracy {
@@ -184,7 +184,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"ExploreObservation: %@(%ld photos) at %f,%f", self.title, (unsigned long)self.observationPhotos.count, self.coordinate.latitude, self.coordinate.longitude];
+    return [NSString stringWithFormat:@"ExploreObservation: %@(%ld photos) at %f,%f", self.title, (unsigned long)self.getPhotos.count, self.coordinate.latitude, self.coordinate.longitude];
 }
 
 // we're putting observations in a set, and want to make sure they don't get added more than once.
@@ -288,6 +288,16 @@
     }
     
     return YES;
+}
+
+-(NSArray*) getPhotos {
+    if (self.observationPhotos != nil && self.observationPhotos.count > 0) {
+        return self.observationPhotos;
+    }
+    if (self.explorePhotos != nil && self.explorePhotos.count > 0) {
+        return self.explorePhotos;
+    }
+    return [[NSArray alloc] init];
 }
 
 

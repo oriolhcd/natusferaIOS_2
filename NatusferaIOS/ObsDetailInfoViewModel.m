@@ -264,7 +264,7 @@
                     footer.dataQualityDetails = NSLocalizedString(@"This observation needs a more specific consensus ID to be considered for Research Grade.", nil);
                 }
             } else if (self.observation.dataQuality == ObsDataQualityCasual) {
-                if (self.observation.observationPhotos.count == 0) {
+                if (self.observation.getPhotos.count == 0) {
                     footer.dataQualityDetails = NSLocalizedString(@"This observation needs a photo to be considered for Research Grade.", nil);
                 } else if (!self.observation.latitude) {
                     footer.dataQualityDetails = NSLocalizedString(@"This observation needs a location to be considered for Research Grade.", nil);

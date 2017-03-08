@@ -127,7 +127,7 @@ static RKObjectMapping *defaultSerializationMapping = nil;
          @"quality_grade", @"qualityGrade",
          @"captive", @"captive",
          nil];
-        [defaultMapping mapKeyPath:@"taxon" 
+        [defaultMapping mapKeyPath:@"taxon"
                     toRelationship:@"taxon" 
                        withMapping:[Taxon mapping]
                          serialize:NO];
@@ -155,6 +155,7 @@ static RKObjectMapping *defaultSerializationMapping = nil;
                     toRelationship:@"faves"
                        withMapping:[Fave mapping]
                          serialize:NO];
+        
         defaultMapping.primaryKeyAttribute = @"recordID";
     }
     return defaultMapping;
@@ -470,9 +471,13 @@ static RKObjectMapping *defaultSerializationMapping = nil;
 }
 
 - (NSArray *)sortedActivity {
+    NSFetchRequest *request = [Comment fetchRequest];
+    request.predicate = [NSPredicate predicateWithFormat:@"parentID = %@", self.recordID];
+    [request setReturnsObjectsAsFaults:NO];
+    NSArray *unsortedComments = [Comment objectsWithFetchRequest:request];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:YES];
-    NSArray *allActivities = [self.comments.allObjects arrayByAddingObjectsFromArray:self.identifications.allObjects];
-    return [allActivities sortedArrayUsingDescriptors:@[sortDescriptor]];
+    [unsortedComments sortedArrayUsingDescriptors:@[sortDescriptor]];
+    return [unsortedComments sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
 - (ObsDataQuality)dataQuality {
@@ -509,6 +514,10 @@ static RKObjectMapping *defaultSerializationMapping = nil;
 
 - (BOOL)isEditable {
     return YES;
+}
+
+-(NSArray*) getPhotos {
+    return [self.observationPhotos allObjects];
 }
 
 

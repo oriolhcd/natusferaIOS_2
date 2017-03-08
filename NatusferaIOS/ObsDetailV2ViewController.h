@@ -10,9 +10,10 @@
 
 #import "ObservationVisualization.h"
 #import "Uploadable.h"
+#import "ExploreObservation.h"
 
 @interface ObsDetailV2ViewController : UIViewController
 
 @property id <ObservationVisualization, Uploadable> observation;
-
+@property (strong, nonatomic) ExploreObservation* exploreObservation;
 @end

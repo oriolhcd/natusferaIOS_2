@@ -315,7 +315,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
 #pragma mark - PhotoScrollViewDelegate
 
 - (void)photoScrollView:(PhotoScrollViewCell *)psv setDefaultIndex:(NSInteger)idx {
-    for (ObservationPhoto *photo in self.observation.observationPhotos) {
+    for (ObservationPhoto *photo in self.observation.getPhotos) {
         if (photo.position.integerValue == idx) {
             photo.position = @(0);
         } else if (photo.position.integerValue < idx) {
@@ -813,7 +813,7 @@ typedef NS_ENUM(NSInteger, ConfirmObsSection) {
                      withProperties:@{
                                       @"Via": [self analyticsVia],
                                       @"Projects": @(self.observation.projectObservations.count),
-                                      @"Photos": @(self.observation.observationPhotos.count),
+                                      @"Photos": @(self.observation.getPhotos.count),
                                       @"OFVs": @(self.observation.observationFieldValues.count)
                                       }];
     

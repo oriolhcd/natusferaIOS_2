@@ -357,7 +357,7 @@
 
 - (NSArray *)observationsWithPhotos {
     return [self.observations.array bk_select:^BOOL(ExploreObservation *observation) {
-        return observation.observationPhotos.count > 0;
+        return observation.getPhotos.count > 0;
     }];
 }
 

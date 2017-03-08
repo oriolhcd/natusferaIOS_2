@@ -126,9 +126,9 @@
     // photos
     PhotosPageControlCell *cell = [tableView dequeueReusableCellWithIdentifier:@"photos"];
     
-    if (self.observation.observationPhotos.count > 0) {
+    if (self.observation.getPhotos.count > 0) {
         
-        if (self.viewingPhoto + 1 > self.observation.observationPhotos.count) {
+        if (self.viewingPhoto + 1 > self.observation.getPhotos.count) {
             // user was viewing, and deleted, the last photo in the observation
             self.viewingPhoto = self.viewingPhoto - 1;
         }
@@ -151,9 +151,9 @@
         cell.iv.contentMode = UIViewContentModeCenter;  // don't scale
     }
     
-    if (self.observation.observationPhotos.count > 1) {
+    if (self.observation.getPhotos.count > 1) {
         cell.pageControl.hidden = NO;
-        cell.pageControl.numberOfPages = self.observation.observationPhotos.count;
+        cell.pageControl.numberOfPages = self.observation.getPhotos.count;
         cell.pageControl.currentPage = self.viewingPhoto;
         [cell.pageControl addTarget:self
                              action:@selector(pageControlChanged:)
@@ -382,7 +382,7 @@
             // do nothing
         } else if (indexPath.item == 1) {
             // photos segue
-            if (self.observation.observationPhotos.count > 0) {
+            if (self.observation.getPhotos.count > 0) {
                 [self.delegate inat_performSegueWithIdentifier:@"photos" sender:@(self.viewingPhoto)];
             }
         } else if (indexPath.item == 2) {
@@ -440,7 +440,7 @@
 
     } else if (gesture.direction == UISwipeGestureRecognizerDirectionLeft) {
         // swiping forward
-        if (self.viewingPhoto + 1 == self.observation.observationPhotos.count) {
+        if (self.viewingPhoto + 1 == self.observation.getPhotos.count) {
             // do nothing
         } else {
             self.viewingPhoto++;

@@ -1100,7 +1100,7 @@
     if (!_fetchedResultsController) {
         // NSFetchedResultsController request for my observations
         NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Observation"];
-        
+        [request setReturnsObjectsAsFaults:NO];
         // sort by common name, if available
         request.sortDescriptors = @[
                                     [[NSSortDescriptor alloc] initWithKey:@"sortable" ascending:NO],

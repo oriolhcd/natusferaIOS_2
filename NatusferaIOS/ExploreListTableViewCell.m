@@ -348,8 +348,8 @@ static NSDateFormatter *shortFormatter;
 - (void)setObservation:(ExploreObservation *)observation {
     observationImageView.image = [UIImage imageForIconicTaxon:observation.iconicTaxonName];
     
-    if (observation.observationPhotos.count > 0) {
-        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.observationPhotos.firstObject;
+    if (observation.getPhotos.count > 0) {
+        ExploreObservationPhoto *photo = (ExploreObservationPhoto *)observation.getPhotos.firstObject;
         
         NSString *mediumUrlString = [photo.squareURL stringByReplacingOccurrencesOfString:@"square"
                                                                          withString:@"medium"];
