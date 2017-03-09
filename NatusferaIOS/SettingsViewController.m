@@ -39,6 +39,8 @@
 #import "UIColor+Natusfera.h"
 #import "GooglePlusAuthViewController.h"
 
+#define INatAppStoreURL @"https://itunes.apple.com/es/app/natusfera/id1209953051?l=es&ls=1&mt=8"
+
 static const int CreditsSection = 3;
 
 static const int UsernameCellTag = 0;
