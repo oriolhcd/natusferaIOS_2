@@ -311,6 +311,7 @@ static const int AutouploadSwitchTag = 101;
 #pragma mark - UITableView
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    cell.userInteractionEnabled = !(indexPath.section == 0 && indexPath.row == 0);
     if (indexPath.section == 4 && indexPath.row == 0) {
         cell.textLabel.text = self.versionText;
         cell.textLabel.textAlignment = NSTextAlignmentNatural;
@@ -323,7 +324,8 @@ static const int AutouploadSwitchTag = 101;
 
         if (indexPath.row == 0) {
             // username cell
-            cell.textLabel.text = NSLocalizedString(@"Username", nil);
+            cell.textLabel.text = NSLocalizedString(@"User", nil);
+            
             NatusferaAppDelegate *appDelegate = (NatusferaAppDelegate *)[[UIApplication sharedApplication] delegate];
             if (appDelegate.loginController.isLoggedIn) {
                 cell.detailTextLabel.text = appDelegate.loginController.fetchMe.login;

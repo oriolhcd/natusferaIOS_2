@@ -300,19 +300,9 @@
         self.observations = [[NSOrderedSet alloc] initWithArray:orderedObservations];
 
         if (shouldNotify) {
-            if (results.count > 0)
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.notificationDelegate finishedObservationFetch];
-                });
-            else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    //NSError *error = [[NSError alloc] initWithDomain:@"org.natusfera" //M.Lujano:10/06/2016
-                    NSError *error = [[NSError alloc] initWithDomain:@"es.gbif.natusfera"
-                                                                code:-1014
-                                                            userInfo:@{ NSLocalizedDescriptionKey: @"No observations found." }];
-                    [self.notificationDelegate failedObservationFetch:error];
-                });
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.notificationDelegate finishedObservationFetch];
+            });
         }
     }];
 }
